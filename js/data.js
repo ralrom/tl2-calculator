@@ -7,12 +7,12 @@ var Characters = {
         inactive: {
           xPos: 199,
           yPos: 331,
-          sheet: "skills"
+          sheet: "skills1"
         },
         active: {
           xPos: 265,
           yPos: 331,
-          sheet: "skills"
+          sheet: "skills1"
         }
       },
       skill1: {
