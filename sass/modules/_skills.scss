@@ -1,0 +1,115 @@
+.skill-tree {
+  display: none;
+  padding: 1em;
+  border-top: none;
+}
+
+.skill-tree.current-tree {
+  display: block;
+}
+
+.skill-row:before,
+.skill-row:after {
+    content: " ";
+    display: table;
+}
+.skill-row:after {
+    clear: both;
+}
+
+.skill-box {
+  width: 33.333%;
+  display: block;
+  float: left;
+  position: relative;
+  padding: 1em;
+  box-sizing: border-box;
+}
+
+.skill-box:last-child {
+  padding-right: 1em;
+}
+
+.third-row .skill-box {
+  float: none;
+  margin: 0 auto;
+}
+
+.skill-title {
+  margin: 0;
+  font-size: 1.2em;
+  font-weight: normal;
+  text-align: center;
+}
+
+.skill-inner {
+  margin: 0.5em 0;
+  position: relative;
+}
+
+.skill-icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 66px;
+  height: 66px;
+}
+
+.skill-button {
+  position: absolute;
+  right: 0;
+  margin: 0;
+  width: 40px;
+  height: 33px;
+  border: none;
+  outline: none;
+  font-size: 1.2em;
+  display: inline-block;
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+}
+
+.skill-plus {
+  top: 0;
+}
+.skill-minus{
+  bottom: 0;
+}
+
+.skill-level-box,
+.skill-level-bar {
+  height: 16px;
+}
+
+.skill-level-box {
+  width: 100%;
+  position: relative;
+}
+
+.skill-level-bar {
+  width: 0%;
+  transition: width 0.1s ease;
+}
+
+.skill-tier {
+  height: 100%;
+  width: 33.333%;
+  position: absolute;
+  bottom: 0;
+}
+
+.skill-tier1 {
+  left: 0
+}
+
+.skill-tier2 {
+  left: 33.333%;
+}
+
+.skill-tier3 {
+  left: 66.666%;
+}
+
+.skill-tier2,
+.skill-tier3 {
+  border-left: solid 1px;
+}

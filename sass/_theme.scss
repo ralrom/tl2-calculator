@@ -1,0 +1,61 @@
+/*****************************/
+/* Colors */
+/*****************************/
+
+$accent-color: #F66;
+$dark-color: #333;
+$light-color: #FFF;
+$subtle-color: #C8C8C8;
+$bg-color: #eae7ec;
+
+body {
+  background-color: $bg-color;
+}
+
+/*****************************/
+/* Skills */
+/*****************************/
+
+.skill-tree {
+  background: $light-color;
+}
+.skill-icon {
+  background-color: $dark-color;
+}
+.skill-button,
+.skill-level-bar {
+  background-color: $accent-color;
+  color: #FFF;
+}
+
+.skill-button:hover {
+  background-color: $dark-color;
+}
+
+.skill-level-box {
+  background-color: $subtle-color;
+}
+.skill-tier2,
+.skill-tier3 {
+  border-color: $light-color;
+}
+
+/*****************************/
+/* Tabs */
+/*****************************/
+.tab {
+  color: $light-color;
+}
+.tab::before {
+  background-color: $accent-color;
+}
+.tab:hover::before {
+  background-color: $dark-color;
+}
+
+.tab.tab-current {
+  color: $dark-color;
+}
+.tab.tab-current::before {
+  background-color: $light-color;
+}
