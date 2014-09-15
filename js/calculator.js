@@ -122,6 +122,7 @@ function levelSkill(evt){
 }
 
 function changeTree(evt){
+  //Get all tab elements
   var tabs = document.getElementsByClassName("tab");
 
   //Get requested tree number
@@ -139,10 +140,12 @@ function changeTree(evt){
   //Show current tree
   skillTree.className ="skill-tree current-tree";
 
+  //Set all tabs back to default
   for(i = 0; i < tabs.length; i++){
     tabs[i].className = "tab";
   }
 
+  //Set current tab
   evt.target.className= "tab tab-current";
 
 }
