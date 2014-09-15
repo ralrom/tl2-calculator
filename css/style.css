@@ -7,7 +7,19 @@ html, body {
 /* line 6, ../sass/_base.scss */
 html {
   @import url(http://fonts.googleapis.com/css?family=Open+Sans);
+}
+
+/* line 11, ../sass/_base.scss */
+html,
+input[type=text] {
   font-family: 'Open Sans', sans-serif;
+}
+
+/* line 15, ../sass/_base.scss */
+input[type=text] {
+  font-size: 1em;
+  line-height: 1;
+  margin: 0;
 }
 
 /* line 1, ../sass/_layout.scss */
@@ -22,26 +34,32 @@ html {
   margin: 0 2em;
 }
 
-/* line 5, ../sass/modules/_tabs.scss */
+/* line 4, ../sass/modules/_tabs.scss */
+.tabs-container.tabs-background {
+  margin: 0;
+  padding: 0 2em;
+}
+
+/* line 9, ../sass/modules/_tabs.scss */
 .tabs-container ul {
   list-style-type: none;
   margin: 0 0 -0.65em;
   padding: 0;
 }
 
-/* line 12, ../sass/modules/_tabs.scss */
+/* line 16, ../sass/modules/_tabs.scss */
 .tabs-container ul:before,
 .tabs-container ul:after {
   content: " ";
   display: table;
 }
 
-/* line 16, ../sass/modules/_tabs.scss */
+/* line 20, ../sass/modules/_tabs.scss */
 .tabs-container ul:after {
   clear: both;
 }
 
-/* line 20, ../sass/modules/_tabs.scss */
+/* line 24, ../sass/modules/_tabs.scss */
 .tab {
   width: 33.333%;
   float: left;
@@ -55,7 +73,7 @@ html {
   margin: 0;
 }
 
-/* line 33, ../sass/modules/_tabs.scss */
+/* line 37, ../sass/modules/_tabs.scss */
 .tab::before {
   content: '';
   position: absolute;
@@ -71,7 +89,7 @@ html {
   transition: background-color 0.2s ease;
 }
 
-/* line 48, ../sass/modules/_tabs.scss */
+/* line 52, ../sass/modules/_tabs.scss */
 .tab.tab-current::before {
   box-shadow: none;
 }
@@ -215,6 +233,38 @@ html {
   border-left: solid 1px;
 }
 
+/* line 1, ../sass/modules/_linker.scss */
+.linker {
+  padding: 1em 2em 2em 2em;
+  border-top: dashed 1px;
+}
+
+/* line 6, ../sass/modules/_linker.scss */
+.linker .tab {
+  z-index: 1;
+}
+
+/* line 11, ../sass/modules/_linker.scss */
+.linker input[type=text],
+.linker label {
+  border: none;
+  outline: none;
+  display: block;
+  box-sizing: border-box;
+}
+
+/* line 17, ../sass/modules/_linker.scss */
+.linker input[type=text] {
+  width: 100%;
+  background: none;
+}
+
+/* line 22, ../sass/modules/_linker.scss */
+.linker label {
+  font-size: 1.25rem;
+  padding: 0.5em 0;
+}
+
 /*****************************/
 /* Colors */
 /*****************************/
@@ -285,4 +335,13 @@ body {
 /* line 59, ../sass/_theme.scss */
 .tab.tab-current::before {
   background-color: white;
+}
+
+/*****************************/
+/* Linker */
+/*****************************/
+/* line 67, ../sass/_theme.scss */
+.linker {
+  background-color: white;
+  border-color: #eae7ec;
 }

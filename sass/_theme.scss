@@ -59,3 +59,12 @@ body {
 .tab.tab-current::before {
   background-color: $light-color;
 }
+
+/*****************************/
+/* Linker */
+/*****************************/
+
+.linker {
+  background-color: $light-color;
+  border-color: $bg-color;
+}

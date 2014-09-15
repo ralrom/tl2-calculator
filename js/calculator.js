@@ -59,12 +59,15 @@ function populateSkills(char){
     var treeTitle = document.getElementById("tree-"+i+"-title");
     treeTitle.innerHTML = charData["tree"+i].name;
 
+    //Get skill levels from query string
+    var skillLevels = parseTree(i);
+
     for(var j = 0; j < 10; j++){
       //Get apropriate skill-box
       var elem = document.getElementById("tree-"+i+"-skill-"+j);
 
       //Set skill levels
-      setSkill(elem, 0);
+      setSkill(elem, skillLevels[j]);
     }
   }
 }
@@ -79,7 +82,7 @@ function setSkill(elem, level){
   var skill = Characters[selectedChar]["tree"+treeNo]["skill"+skillNo];
 
   //Set name
-  console.log("Setting "+skill.name);
+  console.log("Updating "+skill.name);
   var elemTitle = elem.getElementsByClassName("skill-title")[0];
   elemTitle.innerHTML = skill.name;
 
@@ -99,6 +102,9 @@ function setSkill(elem, level){
   var active = level > 0 ? "active" : "inactive";
   elemIcon.style.backgroundImage = "url('img/"+skill[active].sheet+".png')";
   elemIcon.style.backgroundPosition = "-"+skill[active].xPos+"px -"+skill[active].yPos+"px";
+
+  //Update Share Link
+  shareLink();
 }
 
 //Takes care of skill level
@@ -147,5 +153,45 @@ function changeTree(evt){
 
   //Set current tab
   evt.target.className= "tab tab-current";
+}
 
+function shareLink(){
+  //Get Link element
+  var elemLink = document.getElementById("share-link");
+
+  //Get page URL without query string
+  var url = [location.protocol, '//', location.host, location.pathname].join('');
+
+  //Generate link
+  var link = url;
+  link += "?tree0="+serializeTree(0);
+  link += "&tree1="+serializeTree(1);
+  link += "&tree2="+serializeTree(2);
+  elemLink.value = link;
+}
+
+
+function parseTree(tree){
+  return getParameterByName("tree"+tree).split(",");
+}
+
+
+function serializeTree(tree){
+  //Get all skill-boxes in given tree
+  var elemTree = document.getElementById("tree-"+tree).getElementsByClassName("skill-box");
+  var treeSerialized = [];
+
+  //Get data-level attribute from all skill-boxes in given tree
+  for(var i = 0; i < elemTree.length; i++){
+    var level = elemTree[i].getElementsByClassName("skill-level-bar")[0].getAttribute("data-level");
+    treeSerialized[i] = level;
+  }
+
+  //Return data
+  return treeSerialized;
+}
+
+function getParameterByName(name) {
+  var match = RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
+  return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
 }

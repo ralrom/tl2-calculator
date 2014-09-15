@@ -5,13 +5,13 @@ var Characters = {
       skill0: {
         name: "Rapid Fire",
         inactive: {
-          xPos: 67,
-          yPos: 397,
+          xPos: 199,
+          yPos: 331,
           sheet: "skills"
         },
         active: {
-          xPos: 133,
-          yPos: 397,
+          xPos: 265,
+          yPos: 331,
           sheet: "skills"
         }
       },

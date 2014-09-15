@@ -1,6 +1,10 @@
 .tabs-container {
 	margin: 0 2em;
 }
+.tabs-container.tabs-background {
+	margin: 0;
+	padding: 0 2em;
+}
 
 .tabs-container ul {
 	list-style-type: none;

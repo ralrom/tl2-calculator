@@ -1,0 +1,25 @@
+.linker {
+  padding: 1em 2em 2em 2em;
+  border-top: dashed 1px;
+}
+
+.linker .tab {
+  z-index: 1;
+}
+
+.linker input[type=text],
+.linker label {
+  border: none;
+  outline: none;
+  display: block;
+  box-sizing: border-box;
+}
+.linker input[type=text] {
+  width: 100%;
+  background: none;
+}
+
+.linker label {
+  font-size: 1.25rem;
+  padding: 0.5em 0;
+}

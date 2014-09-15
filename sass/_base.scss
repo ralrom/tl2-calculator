@@ -5,5 +5,15 @@ html, body {
 
 html {
   @import url(http://fonts.googleapis.com/css?family=Open+Sans);
+}
+
+html,
+input[type=text] {
   font-family: 'Open Sans', sans-serif;
+}
+
+input[type=text]{
+  font-size: 1em;
+  line-height: 1;
+  margin: 0;
 }
