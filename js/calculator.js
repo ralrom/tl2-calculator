@@ -172,7 +172,12 @@ function shareLink(){
 
 
 function parseTree(tree){
-  return getParameterByName("tree"+tree).split(",");
+  var param = getParameterByName("tree"+tree);
+  if(param == null){
+    return [0,0,0,0,0,0,0,0,0,0];
+  } else {
+    return param.split(",");
+  }
 }
 
 
