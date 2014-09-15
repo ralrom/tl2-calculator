@@ -138,13 +138,13 @@ var Characters = {
       skill0: {
         name: "Glaive Throw",
         inactive: {
-          xPos: 67,
-          yPos: 397,
+          xPos: 1,
+          yPos: 199,
           sheet: "skills"
         },
         active: {
-          xPos: 133,
-          yPos: 397,
+          xPos: 67,
+          yPos: 199,
           sheet: "skills"
         }
       },
@@ -152,116 +152,116 @@ var Characters = {
         name: "Tangling Shot",
         inactive: {
           xPos: 133,
-          yPos: 67,
-          sheet: "skills2"
+          yPos: 199,
+          sheet: "skills"
         },
         active: {
           xPos: 199,
-          yPos: 67,
-          sheet: "skills2"
+          yPos: 199,
+          sheet: "skills"
         }
       },
       skill2: {
         name: "Glaive Sweep",
         inactive: {
-          xPos: 1,
-          yPos: 331,
-          sheet: "skills4"
+          xPos: 265,
+          yPos: 1,
+          sheet: "skills3"
         },
         active: {
-          xPos: 67,
-          yPos: 331,
-          sheet: "skills4"
+          xPos: 331,
+          yPos: 1,
+          sheet: "skills3"
         }
       },
       skill3: {
         name: "Sandstorm",
         inactive: {
-          xPos: 67,
-          yPos: 133,
-          sheet: "skills4"
+          xPos: 199,
+          yPos: 199,
+          sheet: "skills1"
         },
         active: {
-          xPos: 133,
-          yPos: 133,
-          sheet: "skills4"
+          xPos: 265,
+          yPos: 199,
+          sheet: "skills1"
         }
       },
       skill4: {
-        name: "Bramble Well",
+        name: "Bramble Wall",
         inactive: {
-          xPos: 331,
-          yPos: 397,
-          sheet: "skills1"
+          xPos: 397,
+          yPos: 331,
+          sheet: "skills4"
         },
         active: {
-          xPos: 397,
+          xPos: 1,
           yPos: 397,
-          sheet: "skills1"
+          sheet: "skills4"
         }
       },
       skill5: {
         name: "Burning Leap",
         inactive: {
-          xPos: 1,
-          yPos: 397,
-          sheet: "skills3"
+          xPos: 397,
+          yPos: 133,
+          sheet: "skills1"
         },
         active: {
-          xPos: 67,
-          yPos: 397,
-          sheet: "skills3"
+          xPos: 1,
+          yPos: 199,
+          sheet: "skills1"
         }
       },
       skill6: {
         name: "Flaming Glaive",
         inactive: {
-          xPos: 331,
-          yPos: 1,
-          sheet: "skills2"
+          xPos: 133,
+          yPos: 265,
+          sheet: "skills3"
         },
         active: {
-          xPos: 397,
-          yPos: 1,
-          sheet: "skills2"
+          xPos: 199,
+          yPos: 265,
+          sheet: "skills3"
         }
       },
       skill7: {
         name: "Dodge Mastery",
         inactive: {
-          xPos: 67,
-          yPos: 265,
-          sheet: "skills2"
+          xPos: 133,
+          yPos: 67,
+          sheet: "skills4"
         },
         active: {
-          xPos: 133,
-          yPos: 265,
-          sheet: "skills2"
+          xPos: 199,
+          yPos: 67,
+          sheet: "skills4"
         }
       },
       skill8: {
         name: "Poison Burst",
         inactive: {
-          xPos: 67,
-          yPos: 397,
-          sheet: "skills"
+          xPos: 199,
+          yPos: 1,
+          sheet: "skills2"
         },
         active: {
-          xPos: 133,
-          yPos: 397,
-          sheet: "skills"
+          xPos: 265,
+          yPos: 1,
+          sheet: "skills2"
         }
       },
       skill9: {
         name: "Share the Wealth",
         inactive: {
-          xPos: 1,
-          yPos: 67,
+          xPos: 133,
+          yPos: 199,
           sheet: "skills4"
         },
         active: {
-          xPos: 67,
-          yPos: 67,
+          xPos: 199,
+          yPos: 199,
           sheet: "skills4"
         }
       }
@@ -271,130 +271,130 @@ var Characters = {
       skill0: {
         name: "Blade Pact",
         inactive: {
-          xPos: 67,
-          yPos: 397,
-          sheet: "skills"
+          xPos: 199,
+          yPos: 133,
+          sheet: "skills4"
         },
         active: {
-          xPos: 133,
-          yPos: 397,
-          sheet: "skills"
+          xPos: 265,
+          yPos: 133,
+          sheet: "skills4"
         }
       },
       skill1: {
         name: "Shadowshot",
         inactive: {
-          xPos: 133,
-          yPos: 67,
-          sheet: "skills2"
+          xPos: 1,
+          yPos: 133,
+          sheet: "skills1"
         },
         active: {
-          xPos: 199,
-          yPos: 67,
-          sheet: "skills2"
+          xPos: 67,
+          yPos: 133,
+          sheet: "skills1"
         }
       },
       skill2: {
         name: "Bane Breath",
         inactive: {
-          xPos: 1,
-          yPos: 331,
-          sheet: "skills4"
+          xPos: 67,
+          yPos: 1,
+          sheet: "skills"
         },
         active: {
-          xPos: 67,
-          yPos: 331,
-          sheet: "skills4"
+          xPos: 133,
+          yPos: 1,
+          sheet: "skills"
         }
       },
       skill3: {
         name: "Repulsion Hex",
         inactive: {
-          xPos: 67,
-          yPos: 133,
-          sheet: "skills4"
+          xPos: 1,
+          yPos: 265,
+          sheet: "skills1"
         },
         active: {
-          xPos: 133,
-          yPos: 133,
-          sheet: "skills4"
+          xPos: 67,
+          yPos: 265,
+          sheet: "skills1"
         }
       },
       skill4: {
         name: "Stone Pact",
         inactive: {
-          xPos: 331,
-          yPos: 397,
-          sheet: "skills1"
+          xPos: 199,
+          yPos: 67,
+          sheet: "skills5"
         },
         active: {
-          xPos: 397,
-          yPos: 397,
-          sheet: "skills1"
+          xPos: 265,
+          yPos: 67,
+          sheet: "skills5"
         }
       },
       skill5: {
         name: "Shadowmantle",
         inactive: {
-          xPos: 1,
-          yPos: 397,
-          sheet: "skills3"
+          xPos: 133,
+          yPos: 133,
+          sheet: "skills1"
         },
         active: {
-          xPos: 67,
-          yPos: 397,
-          sheet: "skills3"
+          xPos: 199,
+          yPos: 133,
+          sheet: "skills1"
         }
       },
       skill6: {
         name: "Shadowling Brute",
         inactive: {
           xPos: 331,
-          yPos: 1,
-          sheet: "skills2"
+          yPos: 67,
+          sheet: "skills1"
         },
         active: {
           xPos: 397,
-          yPos: 1,
-          sheet: "skills2"
+          yPos: 67,
+          sheet: "skills1"
         }
       },
       skill7: {
         name: "Master of the Elements",
         inactive: {
-          xPos: 67,
-          yPos: 265,
+          xPos: 199,
+          yPos: 133,
           sheet: "skills2"
         },
         active: {
-          xPos: 133,
-          yPos: 265,
+          xPos: 265,
+          yPos: 133,
           sheet: "skills2"
         }
       },
       skill8: {
         name: "Shadowling Ammo",
         inactive: {
-          xPos: 67,
-          yPos: 397,
-          sheet: "skills"
+          xPos: 1,
+          yPos: 133,
+          sheet: "skills1"
         },
         active: {
-          xPos: 133,
-          yPos: 397,
-          sheet: "skills"
+          xPos: 67,
+          yPos: 133,
+          sheet: "skills1"
         }
       },
       skill9: {
         name: "Death Ritual",
         inactive: {
-          xPos: 1,
+          xPos: 397,
           yPos: 67,
           sheet: "skills4"
         },
         active: {
-          xPos: 67,
-          yPos: 67,
+          xPos: 1,
+          yPos: 133,
           sheet: "skills4"
         }
       }
