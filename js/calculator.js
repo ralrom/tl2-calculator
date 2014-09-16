@@ -23,7 +23,8 @@ function abortCheck(){
 }
 
 function initialize(){
-  populateSkills("Outlander");
+  var char = getParameterByName("class") ? getParameterByName("class") : "Outlander";
+  populateSkills(char);
   addButtonListeners();
 }
 
@@ -105,6 +106,23 @@ function setSkill(elem, level){
 
   //Update Share Link
   shareLink();
+
+  //Get total points spent
+  skillsSpent();
+}
+
+function getSum(arr){
+  var sum = 0;
+  for(var i = 0; i < arr.length; i++){
+    sum += parseInt(arr[i], 10);
+  }
+  return sum;
+}
+
+function skillsSpent(){
+  var spent = getSum(serializeTree(0))+getSum(serializeTree(1))+getSum(serializeTree(2));
+  var elemSpent = document.getElementById("points-spent");
+  elemSpent.innerHTML = spent+"/132";
 }
 
 //Takes care of skill level

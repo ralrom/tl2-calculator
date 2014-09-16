@@ -29,6 +29,12 @@ input[type=text] {
   margin: 0 auto;
 }
 
+/* line 6, ../sass/_layout.scss */
+.extend {
+  padding: 1em 2em;
+  border-top: dashed 1px;
+}
+
 /* line 1, ../sass/modules/_tabs.scss */
 .tabs-container {
   margin: 0 2em;
@@ -233,18 +239,13 @@ input[type=text] {
   border-left: solid 1px;
 }
 
-/* line 1, ../sass/modules/_linker.scss */
-.linker {
-  padding: 1em 2em 2em 2em;
-  border-top: dashed 1px;
+/* line 117, ../sass/modules/_skills.scss */
+.points-spent {
+  text-align: center;
+  font-size: 1.2em;
 }
 
-/* line 6, ../sass/modules/_linker.scss */
-.linker .tab {
-  z-index: 1;
-}
-
-/* line 11, ../sass/modules/_linker.scss */
+/* line 2, ../sass/modules/_linker.scss */
 .linker input[type=text],
 .linker label {
   border: none;
@@ -253,13 +254,13 @@ input[type=text] {
   box-sizing: border-box;
 }
 
-/* line 17, ../sass/modules/_linker.scss */
+/* line 8, ../sass/modules/_linker.scss */
 .linker input[type=text] {
   width: 100%;
   background: none;
 }
 
-/* line 22, ../sass/modules/_linker.scss */
+/* line 13, ../sass/modules/_linker.scss */
 .linker label {
   font-size: 1.25rem;
   padding: 0.5em 0;
@@ -338,10 +339,10 @@ body {
 }
 
 /*****************************/
-/* Linker */
+/* Extend */
 /*****************************/
 /* line 67, ../sass/_theme.scss */
-.linker {
+.extend {
   background-color: white;
   border-color: #eae7ec;
 }
