@@ -30,8 +30,8 @@
       <inactive xPos="67" yPos="793"/>
     </skill>
     <skill name="Blood Hunger">
-      <active xPos="1" yPos="1"/>
-      <inactive xPos="1" yPos="1"/>
+      <active xPos="199" yPos="727"/>
+      <inactive xPos="133" yPos="727"/>
     </skill>
     <skill name="Executioner">
       <active xPos="1" yPos="1"/>
