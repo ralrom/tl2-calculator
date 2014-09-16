@@ -67,8 +67,7 @@ function loadSkillset(character) {
 }
 
 function transferProgress(event) {
-  console.log(event);
-  if (event.lengthComputable) { // Set width if size is computable
+  if (event.lengthComputable) { // Set width if size is computable (Not computable on GitHub)
     Calculator.loader.setProgress(100 * event.loaded / event.total);
   }
 }
@@ -185,6 +184,8 @@ function updateSkill(element, data, level) {
   //Update skill-level-number text
   var elemLevelNumber = element.getElementsByClassName("skill-level-number")[0];
   elemLevelNumber.innerHTML = level;
+  //Update skill distribution bar
+  updatePointDistributionBar();
   //Generate new share link
   shareLink();
 }
@@ -212,6 +213,21 @@ function levelSkill(event) {
     }
   } else if(change == "clear"){
     updateSkill(elemSkill, dataSkill, 0);
+  }
+}
+
+function getTreePointTotal(tree){
+  var points = getPointDistribution()[tree];
+  var total = 0;
+  for(var i = 0, m = points.length; i < m; i++){
+    total += Number(points[i]);
+  }
+  return total;
+}
+
+function updatePointDistributionBar(){
+  for(var i = 0; i < 3; i++){
+    document.getElementById("points-bar-"+i).style.width = 100*getTreePointTotal(i)/132+"%";
   }
 }
 
