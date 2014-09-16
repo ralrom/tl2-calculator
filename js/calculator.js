@@ -67,6 +67,7 @@ function loadSkillset(character) {
 }
 
 function transferProgress(event) {
+  console.log(event);
   if (event.lengthComputable) { // Set width if size is computable
     Calculator.loader.setProgress(100 * event.loaded / event.total);
   }
