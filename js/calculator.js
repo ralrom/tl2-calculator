@@ -176,7 +176,7 @@ function updateSkill(element, data, level) {
   var activity = level > 0 ? "active" : "inactive";
   var activityNode = data.getElementsByTagName(activity)[0];
   //Change skill-icon accordingly
-  element.getElementsByClassName("skill-icon")[0].style.backgroundPosition = activityNode.getAttribute("xPos") + "px " + activityNode.getAttribute("yPos") + "px";
+  element.getElementsByClassName("skill-icon")[0].style.backgroundPosition = "-"+activityNode.getAttribute("xPos") + "px -" + activityNode.getAttribute("yPos") + "px";
   //Update skill-level-bar display & data;
   var elemLevelBar = element.getElementsByClassName("skill-level-bar")[0];
   elemLevelBar.setAttribute("data-level", level);
@@ -199,7 +199,7 @@ function levelSkill(event) {
   //Load Skill-Tree for given Skill-Box (from XML)
   var tree = elemSkill.getAttribute("data-tree");
   var skill = elemSkill.getAttribute("data-skill");
-  var dataSkill = Calculator.skillsetData.getElementsByTagName("tree")[tree].getElementsByTagName("skill")[0];
+  var dataSkill = Calculator.skillsetData.getElementsByTagName("tree")[tree].getElementsByTagName("skill")[skill];
   //Get current skill level
   var dataLevel = elemSkill.getElementsByClassName("skill-level-bar")[0].getAttribute("data-level");
   //Manage change
@@ -216,6 +216,7 @@ function levelSkill(event) {
   }
 }
 
+//Returns the total skill points spent in a given tree
 function getTreePointTotal(tree){
   var points = getPointDistribution()[tree];
   var total = 0;
@@ -225,6 +226,7 @@ function getTreePointTotal(tree){
   return total;
 }
 
+//Updates the skill point distribution bar
 function updatePointDistributionBar(){
   for(var i = 0; i < 3; i++){
     document.getElementById("points-bar-"+i).style.width = 100*getTreePointTotal(i)/132+"%";
