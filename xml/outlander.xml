@@ -1,0 +1,128 @@
+<skillset>
+  <tree name="Warfare">
+    <skill name="Rapid Fire">
+      <active xPos="1" yPos="1" sheet="skills"/>
+      <inactive xPos="1" yPos="1" sheet="skills"/>
+    </skill>
+    <skill name="Rune Vault">
+      <active xPos="1" yPos="1" sheet="skills"/>
+      <inactive xPos="1" yPos="1" sheet="skills"/>
+    </skill>
+    <skill name="Chaos Burst">
+      <active xPos="1" yPos="1" sheet="skills"/>
+      <inactive xPos="1" yPos="1" sheet="skills"/>
+    </skill>
+    <skill name="Cursed Daggers">
+      <active xPos="1" yPos="1" sheet="skills"/>
+      <inactive xPos="1" yPos="1" sheet="skills"/>
+    </skill>
+    <skill name="Vortex Hex">
+      <active xPos="1" yPos="1" sheet="skills"/>
+      <inactive xPos="1" yPos="1" sheet="skills"/>
+    </skill>
+    <skill name="Shattering Glaive">
+      <active xPos="1" yPos="1" sheet="skills"/>
+      <inactive xPos="1" yPos="1" sheet="skills"/>
+    </skill>
+    <skill name="Venemous Hail">
+      <active xPos="1" yPos="1" sheet="skills"/>
+      <inactive xPos="1" yPos="1" sheet="skills"/>
+    </skill>
+    <skill name="Long Range Mastery">
+      <active xPos="1" yPos="1" sheet="skills"/>
+      <inactive xPos="1" yPos="1" sheet="skills"/>
+    </skill>
+    <skill name="Shotgonne Mastery">
+      <active xPos="1" yPos="1" sheet="skills"/>
+      <inactive xPos="1" yPos="1" sheet="skills"/>
+    </skill>
+    <skill name="Akimbo">
+      <active xPos="1" yPos="1" sheet="skills"/>
+      <inactive xPos="1" yPos="1" sheet="skills"/>
+    </skill>
+  </tree>
+  <tree name="Lore">
+    <skill name="Glaive Throw">
+      <active xPos="1" yPos="1" sheet="skills"/>
+      <inactive xPos="1" yPos="1" sheet="skills"/>
+    </skill>
+    <skill name="Tangling Shot">
+      <active xPos="1" yPos="1" sheet="skills"/>
+      <inactive xPos="1" yPos="1" sheet="skills"/>
+    </skill>
+    <skill name="Glaive Sweep">
+      <active xPos="1" yPos="1" sheet="skills"/>
+      <inactive xPos="1" yPos="1" sheet="skills"/>
+    </skill>
+    <skill name="Sandstorm">
+      <active xPos="1" yPos="1" sheet="skills"/>
+      <inactive xPos="1" yPos="1" sheet="skills"/>
+    </skill>
+    <skill name="Bramble Wall">
+      <active xPos="1" yPos="1" sheet="skills"/>
+      <inactive xPos="1" yPos="1" sheet="skills"/>
+    </skill>
+    <skill name="Burning Leap">
+      <active xPos="1" yPos="1" sheet="skills"/>
+      <inactive xPos="1" yPos="1" sheet="skills"/>
+    </skill>
+    <skill name="Flaiming Glaive">
+      <active xPos="1" yPos="1" sheet="skills"/>
+      <inactive xPos="1" yPos="1" sheet="skills"/>
+    </skill>
+    <skill name="Dodge Mastery">
+      <active xPos="1" yPos="1" sheet="skills"/>
+      <inactive xPos="1" yPos="1" sheet="skills"/>
+    </skill>
+    <skill name="Poison Burst">
+      <active xPos="1" yPos="1" sheet="skills"/>
+      <inactive xPos="1" yPos="1" sheet="skills"/>
+    </skill>
+    <skill name="Share the Wealth">
+      <active xPos="1" yPos="1" sheet="skills"/>
+      <inactive xPos="1" yPos="1" sheet="skills"/>
+    </skill>
+  </tree>
+  <tree name="Sigil">
+    <skill name="Blade Pact">
+      <active xPos="1" yPos="1" sheet="skills"/>
+      <inactive xPos="1" yPos="1" sheet="skills"/>
+    </skill>
+    <skill name="Shadowshot">
+      <active xPos="1" yPos="1" sheet="skills"/>
+      <inactive xPos="1" yPos="1" sheet="skills"/>
+    </skill>
+    <skill name="Bane Breath">
+      <active xPos="1" yPos="1" sheet="skills"/>
+      <inactive xPos="1" yPos="1" sheet="skills"/>
+    </skill>
+    <skill name="Repulsion Hex">
+      <active xPos="1" yPos="1" sheet="skills"/>
+      <inactive xPos="1" yPos="1" sheet="skills"/>
+    </skill>
+    <skill name="Stone Pact">
+      <active xPos="1" yPos="1" sheet="skills"/>
+      <inactive xPos="1" yPos="1" sheet="skills"/>
+    </skill>
+    <skill name="Shadowmantle">
+      <active xPos="1" yPos="1" sheet="skills"/>
+      <inactive xPos="1" yPos="1" sheet="skills"/>
+    </skill>
+    <skill name="Shadowling Brute">
+      <active xPos="1" yPos="1" sheet="skills"/>
+      <inactive xPos="1" yPos="1" sheet="skills"/>
+    </skill>
+    <skill name="Master of the Elements">
+      <active xPos="1" yPos="1" sheet="skills"/>
+      <inactive xPos="1" yPos="1" sheet="skills"/>
+    </skill>
+    <skill name="Shadowling Ammo">
+      <active xPos="1" yPos="1" sheet="skills"/>
+      <inactive xPos="1" yPos="1" sheet="skills"/>
+    </skill>
+    <skill name="Death Ritual">
+      <active xPos="1" yPos="1" sheet="skills"/>
+      <inactive xPos="1" yPos="1" sheet="skills"/>
+    </skill>
+  </tree>
+</skillset>

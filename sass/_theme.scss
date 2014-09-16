@@ -68,3 +68,16 @@ body {
   background-color: $light-color;
   border-color: $bg-color;
 }
+
+/*****************************/
+/* Class */
+/*****************************/
+
+.class {
+  border-color: $light-color;
+}
+
+.class:hover,
+.class.class-selected {
+  border-color: $accent-color;
+}

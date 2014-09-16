@@ -1,0 +1,128 @@
+<skillset>
+  <tree name="Blitz">
+    <skill name="Flame Hammer">
+      <active xPos="1" yPos="1" sheet="skills"/>
+      <inactive xPos="1" yPos="1" sheet="skills"/>
+    </skill>
+    <skill name="Seismic Slam">
+      <active xPos="1" yPos="1" sheet="skills"/>
+      <inactive xPos="1" yPos="1" sheet="skills"/>
+    </skill>
+    <skill name="Ember Hammer">
+      <active xPos="1" yPos="1" sheet="skills"/>
+      <inactive xPos="1" yPos="1" sheet="skills"/>
+    </skill>
+    <skill name="Onslaught">
+      <active xPos="1" yPos="1" sheet="skills"/>
+      <inactive xPos="1" yPos="1" sheet="skills"/>
+    </skill>
+    <skill name="Ember Reach">
+      <active xPos="1" yPos="1" sheet="skills"/>
+      <inactive xPos="1" yPos="1" sheet="skills"/>
+    </skill>
+    <skill name="Storm Burst">
+      <active xPos="1" yPos="1" sheet="skills"/>
+      <inactive xPos="1" yPos="1" sheet="skills"/>
+    </skill>
+    <skill name="Emberquake">
+      <active xPos="1" yPos="1" sheet="skills"/>
+      <inactive xPos="1" yPos="1" sheet="skills"/>
+    </skill>
+    <skill name="Heavy Lifting">
+      <active xPos="1" yPos="1" sheet="skills"/>
+      <inactive xPos="1" yPos="1" sheet="skills"/>
+    </skill>
+    <skill name="Supercharge">
+      <active xPos="1" yPos="1" sheet="skills"/>
+      <inactive xPos="1" yPos="1" sheet="skills"/>
+    </skill>
+    <skill name="Coup-de-Grace">
+      <active xPos="1" yPos="1" sheet="skills"/>
+      <inactive xPos="1" yPos="1" sheet="skills"/>
+    </skill>
+  </tree>
+  <tree name="Construction">
+    <skill name="Healing Bot">
+      <active xPos="1" yPos="1" sheet="skills"/>
+      <inactive xPos="1" yPos="1" sheet="skills"/>
+    </skill>
+    <skill name="Blast Cannon">
+      <active xPos="1" yPos="1" sheet="skills"/>
+      <inactive xPos="1" yPos="1" sheet="skills"/>
+    </skill>
+    <skill name="Spider Mines">
+      <active xPos="1" yPos="1" sheet="skills"/>
+      <inactive xPos="1" yPos="1" sheet="skills"/>
+    </skill>
+    <skill name="Gun Bot">
+      <active xPos="1" yPos="1" sheet="skills"/>
+      <inactive xPos="1" yPos="1" sheet="skills"/>
+    </skill>
+    <skill name="Shock Grenade">
+      <active xPos="1" yPos="1" sheet="skills"/>
+      <inactive xPos="1" yPos="1" sheet="skills"/>
+    </skill>
+    <skill name="Fusillade">
+      <active xPos="1" yPos="1" sheet="skills"/>
+      <inactive xPos="1" yPos="1" sheet="skills"/>
+    </skill>
+    <skill name="Sledgebot">
+      <active xPos="1" yPos="1" sheet="skills"/>
+      <inactive xPos="1" yPos="1" sheet="skills"/>
+    </skill>
+    <skill name="Bulwark">
+      <active xPos="1" yPos="1" sheet="skills"/>
+      <inactive xPos="1" yPos="1" sheet="skills"/>
+    </skill>
+    <skill name="Fire and Spark">
+      <active xPos="1" yPos="1" sheet="skills"/>
+      <inactive xPos="1" yPos="1" sheet="skills"/>
+    </skill>
+    <skill name="Charge Domination">
+      <active xPos="1" yPos="1" sheet="skills"/>
+      <inactive xPos="1" yPos="1" sheet="skills"/>
+    </skill>
+  </tree>
+  <tree name="Aegis">
+    <skill name="Shield Bash">
+      <active xPos="1" yPos="1" sheet="skills"/>
+      <inactive xPos="1" yPos="1" sheet="skills"/>
+    </skill>
+    <skill name="Forcefield">
+      <active xPos="1" yPos="1" sheet="skills"/>
+      <inactive xPos="1" yPos="1" sheet="skills"/>
+    </skill>
+    <skill name="Overload">
+      <active xPos="1" yPos="1" sheet="skills"/>
+      <inactive xPos="1" yPos="1" sheet="skills"/>
+    </skill>
+    <skill name="Dynamo Field">
+      <active xPos="1" yPos="1" sheet="skills"/>
+      <inactive xPos="1" yPos="1" sheet="skills"/>
+    </skill>
+    <skill name="Tremor">
+      <active xPos="1" yPos="1" sheet="skills"/>
+      <inactive xPos="1" yPos="1" sheet="skills"/>
+    </skill>
+    <skill name="Fire Bash">
+      <active xPos="1" yPos="1" sheet="skills"/>
+      <inactive xPos="1" yPos="1" sheet="skills"/>
+    </skill>
+    <skill name="Immobilization Copter">
+      <active xPos="1" yPos="1" sheet="skills"/>
+      <inactive xPos="1" yPos="1" sheet="skills"/>
+    </skill>
+    <skill name="Sword and Board">
+      <active xPos="1" yPos="1" sheet="skills"/>
+      <inactive xPos="1" yPos="1" sheet="skills"/>
+    </skill>
+    <skill name="Aegis of Fate">
+      <active xPos="1" yPos="1" sheet="skills"/>
+      <inactive xPos="1" yPos="1" sheet="skills"/>
+    </skill>
+    <skill name="Charge Reconstitution">
+      <active xPos="1" yPos="1" sheet="skills"/>
+      <inactive xPos="1" yPos="1" sheet="skills"/>
+    </skill>
+  </tree>
+</skillset>

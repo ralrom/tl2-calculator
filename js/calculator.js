@@ -24,6 +24,7 @@ function abortCheck(){
 
 function initialize(){
   var char = getParameterByName("class") ? getParameterByName("class") : "Outlander";
+  document.getElementById("portrait-"+char.toLowerCase()).className += " class-selected";
   populateSkills(char);
   addButtonListeners();
 }
@@ -182,7 +183,8 @@ function shareLink(){
 
   //Generate link
   var link = url;
-  link += "?tree0="+serializeTree(0);
+  link += "?class="+selectedChar;
+  link += "&tree0="+serializeTree(0);
   link += "&tree1="+serializeTree(1);
   link += "&tree2="+serializeTree(2);
   elemLink.value = link;

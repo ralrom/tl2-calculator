@@ -1,0 +1,128 @@
+<skillset>
+  <tree name="Hunter">
+    <skill name="Eviscerate">
+      <active xPos="1" yPos="1" sheet="skills"/>
+      <inactive xPos="1" yPos="1" sheet="skills"/>
+    </skill>
+    <skill name="Howl">
+      <active xPos="1" yPos="1" sheet="skills"/>
+      <inactive xPos="1" yPos="1" sheet="skills"/>
+    </skill>
+    <skill name="Raze">
+      <active xPos="1" yPos="1" sheet="skills"/>
+      <inactive xPos="1" yPos="1" sheet="skills"/>
+    </skill>
+    <skill name="Wolfstrike">
+      <active xPos="1" yPos="1" sheet="skills"/>
+      <inactive xPos="1" yPos="1" sheet="skills"/>
+    </skill>
+    <skill name="Battle Rage">
+      <active xPos="1" yPos="1" sheet="skills"/>
+      <inactive xPos="1" yPos="1" sheet="skills"/>
+    </skill>
+    <skill name="Rupture">
+      <active xPos="1" yPos="1" sheet="skills"/>
+      <inactive xPos="1" yPos="1" sheet="skills"/>
+    </skill>
+    <skill name="Ravage">
+      <active xPos="1" yPos="1" sheet="skills"/>
+      <inactive xPos="1" yPos="1" sheet="skills"/>
+    </skill>
+    <skill name="Blood Hunger">
+      <active xPos="1" yPos="1" sheet="skills"/>
+      <inactive xPos="1" yPos="1" sheet="skills"/>
+    </skill>
+    <skill name="Executioner">
+      <active xPos="1" yPos="1" sheet="skills"/>
+      <inactive xPos="1" yPos="1" sheet="skills"/>
+    </skill>
+    <skill name="Rampage">
+      <active xPos="1" yPos="1" sheet="skills"/>
+      <inactive xPos="1" yPos="1" sheet="skills"/>
+    </skill>
+  </tree>
+  <tree name="Tundra">
+    <skill name="Frost Breath">
+      <active xPos="1" yPos="1" sheet="skills"/>
+      <inactive xPos="1" yPos="1" sheet="skills"/>
+    </skill>
+    <skill name="Stormclaw">
+      <active xPos="1" yPos="1" sheet="skills"/>
+      <inactive xPos="1" yPos="1" sheet="skills"/>
+    </skill>
+    <skill name="Storm Hatchet">
+      <active xPos="1" yPos="1" sheet="skills"/>
+      <inactive xPos="1" yPos="1" sheet="skills"/>
+    </skill>
+    <skill name="Northern Rage">
+      <active xPos="1" yPos="1" sheet="skills"/>
+      <inactive xPos="1" yPos="1" sheet="skills"/>
+    </skill>
+    <skill name="Ice Shield">
+      <active xPos="1" yPos="1" sheet="skills"/>
+      <inactive xPos="1" yPos="1" sheet="skills"/>
+    </skill>
+    <skill name="Permafrost">
+      <active xPos="1" yPos="1" sheet="skills"/>
+      <inactive xPos="1" yPos="1" sheet="skills"/>
+    </skill>
+    <skill name="Glacial Shatter">
+      <active xPos="1" yPos="1" sheet="skills"/>
+      <inactive xPos="1" yPos="1" sheet="skills"/>
+    </skill>
+    <skill name="Cold Steel Mastery">
+      <active xPos="1" yPos="1" sheet="skills"/>
+      <inactive xPos="1" yPos="1" sheet="skills"/>
+    </skill>
+    <skill name="Shatter Storm">
+      <active xPos="1" yPos="1" sheet="skills"/>
+      <inactive xPos="1" yPos="1" sheet="skills"/>
+    </skill>
+    <skill name="Rage Retaliation">
+      <active xPos="1" yPos="1" sheet="skills"/>
+      <inactive xPos="1" yPos="1" sheet="skills"/>
+    </skill>
+  </tree>
+  <tree name="Shadow">
+    <skill name="Shadow Burst">
+      <active xPos="1" yPos="1" sheet="skills"/>
+      <inactive xPos="1" yPos="1" sheet="skills"/>
+    </skill>
+    <skill name="Wolf Shade">
+      <active xPos="1" yPos="1" sheet="skills"/>
+      <inactive xPos="1" yPos="1" sheet="skills"/>
+    </skill>
+    <skill name="Shadowbind">
+      <active xPos="1" yPos="1" sheet="skills"/>
+      <inactive xPos="1" yPos="1" sheet="skills"/>
+    </skill>
+    <skill name="Savage Rush">
+      <active xPos="1" yPos="1" sheet="skills"/>
+      <inactive xPos="1" yPos="1" sheet="skills"/>
+    </skill>
+    <skill name="Chain Snare">
+      <active xPos="1" yPos="1" sheet="skills"/>
+      <inactive xPos="1" yPos="1" sheet="skills"/>
+    </skill>
+    <skill name="Battle Standard">
+      <active xPos="1" yPos="1" sheet="skills"/>
+      <inactive xPos="1" yPos="1" sheet="skills"/>
+    </skill>
+    <skill name="Wolfpack">
+      <active xPos="1" yPos="1" sheet="skills"/>
+      <inactive xPos="1" yPos="1" sheet="skills"/>
+    </skill>
+    <skill name="Frenzy Mastery">
+      <active xPos="1" yPos="1" sheet="skills"/>
+      <inactive xPos="1" yPos="1" sheet="skills"/>
+    </skill>
+    <skill name="Shred Armor">
+      <active xPos="1" yPos="1" sheet="skills"/>
+      <inactive xPos="1" yPos="1" sheet="skills"/>
+    </skill>
+    <skill name="Red Wolf">
+      <active xPos="1" yPos="1" sheet="skills"/>
+      <inactive xPos="1" yPos="1" sheet="skills"/>
+    </skill>
+  </tree>
+</skillset>
