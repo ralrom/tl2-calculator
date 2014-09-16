@@ -282,7 +282,7 @@ input[type=text] {
 /* line 145, ../sass/modules/_skills.scss */
 .skill-tier2,
 .skill-tier3 {
-  border-left: solid 2px;
+  border-left: solid 1px;
 }
 
 /* line 2, ../sass/modules/_linker.scss */
@@ -360,6 +360,7 @@ input[type=text] {
 .points-bar {
   float: left;
   height: 100%;
+  transition: width 0.2s ease;
 }
 
 /*****************************/
