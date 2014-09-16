@@ -1,128 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <skillset>
   <tree name="Inferno">
     <skill name="Magma Spear">
-      <active xPos="1" yPos="1" sheet="skills"/>
-      <inactive xPos="1" yPos="1" sheet="skills"/>
+      <active xPos="1" yPos="1"/>
+      <inactive xPos="1" yPos="1"/>
     </skill>
     <skill name="Magma Mace">
-      <active xPos="1" yPos="1" sheet="skills"/>
-      <inactive xPos="1" yPos="1" sheet="skills"/>
+      <active xPos="1" yPos="1"/>
+      <inactive xPos="1" yPos="1"/>
     </skill>
     <skill name="Firebombs">
-      <active xPos="1" yPos="1" sheet="skills"/>
-      <inactive xPos="1" yPos="1" sheet="skills"/>
+      <active xPos="1" yPos="1"/>
+      <inactive xPos="1" yPos="1"/>
     </skill>
     <skill name="Blazing Pillar">
-      <active xPos="1" yPos="1" sheet="skills"/>
-      <inactive xPos="1" yPos="1" sheet="skills"/>
+      <active xPos="1" yPos="1"/>
+      <inactive xPos="1" yPos="1"/>
     </skill>
     <skill name="Infernal Collapse">
-      <active xPos="1" yPos="1" sheet="skills"/>
-      <inactive xPos="1" yPos="1" sheet="skills"/>
+      <active xPos="1" yPos="1"/>
+      <inactive xPos="1" yPos="1"/>
     </skill>
     <skill name="Immolation Aura">
-      <active xPos="1" yPos="1" sheet="skills"/>
-      <inactive xPos="1" yPos="1" sheet="skills"/>
+      <active xPos="1" yPos="1"/>
+      <inactive xPos="1" yPos="1"/>
     </skill>
     <skill name="Firestorm">
-      <active xPos="1" yPos="1" sheet="skills"/>
-      <inactive xPos="1" yPos="1" sheet="skills"/>
+      <active xPos="1" yPos="1"/>
+      <inactive xPos="1" yPos="1"/>
     </skill>
     <skill name="Charge Mastery">
-      <active xPos="1" yPos="1" sheet="skills"/>
-      <inactive xPos="1" yPos="1" sheet="skills"/>
+      <active xPos="1" yPos="1"/>
+      <inactive xPos="1" yPos="1"/>
     </skill>
     <skill name="Elemental Attunement">
-      <active xPos="1" yPos="1" sheet="skills"/>
-      <inactive xPos="1" yPos="1" sheet="skills"/>
+      <active xPos="1" yPos="1"/>
+      <inactive xPos="1" yPos="1"/>
     </skill>
     <skill name="Fire Brand">
-      <active xPos="1" yPos="1" sheet="skills"/>
-      <inactive xPos="1" yPos="1" sheet="skills"/>
+      <active xPos="1" yPos="1"/>
+      <inactive xPos="1" yPos="1"/>
     </skill>
   </tree>
   <tree name="Frost">
     <skill name="Icy Blast">
-      <active xPos="1" yPos="1" sheet="skills"/>
-      <inactive xPos="1" yPos="1" sheet="skills"/>
+      <active xPos="1" yPos="1"/>
+      <inactive xPos="1" yPos="1"/>
     </skill>
     <skill name="Hailstorm">
-      <active xPos="1" yPos="1" sheet="skills"/>
-      <inactive xPos="1" yPos="1" sheet="skills"/>
+      <active xPos="1" yPos="1"/>
+      <inactive xPos="1" yPos="1"/>
     </skill>
     <skill name="Frost Phase">
-      <active xPos="1" yPos="1" sheet="skills"/>
-      <inactive xPos="1" yPos="1" sheet="skills"/>
+      <active xPos="1" yPos="1"/>
+      <inactive xPos="1" yPos="1"/>
     </skill>
     <skill name="Elemental Boom">
-      <active xPos="1" yPos="1" sheet="skills"/>
-      <inactive xPos="1" yPos="1" sheet="skills"/>
+      <active xPos="1" yPos="1"/>
+      <inactive xPos="1" yPos="1"/>
     </skill>
     <skill name="Frost Wave">
-      <active xPos="1" yPos="1" sheet="skills"/>
-      <inactive xPos="1" yPos="1" sheet="skills"/>
+      <active xPos="1" yPos="1"/>
+      <inactive xPos="1" yPos="1"/>
     </skill>
     <skill name="Ice Prison">
-      <active xPos="1" yPos="1" sheet="skills"/>
-      <inactive xPos="1" yPos="1" sheet="skills"/>
+      <active xPos="1" yPos="1"/>
+      <inactive xPos="1" yPos="1"/>
     </skill>
     <skill name="Astral Ally">
-      <active xPos="1" yPos="1" sheet="skills"/>
-      <inactive xPos="1" yPos="1" sheet="skills"/>
+      <active xPos="1" yPos="1"/>
+      <inactive xPos="1" yPos="1"/>
     </skill>
     <skill name="Staff Mastery">
-      <active xPos="1" yPos="1" sheet="skills"/>
-      <inactive xPos="1" yPos="1" sheet="skills"/>
+      <active xPos="1" yPos="1"/>
+      <inactive xPos="1" yPos="1"/>
     </skill>
     <skill name="Frozen Fate">
-      <active xPos="1" yPos="1" sheet="skills"/>
-      <inactive xPos="1" yPos="1" sheet="skills"/>
+      <active xPos="1" yPos="1"/>
+      <inactive xPos="1" yPos="1"/>
     </skill>
     <skill name="Ice Brand">
-      <active xPos="1" yPos="1" sheet="skills"/>
-      <inactive xPos="1" yPos="1" sheet="skills"/>
+      <active xPos="1" yPos="1"/>
+      <inactive xPos="1" yPos="1"/>
     </skill>
   </tree>
   <tree name="Storm">
     <skill name="Prismatic Bolt">
-      <active xPos="1" yPos="1" sheet="skills"/>
-      <inactive xPos="1" yPos="1" sheet="skills"/>
+      <active xPos="1" yPos="1"/>
+      <inactive xPos="1" yPos="1"/>
     </skill>
     <skill name="Shocking Burst">
-      <active xPos="1" yPos="1" sheet="skills"/>
-      <inactive xPos="1" yPos="1" sheet="skills"/>
+      <active xPos="1" yPos="1"/>
+      <inactive xPos="1" yPos="1"/>
     </skill>
     <skill name="Thunder Locus">
-      <active xPos="1" yPos="1" sheet="skills"/>
-      <inactive xPos="1" yPos="1" sheet="skills"/>
+      <active xPos="1" yPos="1"/>
+      <inactive xPos="1" yPos="1"/>
     </skill>
     <skill name="Arc Beam">
-      <active xPos="1" yPos="1" sheet="skills"/>
-      <inactive xPos="1" yPos="1" sheet="skills"/>
+      <active xPos="1" yPos="1"/>
+      <inactive xPos="1" yPos="1"/>
     </skill>
     <skill name="Death's Bounty">
-      <active xPos="1" yPos="1" sheet="skills"/>
-      <inactive xPos="1" yPos="1" sheet="skills"/>
+      <active xPos="1" yPos="1"/>
+      <inactive xPos="1" yPos="1"/>
     </skill>
     <skill name="Shockbolts">
-      <active xPos="1" yPos="1" sheet="skills"/>
-      <inactive xPos="1" yPos="1" sheet="skills"/>
+      <active xPos="1" yPos="1"/>
+      <inactive xPos="1" yPos="1"/>
     </skill>
     <skill name="Shocking Orb">
-      <active xPos="1" yPos="1" sheet="skills"/>
-      <inactive xPos="1" yPos="1" sheet="skills"/>
+      <active xPos="1" yPos="1"/>
+      <inactive xPos="1" yPos="1"/>
     </skill>
     <skill name="Prismatic Rift">
-      <active xPos="1" yPos="1" sheet="skills"/>
-      <inactive xPos="1" yPos="1" sheet="skills"/>
+      <active xPos="1" yPos="1"/>
+      <inactive xPos="1" yPos="1"/>
     </skill>
     <skill name="Wand Chaos">
-      <active xPos="1" yPos="1" sheet="skills"/>
-      <inactive xPos="1" yPos="1" sheet="skills"/>
+      <active xPos="1" yPos="1"/>
+      <inactive xPos="1" yPos="1"/>
     </skill>
     <skill name="Lightning Brand">
-      <active xPos="1" yPos="1" sheet="skills"/>
-      <inactive xPos="1" yPos="1" sheet="skills"/>
+      <active xPos="1" yPos="1"/>
+      <inactive xPos="1" yPos="1"/>
     </skill>
   </tree>
 </skillset>

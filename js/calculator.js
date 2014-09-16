@@ -1,222 +1,267 @@
-var dataChecker = setInterval(checkData, 250);
-var aborter = setInterval(abortCheck, 5000);
-var selectedChar = "";
-
-//Make sure data has loaded before beginning
-function checkData(){
-  console.log("Waiting for data...");
-  //Check if Characters are defined
-  if(typeof Characters !== "undefined"){
-    console.log("Data loaded");
-    clearInterval(dataChecker);
-    initialize();
-  }
-}
-
-//Create timeout if data wasn't loaded after a while
-function abortCheck(){
-  if(typeof Characters === "undefined"){
-    console.log("Data retrieval timed out. Skill calculator aborted.")
-    clearInterval(dataChecker);
-    clearInterval(abortCheck);
-  }
-}
-
-function initialize(){
-  var char = getParameterByName("class") ? getParameterByName("class") : "Outlander";
-  document.getElementById("portrait-"+char.toLowerCase()).className += " class-selected";
-  populateSkills(char);
-  addButtonListeners();
-}
-
-//Add listeners to skill buttons
-function addButtonListeners(){
-  console.log("Adding button listeners")
-
-  var tabs = document.getElementsByClassName("tab");
-  for(var i = 0; i < tabs.length; i++){
-    tabs[i].addEventListener("click", changeTree);
-  }
-
-  //Get all skill buttons
-  var buttons = document.getElementsByClassName("skill-button");
-
-  //Loop through them and add listener
-  for(i = 0; i < buttons.length; i++){
-    buttons[i].addEventListener("click", levelSkill);
-  }
-}
-
-//Populate skill tree with Character data
-function populateSkills(char){
-  console.log("Populating " + char + " skills");
-
-  //Set selected character
-  selectedChar = char;
-  var charData = Characters[char];
-
-  //Loop through all skills
-  for(var i = 0; i < 3; i++){
-    //Set tree title in tab;
-    var treeTitle = document.getElementById("tree-"+i+"-title");
-    treeTitle.innerHTML = charData["tree"+i].name;
-
-    //Get skill levels from query string
-    var skillLevels = parseTree(i);
-
-    for(var j = 0; j < 10; j++){
-      //Get apropriate skill-box
-      var elem = document.getElementById("tree-"+i+"-skill-"+j);
-
-      //Set skill levels
-      setSkill(elem, skillLevels[j]);
+/*
+Torchlight II Skill Builder
+Browser Support: IE9+
+*/
+var Calculator = {
+  //Set default character to outlander
+  selectedCharacter: "outlander",
+  //Current character skillset
+  skillsetData: "",
+  //Loader bar
+  loader: {
+    elem: "",
+    setProgress: function(percent) {
+      this.elem.style.width = percent + "%";
+      console.log("Loading: " + percent + "%");
+    },
+    show: function() {
+      this.elem.style.opacity = 1;
+      console.log("Loader shown");
+    },
+    hide: function() {
+      this.elem.style.opacity = 0;
+      console.log("Loader hidden");
     }
   }
 }
 
-//Takes care of individual skill display
-function setSkill(elem, level){
-  //Get desired skill & tree
-  var treeNo = elem.getAttribute("data-tree");
-  var skillNo = elem.getAttribute("data-skill");
+//Begin on DOMContent load
+window.addEventListener("DOMContentLoaded", initialize);
 
-  //Pull skill data
-  var skill = Characters[selectedChar]["tree"+treeNo]["skill"+skillNo];
+//Returns URL parameter,
+//Taken from: https://developer.mozilla.org/en-US/docs/Web/API/URLUtils.search
+function getURLParameter(parameter) {
+  var value = decodeURI(window.location.search.replace(new RegExp("^(?:.*[&\\?]" + encodeURI(parameter).replace(/[\.\+\*]/g, "\\$&") + "(?:\\=([^&]*))?)?.*$", "i"), "$1"));
+  console.log({
+    "parameter": parameter,
+    "value": value
+  });
+  //Return null if empty result;
+  return value ? value : null;
+}
 
-  //Set name
-  console.log("Updating "+skill.name);
-  var elemTitle = elem.getElementsByClassName("skill-title")[0];
-  elemTitle.innerHTML = skill.name;
+//Initialize Skill Calculator
+function initialize() {
+  //Set selectedCharacter if provided, if not keep default
+  Calculator.selectedCharacter = getURLParameter("class") || Calculator.selectedCharacter;
+  //Show selectedCharacter to user
+  document.getElementById("portrait-" + Calculator.selectedCharacter).className += " class-selected";
+  //Set loader element
+  Calculator.loader.elem = document.getElementById("loader");
+  console.log("Loading skills for: " + Calculator.selectedCharacter);
+  //Begin AJAX load of skills
+  loadSkillset(Calculator.selectedCharacter);
+}
 
-  //Get skill level bar
-  var elemLevel = elem.getElementsByClassName("skill-level-bar")[0];
+//Load skillset of chosen character
+function loadSkillset(character) {
+  var skillLoader = new XMLHttpRequest();
+  skillLoader.addEventListener("progress", transferProgress, false);
+  skillLoader.addEventListener("load", transferComplete, false);
+  skillLoader.addEventListener("error", transferFailed, false);
+  skillLoader.addEventListener("abort", transferCanceled, false);
+  skillLoader.open("GET", "xml/" + character + ".xml", true);
+  skillLoader.send();
+  //Show loader bar (initial width = 0)
+  Calculator.loader.show();
+}
 
-  //Set skill level
-  elemLevel.setAttribute("data-level", level);
-  elemLevel.style.width = 100*level/15+"%";
+function transferProgress(event) {
+  if (event.lengthComputable) { // Set width if size is computable
+    Calculator.loader.setProgress(100 * event.loaded / event.total);
+  }
+}
 
-  //Update icon
-  var elemIcon = elem.getElementsByClassName("skill-icon")[0];
-  elemIcon.setAttribute("title", skill.name);
-  elemIcon.setAttribute("alt", skill.name);
+function transferFailed(event) {
+  console.error("Skill transfer failed");
+}
 
-  //Change to colored version if level > 0
-  var active = level > 0 ? "active" : "inactive";
-  elemIcon.style.backgroundImage = "url('img/"+skill[active].sheet+".png')";
-  elemIcon.style.backgroundPosition = "-"+skill[active].xPos+"px -"+skill[active].yPos+"px";
+function transferComplete(event) {
+  Calculator.loader.hide();
+  if (this.status === 200) { // Status is OK
+    if (this.responseXML) { // ResponseXML is not null/undefined
+      Calculator.skillsetData = this.responseXML;
+      //Update UI with data
+      updateUI();
+    } else { // ResponseXML missing
+      console.error("Skill ResponseXML was empty");
+    }
+  } else { // Status is not OK
+    console.error("Skill transfer completed, but response was not OK");
+  }
+}
 
-  //Update Share Link
+function transferCanceled(event) {
+  console.error("Skill transfer was cancelled");
+}
+
+//Sanitize given point
+function checkPoint(point){
+  var p = Number(point);
+  if(p){
+    if (p > 15) {
+      point = 15;
+    } else if (p < 0) {
+      point = 0;
+    }
+  } else {
+    point = 0;
+  }
+  return point;
+}
+
+//Get Points from URL Parameter and generate an array from it;
+function getURLPoints(){
+  //Get Points from GET Parameter
+  var points = getURLParameter("points") ? getURLParameter("points").split(",", 30) : [];
+  //Get length (for efficiency)
+  var length = points.length;
+  //Check if correct length
+  if (length == 30) {
+    for (var i = 0; i < length; i++) {
+      points[i] = checkPoint(points[i]);
+    }
+  } else if(length > 0) {
+    for(var i = 0; i < 30; i++){
+      points[i] = checkPoint(points[i]);
+    }
+  } else {
+    points = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+  }
+  return points;
+}
+
+//Fill skills (run once)
+function updateUI() {
+  //Get Tab elements
+  var elemTabs = document.getElementsByClassName("tab");
+  //Get Skill-Tree elements
+  var elemTrees = document.getElementsByClassName("skill-tree");
+  //Get Skill-Tree data (from XML)
+  var dataTrees = Calculator.skillsetData.getElementsByTagName("tree");
+  //Get Skill-Tree levels (from GET parameters)
+  var dataPoints = getURLPoints();
+  //Loop through Tabs, Skill-Trees, Skill-Boxes & Skill-Buttons
+  for (var i = 0, m = dataTrees.length; i < m; i++) {
+    //Set Tab title
+    elemTabs[i].innerHTML = dataTrees[i].getAttribute("name");
+    console.log("Tree: " + dataTrees[i].getAttribute("name"));
+    //Set Tab Listener
+    elemTabs[i].addEventListener("click", switchTab);
+    //Get Skill-Box elements in current Skill-Tree
+    var elemSkills = elemTrees[i].getElementsByClassName("skill-box");
+    //Get Skill-Box data in current Skill-Tree
+    var dataSkills = dataTrees[i].getElementsByTagName("skill");
+    for (var j = 0, n = dataSkills.length; j < n; j++) {
+      //Set Skill-Box title
+      elemSkills[j].getElementsByClassName("skill-title")[0].innerHTML = dataSkills[j].getAttribute("name");
+      console.log("Skill: " + dataSkills[j].getAttribute("name"));
+      //Set alt & title attributes
+      elemSkills[j].getElementsByClassName("skill-icon")[0].setAttribute("title", dataSkills[j].getAttribute("name"));
+      elemSkills[j].getElementsByClassName("skill-icon")[0].setAttribute("alt", dataSkills[j].getAttribute("name"));
+      //Update Skill level
+      updateSkill(elemSkills[j], dataSkills[j], dataPoints[10 * i + j]);
+      //Add Skill-Buttons listeners
+      var elemButtons = elemSkills[j].getElementsByClassName("skill-button");
+      for (var k = 0, o = elemButtons.length; k < o; k++) {
+        elemButtons[k].addEventListener("click", levelSkill);
+      }
+    }
+  }
+}
+
+//Visually update skill when it is leveled up
+function updateSkill(element, data, level) {
+  //Determine if skill is learned or not
+  var activity = level > 0 ? "active" : "inactive";
+  var activityNode = data.getElementsByTagName(activity)[0];
+  //Change skill-icon accordingly
+  element.getElementsByClassName("skill-icon")[0].style.backgroundPosition = activityNode.getAttribute("xPos") + "px " + activityNode.getAttribute("yPos") + "px";
+  //Update skill-level-bar display & data;
+  var elemLevelBar = element.getElementsByClassName("skill-level-bar")[0];
+  elemLevelBar.setAttribute("data-level", level);
+  elemLevelBar.style.width = 100 * level / 15 + "%";
+  //Update skill-level-number text
+  var elemLevelNumber = element.getElementsByClassName("skill-level-number")[0];
+  elemLevelNumber.innerHTML = level;
+  //Generate new share link
   shareLink();
-
-  //Get total points spent
-  skillsSpent();
 }
 
-function getSum(arr){
-  var sum = 0;
-  for(var i = 0; i < arr.length; i++){
-    sum += parseInt(arr[i], 10);
-  }
-  return sum;
-}
-
-function skillsSpent(){
-  var spent = getSum(serializeTree(0))+getSum(serializeTree(1))+getSum(serializeTree(2));
-  var elemSpent = document.getElementById("points-spent");
-  elemSpent.innerHTML = spent+"/132";
-}
-
-//Takes care of skill level
-function levelSkill(evt){
-  //Get skill-box corresponding to pressed button
-  var elem = evt.target.parentNode.parentNode;
-  var elemLevel = elem.getElementsByClassName("skill-level-bar")[0];
-
-  //Get current skill level & cast as Number
-  var level = Number(elemLevel.getAttribute("data-level"));
-
-  if(evt.target.getAttribute("data-change") == "plus"){
-    if(level < 15){
-      setSkill(elem, level+1);
+//Change skill level
+function levelSkill(event) {
+  //Get skill level change (up, down, or clear)
+  var change = event.target.getAttribute("data-change");
+  //Get Skill-Box corresponding to Skill-Button pressed
+  var elemSkill = event.target.parentNode.parentNode.parentNode;
+  //Load Skill-Tree for given Skill-Box (from XML)
+  var tree = elemSkill.getAttribute("data-tree");
+  var skill = elemSkill.getAttribute("data-skill");
+  var dataSkill = Calculator.skillsetData.getElementsByTagName("tree")[tree].getElementsByTagName("skill")[0];
+  //Get current skill level
+  var dataLevel = elemSkill.getElementsByClassName("skill-level-bar")[0].getAttribute("data-level");
+  //Manage change
+  if(change == "plus"){
+    if (dataLevel < 15) {
+      updateSkill(elemSkill, dataSkill, Number(dataLevel) + 1);
     }
-  } else if(evt.target.getAttribute("data-change") == "minus"){
-    if(level > 0){
-      setSkill(elem, level-1);
+  } else if (change == "minus"){
+    if (dataLevel > 0) {
+      updateSkill(elemSkill, dataSkill, Number(dataLevel) - 1);
+    }
+  } else if(change == "clear"){
+    updateSkill(elemSkill, dataSkill, 0);
+  }
+}
+
+//Returns a 2D array containing all Skill points distribution
+function getPointDistribution() {
+  //Get all Skill-Tree elments
+  var elemTrees = document.getElementsByClassName("skill-tree");
+  //Variable to hold all Skill-Box level data
+  var points = [];
+  //Loop through all Skill-Boxes to fill dataTrees
+  for (var i = 0, m = elemTrees.length; i < m; i++) {
+    points[i] = [];
+    var elemSkills = elemTrees[i].getElementsByClassName("skill-box");
+    for (var j = 0, n = elemSkills.length; j < n; j++) {
+      //Get current skill level
+      points[i][j] = elemSkills[j].getElementsByClassName("skill-level-bar")[0].getAttribute("data-level");
     }
   }
+  return points;
 }
 
-function changeTree(evt){
-  //Get all tab elements
-  var tabs = document.getElementsByClassName("tab");
-
-  //Get requested tree number
-  var tab = evt.target.getAttribute("data-tree");
-
-  //Get request tree div
-  var skillTree = document.getElementById("tree-"+tab);
-
-  //Hide all tress
-  var trees = document.getElementsByClassName("skill-tree");
-  for(var i = 0; i < trees.length; i++){
-    trees[i].className = "skill-tree";
-  }
-
-  //Show current tree
-  skillTree.className ="skill-tree current-tree";
-
-  //Set all tabs back to default
-  for(i = 0; i < tabs.length; i++){
-    tabs[i].className = "tab";
-  }
-
-  //Set current tab
-  evt.target.className= "tab tab-current";
-}
-
-function shareLink(){
-  //Get Link element
+//Create & Display a share link so build can be shared
+function shareLink() {
+  //Start Link as current page without query string
+  var link = [location.protocol, '//', location.host, location.pathname].join('');
+  //Get Link input element
   var elemLink = document.getElementById("share-link");
-
-  //Get page URL without query string
-  var url = [location.protocol, '//', location.host, location.pathname].join('');
-
-  //Generate link
-  var link = url;
-  link += "?class="+selectedChar;
-  link += "&tree0="+serializeTree(0);
-  link += "&tree1="+serializeTree(1);
-  link += "&tree2="+serializeTree(2);
+  //Add current character to Link
+  link += "?class=" + Calculator.selectedCharacter;
+  //Add points to Link
+  var dataPoints = getPointDistribution();
+  link += "&points=" + dataPoints.toString();
+  //Display Link in Link input element
   elemLink.value = link;
 }
 
-
-function parseTree(tree){
-  var param = getParameterByName("tree"+tree);
-  if(param == null){
-    return [0,0,0,0,0,0,0,0,0,0];
-  } else {
-    return param.split(",");
+//Show current tab view and hide other ones
+function switchTab(event) {
+  //Get Skill-Tree elements
+  var elemTrees = document.getElementsByClassName("skill-tree");
+  //Get Tab elements
+  var elemTabs = document.getElementsByClassName("tab");
+  //Hide all Skill-Trees & change all tabs to unselected
+  for (var i = 0, m = elemTrees.length; i < m; i++) {
+    elemTrees[i].className = "skill-tree";
+    elemTabs[i].className = "tab";
   }
-}
-
-
-function serializeTree(tree){
-  //Get all skill-boxes in given tree
-  var elemTree = document.getElementById("tree-"+tree).getElementsByClassName("skill-box");
-  var treeSerialized = [];
-
-  //Get data-level attribute from all skill-boxes in given tree
-  for(var i = 0; i < elemTree.length; i++){
-    var level = elemTree[i].getElementsByClassName("skill-level-bar")[0].getAttribute("data-level");
-    treeSerialized[i] = level;
-  }
-
-  //Return data
-  return treeSerialized;
-}
-
-function getParameterByName(name) {
-  var match = RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
-  return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
+  //Get requested Skill-Tree
+  var reqTree = event.target.getAttribute("data-tree");
+  //Display requested Skill-Tree
+  document.getElementById("tree-" + reqTree).className = "skill-tree current-tree";
+  //Select current tab
+  document.getElementById("tree-" + reqTree + "-title").className = "tab current-tab";
 }

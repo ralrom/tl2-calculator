@@ -5,8 +5,7 @@
 $accent-color: #F66;
 $dark-color: #333;
 $light-color: #FFF;
-$subtle-color: #C8C8C8;
-$bg-color: #eae7ec;
+$bg-color: #eae9ea;
 
 body {
   background-color: $bg-color;
@@ -22,18 +21,26 @@ body {
 .skill-icon {
   background-color: $dark-color;
 }
-.skill-button,
-.skill-level-bar {
-  background-color: $accent-color;
-  color: #FFF;
+
+.skill-button{
+  background-color: $bg-color;
 }
 
+.skill-level-bar {
+  background-color: $accent-color;
+  color: $light-color;
+}
 .skill-button:hover {
   background-color: $dark-color;
+  color: $light-color;
 }
 
 .skill-level-box {
-  background-color: $subtle-color;
+  background-color: shade($bg-color, 35%);
+}
+
+.skill-level-number {
+  color: $light-color;
 }
 .skill-tier2,
 .skill-tier3 {
@@ -53,10 +60,10 @@ body {
   background-color: $dark-color;
 }
 
-.tab.tab-current {
+.tab.current-tab {
   color: $dark-color;
 }
-.tab.tab-current::before {
+.tab.current-tab::before {
   background-color: $light-color;
 }
 
@@ -80,4 +87,12 @@ body {
 .class:hover,
 .class.class-selected {
   border-color: $accent-color;
+}
+
+/*****************************/
+/* Loader */
+/*****************************/
+
+#loader {
+  background-color: $accent-color;
 }

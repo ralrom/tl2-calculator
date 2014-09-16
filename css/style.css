@@ -101,7 +101,7 @@ input[type=text] {
 }
 
 /* line 52, ../sass/modules/_tabs.scss */
-.tab.tab-current::before {
+.tab.current-tab::before {
   box-shadow: none;
 }
 
@@ -170,81 +170,114 @@ input[type=text] {
   vertical-align: middle;
   width: 66px;
   height: 66px;
+  background-image: url("../img/skills.png");
+  background-repeat: no-repeat;
 }
 
-/* line 57, ../sass/modules/_skills.scss */
+/* line 60, ../sass/modules/_skills.scss */
+.skill-buttons {
+  position: absolute;
+  left: 70px;
+  right: 0;
+  bottom: 0;
+  height: 31px;
+}
+
+/* line 68, ../sass/modules/_skills.scss */
 .skill-button {
   position: absolute;
-  right: 0;
+  bottom: 0;
   margin: 0;
-  width: 40px;
-  height: 33px;
+  width: 33.333%;
+  height: 100%;
   border: none;
   outline: none;
-  font-size: 1.2em;
+  font-size: 1.1em;
   display: inline-block;
   transition: background-color 0.2s ease;
   cursor: pointer;
 }
 
-/* line 71, ../sass/modules/_skills.scss */
+/* line 82, ../sass/modules/_skills.scss */
 .skill-plus {
-  top: 0;
+  left: 0;
 }
 
-/* line 74, ../sass/modules/_skills.scss */
+/* line 86, ../sass/modules/_skills.scss */
 .skill-minus {
-  bottom: 0;
-}
-
-/* line 79, ../sass/modules/_skills.scss */
-.skill-level-box,
-.skill-level-bar {
-  height: 16px;
-}
-
-/* line 83, ../sass/modules/_skills.scss */
-.skill-level-box {
-  width: 100%;
-  position: relative;
-}
-
-/* line 88, ../sass/modules/_skills.scss */
-.skill-level-bar {
-  width: 0%;
-  transition: width 0.1s ease;
+  left: 33.333%;
+  border-style: none dotted;
+  border-width: 1px;
+  border-color: rgba(0, 0, 0, 0.15);
 }
 
 /* line 93, ../sass/modules/_skills.scss */
-.skill-tier {
-  height: 100%;
-  width: 33.333%;
-  position: absolute;
-  bottom: 0;
+.skill-clear {
+  left: 66.666%;
 }
 
-/* line 100, ../sass/modules/_skills.scss */
+/* line 98, ../sass/modules/_skills.scss */
+.skill-level-box,
+.skill-level-bar {
+  height: 31px;
+}
+
+/* line 102, ../sass/modules/_skills.scss */
+.skill-level-box {
+  position: absolute;
+  left: 70px;
+  right: 0;
+  top: 0;
+}
+
+/* line 109, ../sass/modules/_skills.scss */
+.skill-level-bar {
+  width: 0%;
+  transition: width 0.3s ease;
+}
+
+/* line 114, ../sass/modules/_skills.scss */
+.skill-level-number {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  font-size: 1.25em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-shadow: 0 1px 1px #000;
+}
+
+/* line 125, ../sass/modules/_skills.scss */
+.skill-tier {
+  height: 33.333%;
+  width: 33.333%;
+  position: absolute;
+  top: 0;
+}
+
+/* line 132, ../sass/modules/_skills.scss */
 .skill-tier1 {
   left: 0;
 }
 
-/* line 104, ../sass/modules/_skills.scss */
+/* line 136, ../sass/modules/_skills.scss */
 .skill-tier2 {
   left: 33.333%;
 }
 
-/* line 108, ../sass/modules/_skills.scss */
+/* line 140, ../sass/modules/_skills.scss */
 .skill-tier3 {
   left: 66.666%;
 }
 
-/* line 113, ../sass/modules/_skills.scss */
+/* line 145, ../sass/modules/_skills.scss */
 .skill-tier2,
 .skill-tier3 {
-  border-left: solid 1px;
+  border-left: solid 2px;
 }
 
-/* line 117, ../sass/modules/_skills.scss */
+/* line 149, ../sass/modules/_skills.scss */
 .points-spent {
   text-align: center;
   font-size: 1.2em;
@@ -279,7 +312,7 @@ input[type=text] {
 
 /* line 5, ../sass/modules/_class.scss */
 .class {
-  background-image: url("../img/class_portraits.png");
+  background-image: url("../img/classes.png");
   background-repeat: no-repeat;
   width: 118px;
   height: 118px;
@@ -289,67 +322,86 @@ input[type=text] {
   border: solid 5px;
   box-shadow: inset 0 0 10px #333;
   transition: border-color 0.2s ease;
+  position: relative;
 }
 
-/* line 17, ../sass/modules/_class.scss */
-.Berserker {
+/* line 18, ../sass/modules/_class.scss */
+.berserker {
   background-position: -5px -5px;
 }
 
-/* line 20, ../sass/modules/_class.scss */
-.Embermage {
+/* line 21, ../sass/modules/_class.scss */
+.embermage {
   background-position: -133px -5px;
 }
 
-/* line 23, ../sass/modules/_class.scss */
-.Engineer {
+/* line 24, ../sass/modules/_class.scss */
+.engineer {
   background-position: -261px -5px;
 }
 
-/* line 26, ../sass/modules/_class.scss */
-.Outlander {
+/* line 27, ../sass/modules/_class.scss */
+.outlander {
   background-position: -389px -5px;
+}
+
+/* line 1, ../sass/modules/_loader.scss */
+.loader {
+  height: 0.25em;
+  transition: width 0.2s ease, opacity 1s ease;
+  width: 0;
+  opacity: 0;
 }
 
 /*****************************/
 /* Colors */
 /*****************************/
-/* line 11, ../sass/_theme.scss */
+/* line 10, ../sass/_theme.scss */
 body {
-  background-color: #eae7ec;
+  background-color: #eae9ea;
 }
 
 /*****************************/
 /* Skills */
 /*****************************/
-/* line 19, ../sass/_theme.scss */
+/* line 18, ../sass/_theme.scss */
 .skill-tree {
   background: white;
 }
 
-/* line 22, ../sass/_theme.scss */
+/* line 21, ../sass/_theme.scss */
 .skill-icon {
   background-color: #333333;
 }
 
-/* line 26, ../sass/_theme.scss */
-.skill-button,
+/* line 25, ../sass/_theme.scss */
+.skill-button {
+  background-color: #eae9ea;
+}
+
+/* line 29, ../sass/_theme.scss */
 .skill-level-bar {
   background-color: #ff6666;
-  color: #FFF;
+  color: white;
 }
 
-/* line 31, ../sass/_theme.scss */
+/* line 33, ../sass/_theme.scss */
 .skill-button:hover {
   background-color: #333333;
+  color: white;
 }
 
-/* line 35, ../sass/_theme.scss */
+/* line 38, ../sass/_theme.scss */
 .skill-level-box {
-  background-color: #c8c8c8;
+  background-color: #989798;
 }
 
-/* line 39, ../sass/_theme.scss */
+/* line 42, ../sass/_theme.scss */
+.skill-level-number {
+  color: white;
+}
+
+/* line 46, ../sass/_theme.scss */
 .skill-tier2,
 .skill-tier3 {
   border-color: white;
@@ -358,50 +410,58 @@ body {
 /*****************************/
 /* Tabs */
 /*****************************/
-/* line 46, ../sass/_theme.scss */
+/* line 53, ../sass/_theme.scss */
 .tab {
   color: white;
 }
 
-/* line 49, ../sass/_theme.scss */
+/* line 56, ../sass/_theme.scss */
 .tab::before {
   background-color: #ff6666;
 }
 
-/* line 52, ../sass/_theme.scss */
+/* line 59, ../sass/_theme.scss */
 .tab:hover::before {
   background-color: #333333;
 }
 
-/* line 56, ../sass/_theme.scss */
-.tab.tab-current {
+/* line 63, ../sass/_theme.scss */
+.tab.current-tab {
   color: #333333;
 }
 
-/* line 59, ../sass/_theme.scss */
-.tab.tab-current::before {
+/* line 66, ../sass/_theme.scss */
+.tab.current-tab::before {
   background-color: white;
 }
 
 /*****************************/
 /* Extend */
 /*****************************/
-/* line 67, ../sass/_theme.scss */
+/* line 74, ../sass/_theme.scss */
 .extend {
   background-color: white;
-  border-color: #eae7ec;
+  border-color: #eae9ea;
 }
 
 /*****************************/
 /* Class */
 /*****************************/
-/* line 76, ../sass/_theme.scss */
+/* line 83, ../sass/_theme.scss */
 .class {
   border-color: white;
 }
 
-/* line 81, ../sass/_theme.scss */
+/* line 88, ../sass/_theme.scss */
 .class:hover,
 .class.class-selected {
   border-color: #ff6666;
+}
+
+/*****************************/
+/* Loader */
+/*****************************/
+/* line 96, ../sass/_theme.scss */
+#loader {
+  background-color: #ff6666;
 }

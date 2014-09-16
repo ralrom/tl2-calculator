@@ -49,6 +49,6 @@
 	transition: background-color 0.2s ease;
 }
 
-.tab.tab-current::before {
+.tab.current-tab::before {
 	box-shadow: none;
 }

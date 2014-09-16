@@ -3,7 +3,7 @@
   margin: 0 auto;
 }
 .class {
-  background-image: url('../img/class_portraits.png');
+  background-image: url('../img/classes.png');
   background-repeat: no-repeat;
   width: 118px;
   height: 118px;
@@ -13,16 +13,17 @@
   border: solid 5px;
   box-shadow: inset 0 0 10px #333;
   transition: border-color 0.2s ease;
+  position: relative;
 }
-.Berserker {
+.berserker {
   background-position: -5px -5px;
 }
-.Embermage {
+.embermage {
   background-position: -133px -5px;
 }
-.Engineer {
+.engineer {
   background-position: -261px -5px;
 }
-.Outlander {
+.outlander {
   background-position: -389px -5px;
 }
