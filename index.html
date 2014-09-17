@@ -1,0 +1,634 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <script type="text/javascript" src="js/calculator.js"></script>
+</head>
+<body>
+  <div id="loader" class="loader"></div>
+  <div class="class-selector">
+    <a href="?class=outlander" id="portrait-outlander" class="class outlander"></a>
+    <a href="?class=embermage" id="portrait-embermage" class="class embermage"></a>
+    <a href="?class=berserker" id="portrait-berserker" class="class berserker"></a>
+    <a href="?class=engineer" id="portrait-engineer" class="class engineer"></a>
+  </div>
+  <div class="container">
+    <nav class="tabs-container">
+      <ul>
+        <li>
+          <a href="javascript:;" class="tab current-tab" id="tree-0-title" data-tree="0">Tree</a>
+        </li>
+        <li>
+          <a href="javascript:;" class="tab" id="tree-1-title" data-tree="1">Tree</a>
+        </li>
+        <li>
+          <a href="javascript:;" class="tab" id="tree-2-title" data-tree="2">Tree</a>
+        </li>
+      </ul>
+    </nav>
+    <!-- First Tree -->
+    <div id="tree-0" class="skill-tree current-tree">
+      <!-- First Row -->
+      <div class="skill-row">
+        <div id="tree-0-skill-0" class="skill-box" data-tree="0" data-skill="0">
+          <h1 class="skill-title">Skill Name</h1>
+          <div class="skill-inner">
+            <img class="skill-icon" src="img/small.gif" />
+            <div class="skill-level-box">
+              <div class="skill-level-number">0</div>
+              <div class="skill-level-bar" data-level="0"></div>
+              <div class="skill-tier skill-tier1"></div>
+              <div class="skill-tier skill-tier2"></div>
+              <div class="skill-tier skill-tier3"></div>
+            </div>
+            <div class="skill-buttons">
+              <button class="skill-button skill-plus" data-change="plus">+</button>
+              <button class="skill-button skill-minus" data-change="minus">-</button>
+              <button class="skill-button skill-clear" data-change="clear">x</button>
+            </div>
+          </div>
+        </div><!-- /Skill -->
+        <div id="tree-0-skill-1" class="skill-box" data-tree="0" data-skill="1">
+          <h1 class="skill-title">Skill Name</h1>
+          <div class="skill-inner">
+            <img class="skill-icon" src="img/small.gif" />
+            <div class="skill-level-box">
+              <div class="skill-level-number">0</div>
+              <div class="skill-level-bar" data-level="0"></div>
+              <div class="skill-tier skill-tier1"></div>
+              <div class="skill-tier skill-tier2"></div>
+              <div class="skill-tier skill-tier3"></div>
+            </div>
+            <div class="skill-buttons">
+              <button class="skill-button skill-plus" data-change="plus">+</button>
+              <button class="skill-button skill-minus" data-change="minus">-</button>
+              <button class="skill-button skill-clear" data-change="clear">x</button>
+            </div>
+          </div>
+        </div><!-- /Skill -->
+        <div id="tree-0-skill-2" class="skill-box" data-tree="0" data-skill="2">
+          <h1 class="skill-title">Skill Name</h1>
+          <div class="skill-inner">
+            <img class="skill-icon" src="img/small.gif" />
+            <div class="skill-level-box">
+              <div class="skill-level-number">0</div>
+              <div class="skill-level-bar" data-level="0"></div>
+              <div class="skill-tier skill-tier1"></div>
+              <div class="skill-tier skill-tier2"></div>
+              <div class="skill-tier skill-tier3"></div>
+            </div>
+            <div class="skill-buttons">
+              <button class="skill-button skill-plus" data-change="plus">+</button>
+              <button class="skill-button skill-minus" data-change="minus">-</button>
+              <button class="skill-button skill-clear" data-change="clear">x</button>
+            </div>
+          </div>
+        </div><!-- /Skill -->
+      </div><!-- /Row -->
+      <!-- Second Row -->
+      <div class="skill-row">
+        <div id="tree-0-skill-3" class="skill-box" data-tree="0" data-skill="3">
+          <h1 class="skill-title">Skill Name</h1>
+          <div class="skill-inner">
+            <img class="skill-icon" src="img/small.gif" />
+            <div class="skill-level-box">
+              <div class="skill-level-number">0</div>
+              <div class="skill-level-bar" data-level="0"></div>
+              <div class="skill-tier skill-tier1"></div>
+              <div class="skill-tier skill-tier2"></div>
+              <div class="skill-tier skill-tier3"></div>
+            </div>
+            <div class="skill-buttons">
+              <button class="skill-button skill-plus" data-change="plus">+</button>
+              <button class="skill-button skill-minus" data-change="minus">-</button>
+              <button class="skill-button skill-clear" data-change="clear">x</button>
+            </div>
+          </div>
+        </div><!-- /Skill -->
+        <div id="tree-0-skill-4" class="skill-box" data-tree="0" data-skill="4">
+          <h1 class="skill-title">Skill Name</h1>
+          <div class="skill-inner">
+            <img class="skill-icon" src="img/small.gif" />
+            <div class="skill-level-box">
+              <div class="skill-level-number">0</div>
+              <div class="skill-level-bar" data-level="0"></div>
+              <div class="skill-tier skill-tier1"></div>
+              <div class="skill-tier skill-tier2"></div>
+              <div class="skill-tier skill-tier3"></div>
+            </div>
+            <div class="skill-buttons">
+              <button class="skill-button skill-plus" data-change="plus">+</button>
+              <button class="skill-button skill-minus" data-change="minus">-</button>
+              <button class="skill-button skill-clear" data-change="clear">x</button>
+            </div>
+          </div>
+        </div><!-- /Skill -->
+        <div id="tree-0-skill-5" class="skill-box" data-tree="0" data-skill="5">
+          <h1 class="skill-title">Skill Name</h1>
+          <div class="skill-inner">
+            <img class="skill-icon" src="img/small.gif" />
+            <div class="skill-level-box">
+              <div class="skill-level-number">0</div>
+              <div class="skill-level-bar" data-level="0"></div>
+              <div class="skill-tier skill-tier1"></div>
+              <div class="skill-tier skill-tier2"></div>
+              <div class="skill-tier skill-tier3"></div>
+            </div>
+            <div class="skill-buttons">
+              <button class="skill-button skill-plus" data-change="plus">+</button>
+              <button class="skill-button skill-minus" data-change="minus">-</button>
+              <button class="skill-button skill-clear" data-change="clear">x</button>
+            </div>
+          </div>
+        </div><!-- /Skill -->
+      </div><!-- /Row -->
+      <!-- Third Row -->
+      <div class="skill-row third-row">
+        <div id="tree-0-skill-6" class="skill-box" data-tree="0" data-skill="6">
+          <h1 class="skill-title">Skill Name</h1>
+          <div class="skill-inner">
+            <img class="skill-icon" src="img/small.gif" />
+            <div class="skill-level-box">
+              <div class="skill-level-number">0</div>
+              <div class="skill-level-bar" data-level="0"></div>
+              <div class="skill-tier skill-tier1"></div>
+              <div class="skill-tier skill-tier2"></div>
+              <div class="skill-tier skill-tier3"></div>
+            </div>
+            <div class="skill-buttons">
+              <button class="skill-button skill-plus" data-change="plus">+</button>
+              <button class="skill-button skill-minus" data-change="minus">-</button>
+              <button class="skill-button skill-clear" data-change="clear">x</button>
+            </div>
+          </div>
+        </div><!-- /Skill -->
+      </div><!-- /Row -->
+      <!-- Fourth Row -->
+      <div class="skill-row">
+        <div id="tree-0-skill-7" class="skill-box" data-tree="0" data-skill="7">
+          <h1 class="skill-title">Skill Name</h1>
+          <div class="skill-inner">
+            <img class="skill-icon" src="img/small.gif" />
+            <div class="skill-level-box">
+              <div class="skill-level-number">0</div>
+              <div class="skill-level-bar" data-level="0"></div>
+              <div class="skill-tier skill-tier1"></div>
+              <div class="skill-tier skill-tier2"></div>
+              <div class="skill-tier skill-tier3"></div>
+            </div>
+            <div class="skill-buttons">
+              <button class="skill-button skill-plus" data-change="plus">+</button>
+              <button class="skill-button skill-minus" data-change="minus">-</button>
+              <button class="skill-button skill-clear" data-change="clear">x</button>
+            </div>
+          </div>
+        </div><!-- /Skill -->
+        <div id="tree-0-skill-8" class="skill-box" data-tree="0" data-skill="8">
+          <h1 class="skill-title">Skill Name</h1>
+          <div class="skill-inner">
+            <img class="skill-icon" src="img/small.gif" />
+            <div class="skill-level-box">
+              <div class="skill-level-number">0</div>
+              <div class="skill-level-bar" data-level="0"></div>
+              <div class="skill-tier skill-tier1"></div>
+              <div class="skill-tier skill-tier2"></div>
+              <div class="skill-tier skill-tier3"></div>
+            </div>
+            <div class="skill-buttons">
+              <button class="skill-button skill-plus" data-change="plus">+</button>
+              <button class="skill-button skill-minus" data-change="minus">-</button>
+              <button class="skill-button skill-clear" data-change="clear">x</button>
+            </div>
+          </div>
+        </div><!-- /Skill -->
+        <div id="tree-0-skill-9" class="skill-box" data-tree="0" data-skill="9">
+          <h1 class="skill-title">Skill Name</h1>
+          <div class="skill-inner">
+            <img class="skill-icon" src="img/small.gif" />
+            <div class="skill-level-box">
+              <div class="skill-level-number">0</div>
+              <div class="skill-level-bar" data-level="0"></div>
+              <div class="skill-tier skill-tier1"></div>
+              <div class="skill-tier skill-tier2"></div>
+              <div class="skill-tier skill-tier3"></div>
+            </div>
+            <div class="skill-buttons">
+              <button class="skill-button skill-plus" data-change="plus">+</button>
+              <button class="skill-button skill-minus" data-change="minus">-</button>
+              <button class="skill-button skill-clear" data-change="clear">x</button>
+            </div>
+          </div>
+        </div><!-- /Skill -->
+      </div><!-- /Row -->
+    </div><!-- /Tree -->
+    <!-- Second  Tree -->
+    <div id="tree-1" class="skill-tree">
+      <!-- First Row -->
+      <div class="skill-row">
+        <div id="tree-1-skill-0" class="skill-box" data-tree="1" data-skill="0">
+          <h1 class="skill-title">Skill Name</h1>
+          <div class="skill-inner">
+            <img class="skill-icon" src="img/small.gif" />
+            <div class="skill-level-box">
+              <div class="skill-level-number">0</div>
+              <div class="skill-level-bar" data-level="0"></div>
+              <div class="skill-tier skill-tier1"></div>
+              <div class="skill-tier skill-tier2"></div>
+              <div class="skill-tier skill-tier3"></div>
+            </div>
+            <div class="skill-buttons">
+              <button class="skill-button skill-plus" data-change="plus">+</button>
+              <button class="skill-button skill-minus" data-change="minus">-</button>
+              <button class="skill-button skill-clear" data-change="clear">x</button>
+            </div>
+          </div>
+        </div><!-- /Skill -->
+        <div id="tree-1-skill-1" class="skill-box" data-tree="1" data-skill="1">
+          <h1 class="skill-title">Skill Name</h1>
+          <div class="skill-inner">
+            <img class="skill-icon" src="img/small.gif" />
+            <div class="skill-level-box">
+              <div class="skill-level-number">0</div>
+              <div class="skill-level-bar" data-level="0"></div>
+              <div class="skill-tier skill-tier1"></div>
+              <div class="skill-tier skill-tier2"></div>
+              <div class="skill-tier skill-tier3"></div>
+            </div>
+            <div class="skill-buttons">
+              <button class="skill-button skill-plus" data-change="plus">+</button>
+              <button class="skill-button skill-minus" data-change="minus">-</button>
+              <button class="skill-button skill-clear" data-change="clear">x</button>
+            </div>
+          </div>
+        </div><!-- /Skill -->
+        <div id="tree-1-skill-2" class="skill-box" data-tree="1" data-skill="2">
+          <h1 class="skill-title">Skill Name</h1>
+          <div class="skill-inner">
+            <img class="skill-icon" src="img/small.gif" />
+            <div class="skill-level-box">
+              <div class="skill-level-number">0</div>
+              <div class="skill-level-bar" data-level="0"></div>
+              <div class="skill-tier skill-tier1"></div>
+              <div class="skill-tier skill-tier2"></div>
+              <div class="skill-tier skill-tier3"></div>
+            </div>
+            <div class="skill-buttons">
+              <button class="skill-button skill-plus" data-change="plus">+</button>
+              <button class="skill-button skill-minus" data-change="minus">-</button>
+              <button class="skill-button skill-clear" data-change="clear">x</button>
+            </div>
+          </div>
+        </div><!-- /Skill -->
+      </div><!-- /Row -->
+      <!-- Second Row -->
+      <div class="skill-row">
+        <div id="tree-1-skill-3" class="skill-box" data-tree="1" data-skill="3">
+          <h1 class="skill-title">Skill Name</h1>
+          <div class="skill-inner">
+            <img class="skill-icon" src="img/small.gif" />
+            <div class="skill-level-box">
+              <div class="skill-level-number">0</div>
+              <div class="skill-level-bar" data-level="0"></div>
+              <div class="skill-tier skill-tier1"></div>
+              <div class="skill-tier skill-tier2"></div>
+              <div class="skill-tier skill-tier3"></div>
+            </div>
+            <div class="skill-buttons">
+              <button class="skill-button skill-plus" data-change="plus">+</button>
+              <button class="skill-button skill-minus" data-change="minus">-</button>
+              <button class="skill-button skill-clear" data-change="clear">x</button>
+            </div>
+          </div>
+        </div><!-- /Skill -->
+        <div id="tree-1-skill-4" class="skill-box" data-tree="1" data-skill="4">
+          <h1 class="skill-title">Skill Name</h1>
+          <div class="skill-inner">
+            <img class="skill-icon" src="img/small.gif" />
+            <div class="skill-level-box">
+              <div class="skill-level-number">0</div>
+              <div class="skill-level-bar" data-level="0"></div>
+              <div class="skill-tier skill-tier1"></div>
+              <div class="skill-tier skill-tier2"></div>
+              <div class="skill-tier skill-tier3"></div>
+            </div>
+            <div class="skill-buttons">
+              <button class="skill-button skill-plus" data-change="plus">+</button>
+              <button class="skill-button skill-minus" data-change="minus">-</button>
+              <button class="skill-button skill-clear" data-change="clear">x</button>
+            </div>
+          </div>
+        </div><!-- /Skill -->
+        <div id="tree-1-skill-5" class="skill-box" data-tree="1" data-skill="5">
+          <h1 class="skill-title">Skill Name</h1>
+          <div class="skill-inner">
+            <img class="skill-icon" src="img/small.gif" />
+            <div class="skill-level-box">
+              <div class="skill-level-number">0</div>
+              <div class="skill-level-bar" data-level="0"></div>
+              <div class="skill-tier skill-tier1"></div>
+              <div class="skill-tier skill-tier2"></div>
+              <div class="skill-tier skill-tier3"></div>
+            </div>
+            <div class="skill-buttons">
+              <button class="skill-button skill-plus" data-change="plus">+</button>
+              <button class="skill-button skill-minus" data-change="minus">-</button>
+              <button class="skill-button skill-clear" data-change="clear">x</button>
+            </div>
+          </div>
+        </div><!-- /Skill -->
+      </div><!-- /Row -->
+      <!-- Third Row -->
+      <div class="skill-row third-row">
+        <div id="tree-1-skill-6" class="skill-box" data-tree="1" data-skill="6">
+          <h1 class="skill-title">Skill Name</h1>
+          <div class="skill-inner">
+            <img class="skill-icon" src="img/small.gif" />
+            <div class="skill-level-box">
+              <div class="skill-level-number">0</div>
+              <div class="skill-level-bar" data-level="0"></div>
+              <div class="skill-tier skill-tier1"></div>
+              <div class="skill-tier skill-tier2"></div>
+              <div class="skill-tier skill-tier3"></div>
+            </div>
+            <div class="skill-buttons">
+              <button class="skill-button skill-plus" data-change="plus">+</button>
+              <button class="skill-button skill-minus" data-change="minus">-</button>
+              <button class="skill-button skill-clear" data-change="clear">x</button>
+            </div>
+          </div>
+        </div><!-- /Skill -->
+      </div><!-- /Row -->
+      <!-- Fourth Row -->
+      <div class="skill-row">
+        <div id="tree-1-skill-7" class="skill-box" data-tree="1" data-skill="7">
+          <h1 class="skill-title">Skill Name</h1>
+          <div class="skill-inner">
+            <img class="skill-icon" src="img/small.gif" />
+            <div class="skill-level-box">
+              <div class="skill-level-number">0</div>
+              <div class="skill-level-bar" data-level="0"></div>
+              <div class="skill-tier skill-tier1"></div>
+              <div class="skill-tier skill-tier2"></div>
+              <div class="skill-tier skill-tier3"></div>
+            </div>
+            <div class="skill-buttons">
+              <button class="skill-button skill-plus" data-change="plus">+</button>
+              <button class="skill-button skill-minus" data-change="minus">-</button>
+              <button class="skill-button skill-clear" data-change="clear">x</button>
+            </div>
+          </div>
+        </div><!-- /Skill -->
+        <div id="tree-1-skill-8" class="skill-box" data-tree="1" data-skill="8">
+          <h1 class="skill-title">Skill Name</h1>
+          <div class="skill-inner">
+            <img class="skill-icon" src="img/small.gif" />
+            <div class="skill-level-box">
+              <div class="skill-level-number">0</div>
+              <div class="skill-level-bar" data-level="0"></div>
+              <div class="skill-tier skill-tier1"></div>
+              <div class="skill-tier skill-tier2"></div>
+              <div class="skill-tier skill-tier3"></div>
+            </div>
+            <div class="skill-buttons">
+              <button class="skill-button skill-plus" data-change="plus">+</button>
+              <button class="skill-button skill-minus" data-change="minus">-</button>
+              <button class="skill-button skill-clear" data-change="clear">x</button>
+            </div>
+          </div>
+        </div><!-- /Skill -->
+        <div id="tree-1-skill-9" class="skill-box" data-tree="1" data-skill="9">
+          <h1 class="skill-title">Skill Name</h1>
+          <div class="skill-inner">
+            <img class="skill-icon" src="img/small.gif" />
+            <div class="skill-level-box">
+              <div class="skill-level-number">0</div>
+              <div class="skill-level-bar" data-level="0"></div>
+              <div class="skill-tier skill-tier1"></div>
+              <div class="skill-tier skill-tier2"></div>
+              <div class="skill-tier skill-tier3"></div>
+            </div>
+            <div class="skill-buttons">
+              <button class="skill-button skill-plus" data-change="plus">+</button>
+              <button class="skill-button skill-minus" data-change="minus">-</button>
+              <button class="skill-button skill-clear" data-change="clear">x</button>
+            </div>
+          </div>
+        </div><!-- /Skill -->
+      </div><!-- /Row -->
+    </div><!-- /Tree -->
+    <!-- Third Tree -->
+    <div id="tree-2" class="skill-tree">
+      <!-- First Row -->
+      <div class="skill-row">
+        <div id="tree-2-skill-0" class="skill-box" data-tree="2" data-skill="0">
+          <h1 class="skill-title">Skill Name</h1>
+          <div class="skill-inner">
+            <img class="skill-icon" src="img/small.gif" />
+            <div class="skill-level-box">
+              <div class="skill-level-number">0</div>
+              <div class="skill-level-bar" data-level="0"></div>
+              <div class="skill-tier skill-tier1"></div>
+              <div class="skill-tier skill-tier2"></div>
+              <div class="skill-tier skill-tier3"></div>
+            </div>
+            <div class="skill-buttons">
+              <button class="skill-button skill-plus" data-change="plus">+</button>
+              <button class="skill-button skill-minus" data-change="minus">-</button>
+              <button class="skill-button skill-clear" data-change="clear">x</button>
+            </div>
+          </div>
+        </div><!-- /Skill -->
+        <div id="tree-2-skill-1" class="skill-box" data-tree="2" data-skill="1">
+          <h1 class="skill-title">Skill Name</h1>
+          <div class="skill-inner">
+            <img class="skill-icon" src="img/small.gif" />
+            <div class="skill-level-box">
+              <div class="skill-level-number">0</div>
+              <div class="skill-level-bar" data-level="0"></div>
+              <div class="skill-tier skill-tier1"></div>
+              <div class="skill-tier skill-tier2"></div>
+              <div class="skill-tier skill-tier3"></div>
+            </div>
+            <div class="skill-buttons">
+              <button class="skill-button skill-plus" data-change="plus">+</button>
+              <button class="skill-button skill-minus" data-change="minus">-</button>
+              <button class="skill-button skill-clear" data-change="clear">x</button>
+            </div>
+          </div>
+        </div><!-- /Skill -->
+        <div id="tree-2-skill-2" class="skill-box" data-tree="2" data-skill="2">
+          <h1 class="skill-title">Skill Name</h1>
+          <div class="skill-inner">
+            <img class="skill-icon" src="img/small.gif" />
+            <div class="skill-level-box">
+              <div class="skill-level-number">0</div>
+              <div class="skill-level-bar" data-level="0"></div>
+              <div class="skill-tier skill-tier1"></div>
+              <div class="skill-tier skill-tier2"></div>
+              <div class="skill-tier skill-tier3"></div>
+            </div>
+            <div class="skill-buttons">
+              <button class="skill-button skill-plus" data-change="plus">+</button>
+              <button class="skill-button skill-minus" data-change="minus">-</button>
+              <button class="skill-button skill-clear" data-change="clear">x</button>
+            </div>
+          </div>
+        </div><!-- /Skill -->
+      </div><!-- /Row -->
+      <!-- Second Row -->
+      <div class="skill-row">
+        <div id="tree-2-skill-3" class="skill-box" data-tree="2" data-skill="3">
+          <h1 class="skill-title">Skill Name</h1>
+          <div class="skill-inner">
+            <img class="skill-icon" src="img/small.gif" />
+            <div class="skill-level-box">
+              <div class="skill-level-number">0</div>
+              <div class="skill-level-bar" data-level="0"></div>
+              <div class="skill-tier skill-tier1"></div>
+              <div class="skill-tier skill-tier2"></div>
+              <div class="skill-tier skill-tier3"></div>
+            </div>
+            <div class="skill-buttons">
+              <button class="skill-button skill-plus" data-change="plus">+</button>
+              <button class="skill-button skill-minus" data-change="minus">-</button>
+              <button class="skill-button skill-clear" data-change="clear">x</button>
+            </div>
+          </div>
+        </div><!-- /Skill -->
+        <div id="tree-2-skill-4" class="skill-box" data-tree="2" data-skill="4">
+          <h1 class="skill-title">Skill Name</h1>
+          <div class="skill-inner">
+            <img class="skill-icon" src="img/small.gif" />
+            <div class="skill-level-box">
+              <div class="skill-level-number">0</div>
+              <div class="skill-level-bar" data-level="0"></div>
+              <div class="skill-tier skill-tier1"></div>
+              <div class="skill-tier skill-tier2"></div>
+              <div class="skill-tier skill-tier3"></div>
+            </div>
+            <div class="skill-buttons">
+              <button class="skill-button skill-plus" data-change="plus">+</button>
+              <button class="skill-button skill-minus" data-change="minus">-</button>
+              <button class="skill-button skill-clear" data-change="clear">x</button>
+            </div>
+          </div>
+        </div><!-- /Skill -->
+        <div id="tree-2-skill-5" class="skill-box" data-tree="2" data-skill="5">
+          <h1 class="skill-title">Skill Name</h1>
+          <div class="skill-inner">
+            <img class="skill-icon" src="img/small.gif" />
+            <div class="skill-level-box">
+              <div class="skill-level-number">0</div>
+              <div class="skill-level-bar" data-level="0"></div>
+              <div class="skill-tier skill-tier1"></div>
+              <div class="skill-tier skill-tier2"></div>
+              <div class="skill-tier skill-tier3"></div>
+            </div>
+            <div class="skill-buttons">
+              <button class="skill-button skill-plus" data-change="plus">+</button>
+              <button class="skill-button skill-minus" data-change="minus">-</button>
+              <button class="skill-button skill-clear" data-change="clear">x</button>
+            </div>
+          </div>
+        </div><!-- /Skill -->
+      </div><!-- /Row -->
+      <!-- Third Row -->
+      <div class="skill-row third-row">
+        <div id="tree-2-skill-6" class="skill-box" data-tree="2" data-skill="6">
+          <h1 class="skill-title">Skill Name</h1>
+          <div class="skill-inner">
+            <img class="skill-icon" src="img/small.gif" />
+            <div class="skill-level-box">
+              <div class="skill-level-number">0</div>
+              <div class="skill-level-bar" data-level="0"></div>
+              <div class="skill-tier skill-tier1"></div>
+              <div class="skill-tier skill-tier2"></div>
+              <div class="skill-tier skill-tier3"></div>
+            </div>
+            <div class="skill-buttons">
+              <button class="skill-button skill-plus" data-change="plus">+</button>
+              <button class="skill-button skill-minus" data-change="minus">-</button>
+              <button class="skill-button skill-clear" data-change="clear">x</button>
+            </div>
+          </div>
+        </div><!-- /Skill -->
+      </div><!-- /Row -->
+      <!-- Fourth Row -->
+      <div class="skill-row">
+        <div id="tree-2-skill-7" class="skill-box" data-tree="2" data-skill="7">
+          <h1 class="skill-title">Skill Name</h1>
+          <div class="skill-inner">
+            <img class="skill-icon" src="img/small.gif" />
+            <div class="skill-level-box">
+              <div class="skill-level-number">0</div>
+              <div class="skill-level-bar" data-level="0"></div>
+              <div class="skill-tier skill-tier1"></div>
+              <div class="skill-tier skill-tier2"></div>
+              <div class="skill-tier skill-tier3"></div>
+            </div>
+            <div class="skill-buttons">
+              <button class="skill-button skill-plus" data-change="plus">+</button>
+              <button class="skill-button skill-minus" data-change="minus">-</button>
+              <button class="skill-button skill-clear" data-change="clear">x</button>
+            </div>
+          </div>
+        </div><!-- /Skill -->
+        <div id="tree-2-skill-8" class="skill-box" data-tree="2" data-skill="8">
+          <h1 class="skill-title">Skill Name</h1>
+          <div class="skill-inner">
+            <img class="skill-icon" src="img/small.gif" />
+            <div class="skill-level-box">
+              <div class="skill-level-number">0</div>
+              <div class="skill-level-bar" data-level="0"></div>
+              <div class="skill-tier skill-tier1"></div>
+              <div class="skill-tier skill-tier2"></div>
+              <div class="skill-tier skill-tier3"></div>
+            </div>
+            <div class="skill-buttons">
+              <button class="skill-button skill-plus" data-change="plus">+</button>
+              <button class="skill-button skill-minus" data-change="minus">-</button>
+              <button class="skill-button skill-clear" data-change="clear">x</button>
+            </div>
+          </div>
+        </div><!-- /Skill -->
+        <div id="tree-2-skill-9" class="skill-box" data-tree="2" data-skill="9">
+          <h1 class="skill-title">Skill Name</h1>
+          <div class="skill-inner">
+            <img class="skill-icon" src="img/small.gif" />
+            <div class="skill-level-box">
+              <div class="skill-level-number">0</div>
+              <div class="skill-level-bar" data-level="0"></div>
+              <div class="skill-tier skill-tier1"></div>
+              <div class="skill-tier skill-tier2"></div>
+              <div class="skill-tier skill-tier3"></div>
+            </div>
+            <div class="skill-buttons">
+              <button class="skill-button skill-plus" data-change="plus">+</button>
+              <button class="skill-button skill-minus" data-change="minus">-</button>
+              <button class="skill-button skill-clear" data-change="clear">x</button>
+            </div>
+          </div>
+        </div><!-- /Skill -->
+      </div><!-- /Row -->
+    </div><!-- /Tree -->
+    <div class="extend points-spent">
+      <h1 class="extend-title">Skill Distribution</h1>
+      <div class="points-box">
+        <div class="skill-level-number"><span id="tree-0-total">0</span> . <span id="tree-1-total">0</span> . <span id="tree-2-total">0</span></div>
+        <div id="points-bar-0" class="points-bar points-bar-0"></div>
+        <div id="points-bar-1" class="points-bar points-bar-1"></div>
+        <div id="points-bar-2" class="points-bar points-bar-2"></div>
+      </div>
+    </div>
+    <!-- Link Generator -->
+    <div class="linker extend">
+      <label for="share-link" class="extend-title">Share Build</label>
+      <input id="share-link" type="text" value=""/>
+    </div>
+    <div class="note">
+      <p><a href="https://github.com/ralrom/TL2-Calculator">View on GitHub</a></p>
+    </div>
+  </div>
+</body>
+</html>
