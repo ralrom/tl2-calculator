@@ -2,128 +2,128 @@
 <skillset>
   <tree name="Blitz">
     <skill name="Flame Hammer">
-      <active xPos="1" yPos="1"/>
-      <inactive xPos="1" yPos="1"/>
+      <inactive xPos="67" yPos="1585"/>
+      <active xPos="133" yPos="1585"/>
     </skill>
     <skill name="Seismic Slam">
-      <active xPos="1" yPos="1"/>
-      <inactive xPos="1" yPos="1"/>
+      <inactive xPos="67" yPos="661"/>
+      <active xPos="133" yPos="661"/>
     </skill>
     <skill name="Ember Hammer">
-      <active xPos="1" yPos="1"/>
-      <inactive xPos="1" yPos="1"/>
+      <inactive xPos="133" yPos="1783"/>
+      <active xPos="199" yPos="1783"/>
     </skill>
     <skill name="Onslaught">
-      <active xPos="1" yPos="1"/>
-      <inactive xPos="1" yPos="1"/>
+      <inactive xPos="397" yPos="991"/>
+      <active xPos="1" yPos="1057"/>
     </skill>
     <skill name="Ember Reach">
-      <active xPos="1" yPos="1"/>
-      <inactive xPos="1" yPos="1"/>
+      <inactive xPos="265" yPos="859"/>
+      <active xPos="1" yPos="925"/>
     </skill>
     <skill name="Storm Burst">
-      <active xPos="1" yPos="1"/>
-      <inactive xPos="1" yPos="1"/>
+      <inactive xPos="199" yPos="397"/>
+      <active xPos="265" yPos="397"/>
     </skill>
     <skill name="Emberquake">
-      <active xPos="1" yPos="1"/>
-      <inactive xPos="1" yPos="1"/>
+      <inactive xPos="265" yPos="1783"/>
+      <active xPos="331" yPos="1783"/>
     </skill>
     <skill name="Heavy Lifting">
-      <active xPos="1" yPos="1"/>
-      <inactive xPos="1" yPos="1"/>
+      <inactive xPos="397" yPos="2443"/>
+      <active xPos="1" yPos="2509"/>
     </skill>
     <skill name="Supercharge">
-      <active xPos="1" yPos="1"/>
-      <inactive xPos="1" yPos="1"/>
+      <inactive xPos="331" yPos="133"/>
+      <active xPos="397" yPos="133"/>
     </skill>
     <skill name="Coup-de-Grace">
-      <active xPos="1" yPos="1"/>
-      <inactive xPos="1" yPos="1"/>
+      <inactive xPos="331" yPos="1981"/>
+      <active xPos="397" yPos="1981"/>
     </skill>
   </tree>
   <tree name="Construction">
     <skill name="Healing Bot">
-      <active xPos="1" yPos="1"/>
-      <inactive xPos="1" yPos="1"/>
+      <inactive xPos="397" yPos="199"/>
+      <active xPos="1" yPos="265"/>
     </skill>
     <skill name="Blast Cannon">
-      <active xPos="1" yPos="1"/>
-      <inactive xPos="1" yPos="1"/>
+      <inactive xPos="331" yPos="2245"/>
+      <active xPos="397" yPos="2245"/>
     </skill>
     <skill name="Spider Mines">
-      <active xPos="1" yPos="1"/>
-      <inactive xPos="1" yPos="1"/>
+      <inactive xPos="265" yPos="331"/>
+      <active xPos="331" yPos="331"/>
     </skill>
     <skill name="Gun Bot">
-      <active xPos="1" yPos="1"/>
-      <inactive xPos="1" yPos="1"/>
+      <inactive xPos="1" yPos="1387"/>
+      <active xPos="67" yPos="1387"/>
     </skill>
     <skill name="Shock Grenade">
-      <active xPos="1" yPos="1"/>
-      <inactive xPos="1" yPos="1"/>
+      <inactive xPos="265" yPos="463"/>
+      <active xPos="331" yPos="463"/>
     </skill>
     <skill name="Fusillade">
-      <active xPos="1" yPos="1"/>
-      <inactive xPos="1" yPos="1"/>
+      <inactive xPos="67" yPos="1453"/>
+      <active xPos="133" yPos="1453"/>
     </skill>
     <skill name="Sledgebot">
-      <active xPos="1" yPos="1"/>
-      <inactive xPos="1" yPos="1"/>
+      <inactive xPos="199" yPos="1321"/>
+      <active xPos="265" yPos="1321"/>
     </skill>
     <skill name="Bulwark">
-      <active xPos="1" yPos="1"/>
-      <inactive xPos="1" yPos="1"/>
+      <inactive xPos="331" yPos="2377"/>
+      <active xPos="397" yPos="2377"/>
     </skill>
     <skill name="Fire and Spark">
-      <active xPos="1" yPos="1"/>
-      <inactive xPos="1" yPos="1"/>
+      <inactive xPos="199" yPos="1717"/>
+      <active xPos="265" yPos="1717"/>
     </skill>
     <skill name="Charge Domination">
-      <active xPos="1" yPos="1"/>
-      <inactive xPos="1" yPos="1"/>
+      <inactive xPos="331" yPos="2113"/>
+      <active xPos="397" yPos="2113"/>
     </skill>
   </tree>
   <tree name="Aegis">
     <skill name="Shield Bash">
-      <active xPos="1" yPos="1"/>
-      <inactive xPos="1" yPos="1"/>
+      <inactive xPos="67" yPos="529"/>
+      <active xPos="133" yPos="529"/>
     </skill>
     <skill name="Forcefield">
-      <active xPos="1" yPos="1"/>
-      <inactive xPos="1" yPos="1"/>
+      <inactive xPos="397" yPos="1519"/>
+      <active xPos="1" yPos="1585"/>
     </skill>
     <skill name="Overload">
-      <active xPos="1" yPos="1"/>
-      <inactive xPos="1" yPos="1"/>
+      <inactive xPos="265" yPos="991"/>
+      <active xPos="331" yPos="991"/>
     </skill>
     <skill name="Dynamo Field">
-      <active xPos="1" yPos="1"/>
-      <inactive xPos="1" yPos="1"/>
+      <inactive xPos="331" yPos="1849"/>
+      <active xPos="331" yPos="1849"/>
     </skill>
     <skill name="Tremor">
-      <active xPos="1" yPos="1"/>
-      <inactive xPos="1" yPos="1"/>
+      <inactive xPos="67" yPos="133"/>
+      <active xPos="133" yPos="133"/>
     </skill>
     <skill name="Fire Bash">
-      <active xPos="1" yPos="1"/>
-      <inactive xPos="1" yPos="1"/>
+      <inactive xPos="67" yPos="1717"/>
+      <active xPos="133" yPos="1717"/>
     </skill>
     <skill name="Immobilization Copter">
-      <active xPos="1" yPos="1"/>
-      <inactive xPos="1" yPos="1"/>
+      <inactive xPos="397" yPos="331"/>
+      <active xPos="1" yPos="397"/>
     </skill>
     <skill name="Sword and Board">
-      <active xPos="1" yPos="1"/>
-      <inactive xPos="1" yPos="1"/>
+      <inactive xPos="265" yPos="199"/>
+      <active xPos="331" yPos="199"/>
     </skill>
     <skill name="Aegis of Fate">
-      <active xPos="1" yPos="1"/>
-      <inactive xPos="1" yPos="1"/>
+      <inactive xPos="331" yPos="1717"/>
+      <active xPos="397" yPos="1717"/>
     </skill>
     <skill name="Charge Reconstitution">
-      <active xPos="1" yPos="1"/>
-      <inactive xPos="1" yPos="1"/>
+      <inactive xPos="265" yPos="2047"/>
+      <active xPos="331" yPos="2047"/>
     </skill>
   </tree>
 </skillset>

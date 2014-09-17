@@ -2,128 +2,128 @@
 <skillset>
   <tree name="Inferno">
     <skill name="Magma Spear">
-      <active xPos="1" yPos="1"/>
-      <inactive xPos="1" yPos="1"/>
+      <inactive xPos="1" yPos="1123"/>
+      <active xPos="67" yPos="1123"/>
     </skill>
     <skill name="Magma Mace">
-      <active xPos="1" yPos="1"/>
-      <inactive xPos="1" yPos="1"/>
+      <inactive xPos="133" yPos="1123"/>
+      <active xPos="199" yPos="1123"/>
     </skill>
     <skill name="Firebombs">
-      <active xPos="1" yPos="1"/>
-      <inactive xPos="1" yPos="1"/>
+      <inactive xPos="397" yPos="1651"/>
+      <active xPos="1" yPos="1717"/>
     </skill>
     <skill name="Blazing Pillar">
-      <active xPos="1" yPos="1"/>
-      <inactive xPos="1" yPos="1"/>
+      <inactive xPos="133" yPos="2245"/>
+      <active xPos="199" yPos="2245"/>
     </skill>
     <skill name="Infernal Collapse">
-      <active xPos="1" yPos="1"/>
-      <inactive xPos="1" yPos="1"/>
+      <inactive xPos="199" yPos="1189"/>
+      <active xPos="265" yPos="1189"/>
     </skill>
     <skill name="Immolation Aura">
-      <active xPos="1" yPos="1"/>
-      <inactive xPos="1" yPos="1"/>
+      <inactive xPos="199" yPos="1585"/>
+      <active xPos="265" yPos="1585"/>
     </skill>
     <skill name="Firestorm">
-      <active xPos="1" yPos="1"/>
-      <inactive xPos="1" yPos="1"/>
+      <inactive xPos="1" yPos="1651"/>
+      <active xPos="67" yPos="1651"/>
     </skill>
     <skill name="Charge Mastery">
-      <active xPos="1" yPos="1"/>
-      <inactive xPos="1" yPos="1"/>
+      <inactive xPos="67" yPos="2113"/>
+      <active xPos="133" yPos="2113"/>
     </skill>
     <skill name="Elemental Attunement">
-      <active xPos="1" yPos="1"/>
-      <inactive xPos="1" yPos="1"/>
+      <inactive xPos="199" yPos="1849"/>
+      <active xPos="265" yPos="1849"/>
     </skill>
     <skill name="Fire Brand">
-      <active xPos="1" yPos="1"/>
-      <inactive xPos="1" yPos="1"/>
+      <inactive xPos="265" yPos="1651"/>
+      <active xPos="331" yPos="1651"/>
     </skill>
   </tree>
   <tree name="Frost">
     <skill name="Icy Blast">
-      <active xPos="1" yPos="1"/>
-      <inactive xPos="1" yPos="1"/>
+      <inactive xPos="265" yPos="1255"/>
+      <active xPos="331" yPos="1255"/>
     </skill>
     <skill name="Hailstorm">
-      <active xPos="1" yPos="1"/>
-      <inactive xPos="1" yPos="1"/>
+      <inactive xPos="331" yPos="1321"/>
+      <active xPos="397" yPos="1321"/>
     </skill>
     <skill name="Frost Phase">
-      <active xPos="1" yPos="1"/>
-      <inactive xPos="1" yPos="1"/>
+      <inactive xPos="133" yPos="1519"/>
+      <active xPos="199" yPos="1519"/>
     </skill>
-    <skill name="Elemental Boom">
-      <active xPos="1" yPos="1"/>
-      <inactive xPos="1" yPos="1"/>
+    <skill name="Elemental Boon">
+      <inactive xPos="199" yPos="1849"/>
+      <active xPos="265" yPos="1849"/>
     </skill>
     <skill name="Frost Wave">
-      <active xPos="1" yPos="1"/>
-      <inactive xPos="1" yPos="1"/>
+      <inactive xPos="1" yPos="1519"/>
+      <active xPos="67" yPos="1519"/>
     </skill>
     <skill name="Ice Prison">
-      <active xPos="1" yPos="1"/>
-      <inactive xPos="1" yPos="1"/>
+      <inactive xPos="133" yPos="1255"/>
+      <active xPos="199" yPos="1255"/>
     </skill>
     <skill name="Astral Ally">
-      <active xPos="1" yPos="1"/>
-      <inactive xPos="1" yPos="1"/>
+      <inactive xPos="397" yPos="1783"/>
+      <active xPos="1" yPos="1849"/>
     </skill>
     <skill name="Staff Mastery">
-      <active xPos="1" yPos="1"/>
-      <inactive xPos="1" yPos="1"/>
+      <inactive xPos="133" yPos="331"/>
+      <active xPos="199" yPos="331"/>
     </skill>
     <skill name="Frozen Fate">
-      <active xPos="1" yPos="1"/>
-      <inactive xPos="1" yPos="1"/>
+      <inactive xPos="199" yPos="1453"/>
+      <active xPos="265" yPos="1453"/>
     </skill>
     <skill name="Ice Brand">
-      <active xPos="1" yPos="1"/>
-      <inactive xPos="1" yPos="1"/>
+      <inactive xPos="331" yPos="1189"/>
+      <active xPos="397" yPos="1189"/>
     </skill>
   </tree>
   <tree name="Storm">
     <skill name="Prismatic Bolt">
-      <active xPos="1" yPos="1"/>
-      <inactive xPos="1" yPos="1"/>
+      <inactive xPos="67" yPos="925"/>
+      <active xPos="133" yPos="925"/>
     </skill>
     <skill name="Shocking Burst">
-      <active xPos="1" yPos="1"/>
-      <inactive xPos="1" yPos="1"/>
+      <inactive xPos="133" yPos="463"/>
+      <active xPos="199" yPos="463"/>
     </skill>
     <skill name="Thunder Locus">
-      <active xPos="1" yPos="1"/>
-      <inactive xPos="1" yPos="1"/>
+      <inactive xPos="199" yPos="265"/>
+      <active xPos="67" yPos="331"/>
     </skill>
     <skill name="Arc Beam">
-      <active xPos="1" yPos="1"/>
-      <inactive xPos="1" yPos="1"/>
+      <inactive xPos="1" yPos="2443"/>
+      <active xPos="67" yPos="2443"/>
     </skill>
     <skill name="Death's Bounty">
-      <active xPos="1" yPos="1"/>
-      <inactive xPos="1" yPos="1"/>
+      <inactive xPos="265" yPos="727"/>
+      <active xPos="331" yPos="727"/>
     </skill>
     <skill name="Shockbolts">
-      <active xPos="1" yPos="1"/>
-      <inactive xPos="1" yPos="1"/>
+      <inactive xPos="397" yPos="463"/>
+      <active xPos="1" yPos="529"/>
     </skill>
     <skill name="Shocking Orb">
-      <active xPos="1" yPos="1"/>
-      <inactive xPos="1" yPos="1"/>
+      <inactive xPos="1" yPos="463"/>
+      <active xPos="67" yPos="463"/>
     </skill>
     <skill name="Prismatic Rift">
-      <active xPos="1" yPos="1"/>
-      <inactive xPos="1" yPos="1"/>
+      <inactive xPos="67" yPos="1849"/>
+      <active xPos="133" yPos="1849"/>
     </skill>
     <skill name="Wand Chaos">
-      <active xPos="1" yPos="1"/>
-      <inactive xPos="1" yPos="1"/>
+      <inactive xPos="397" yPos="67"/>
+      <active xPos="1" yPos="133"/>
     </skill>
     <skill name="Lightning Brand">
-      <active xPos="1" yPos="1"/>
-      <inactive xPos="1" yPos="1"/>
+      <inactive xPos="67" yPos="265"/>
+      <active xPos="133" yPos="265"/>
     </skill>
   </tree>
 </skillset>

@@ -36,11 +36,13 @@ body {
 }
 
 .skill-level-box {
-  background-color: shade($bg-color, 35%);
+  background-color: $bg-color;
 }
 
 .skill-level-number {
-  color: $light-color;
+  color: #333;
+  color: rgba(0,0,0,0.7);
+  text-shadow: 1px 1px 0 rgba(255,255,255,0.15);
 }
 .skill-tier2,
 .skill-tier3 {
@@ -55,13 +57,13 @@ body {
   background-color: $bg-color;
 }
 .points-bar-0{
-  background-color: #FE4445;
+  background-color: #ff8800;
 }
 .points-bar-1{
-  background-color: #99CC01;
+  background-color: #99cc01;
 }
 .points-bar-2{
-  background-color: #33B5E6;
+  background-color: #33b5e6;
 }
 
 /*****************************/

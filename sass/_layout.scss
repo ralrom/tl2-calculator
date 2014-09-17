@@ -13,8 +13,15 @@
   padding: 0 0 0.5em 0;
   font-weight: normal;
 }
-
-
 .extend:last-child {
   margin-bottom: 3em;
+}
+.note {
+  text-align: center;
+}
+.note h1 {
+  margin: 0.1125em;
+}
+.note p {
+  font-size: 1.1em;
 }

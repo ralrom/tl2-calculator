@@ -6,6 +6,10 @@
 </head>
 <body>
   <div id="loader" class="loader"></div>
+  <div class="container note">
+    <h1>TL2 Skill Calculator</h1>
+    <p>Consider sharing it if you found it useful!</p>
+  </div>
   <div class="class-selector">
     <a href="?class=outlander" id="portrait-outlander" class="class outlander"></a>
     <a href="?class=embermage" id="portrait-embermage" class="class embermage"></a>
@@ -614,6 +618,7 @@
     <div class="extend points-spent">
       <h1 class="extend-title">Skill Distribution</h1>
       <div class="points-box">
+        <div class="skill-level-number"><span id="tree-0-total">0</span> . <span id="tree-1-total">0</span> . <span id="tree-2-total">0</span></div>
         <div id="points-bar-0" class="points-bar points-bar-0"></div>
         <div id="points-bar-1" class="points-bar points-bar-1"></div>
         <div id="points-bar-2" class="points-bar points-bar-2"></div>
@@ -621,7 +626,7 @@
     </div>
     <!-- Link Generator -->
     <div class="linker extend">
-      <label for="share-link" class="extend-title">Share Link</label>
+      <label for="share-link" class="extend-title">Share Build</label>
       <input id="share-link" type="text" value=""/>
     </div>
   </section>

@@ -43,9 +43,24 @@ input[type=text] {
   font-weight: normal;
 }
 
-/* line 18, ../sass/_layout.scss */
+/* line 16, ../sass/_layout.scss */
 .extend:last-child {
   margin-bottom: 3em;
+}
+
+/* line 19, ../sass/_layout.scss */
+.note {
+  text-align: center;
+}
+
+/* line 22, ../sass/_layout.scss */
+.note h1 {
+  margin: 0.1125em;
+}
+
+/* line 25, ../sass/_layout.scss */
+.note p {
+  font-size: 1.1em;
 }
 
 /* line 1, ../sass/modules/_tabs.scss */
@@ -253,7 +268,7 @@ input[type=text] {
   position: absolute;
   top: 0;
   left: 0;
-  text-shadow: 0 1px 1px #000;
+  font-weight: bold;
 }
 
 /* line 125, ../sass/modules/_skills.scss */
@@ -403,15 +418,17 @@ body {
 
 /* line 38, ../sass/_theme.scss */
 .skill-level-box {
-  background-color: #989798;
+  background-color: #eae9ea;
 }
 
 /* line 42, ../sass/_theme.scss */
 .skill-level-number {
-  color: white;
+  color: #333;
+  color: rgba(0, 0, 0, 0.7);
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.15);
 }
 
-/* line 46, ../sass/_theme.scss */
+/* line 48, ../sass/_theme.scss */
 .skill-tier2,
 .skill-tier3 {
   border-color: white;
@@ -420,50 +437,50 @@ body {
 /*****************************/
 /* Points */
 /*****************************/
-/* line 54, ../sass/_theme.scss */
+/* line 56, ../sass/_theme.scss */
 .points-box {
   background-color: #eae9ea;
 }
 
-/* line 57, ../sass/_theme.scss */
+/* line 59, ../sass/_theme.scss */
 .points-bar-0 {
-  background-color: #FE4445;
+  background-color: #ff8800;
 }
 
-/* line 60, ../sass/_theme.scss */
+/* line 62, ../sass/_theme.scss */
 .points-bar-1 {
-  background-color: #99CC01;
+  background-color: #99cc01;
 }
 
-/* line 63, ../sass/_theme.scss */
+/* line 65, ../sass/_theme.scss */
 .points-bar-2 {
-  background-color: #33B5E6;
+  background-color: #33b5e6;
 }
 
 /*****************************/
 /* Tabs */
 /*****************************/
-/* line 70, ../sass/_theme.scss */
+/* line 72, ../sass/_theme.scss */
 .tab {
   color: white;
 }
 
-/* line 73, ../sass/_theme.scss */
+/* line 75, ../sass/_theme.scss */
 .tab::before {
   background-color: #ff6666;
 }
 
-/* line 76, ../sass/_theme.scss */
+/* line 78, ../sass/_theme.scss */
 .tab:hover::before {
   background-color: #333333;
 }
 
-/* line 80, ../sass/_theme.scss */
+/* line 82, ../sass/_theme.scss */
 .tab.current-tab {
   color: #333333;
 }
 
-/* line 83, ../sass/_theme.scss */
+/* line 85, ../sass/_theme.scss */
 .tab.current-tab::before {
   background-color: white;
 }
@@ -471,7 +488,7 @@ body {
 /*****************************/
 /* Extend */
 /*****************************/
-/* line 91, ../sass/_theme.scss */
+/* line 93, ../sass/_theme.scss */
 .extend {
   background-color: white;
   border-color: #eae9ea;
@@ -480,12 +497,12 @@ body {
 /*****************************/
 /* Class */
 /*****************************/
-/* line 100, ../sass/_theme.scss */
+/* line 102, ../sass/_theme.scss */
 .class {
   border-color: white;
 }
 
-/* line 105, ../sass/_theme.scss */
+/* line 107, ../sass/_theme.scss */
 .class:hover,
 .class.class-selected {
   border-color: #ff6666;
@@ -494,7 +511,7 @@ body {
 /*****************************/
 /* Loader */
 /*****************************/
-/* line 113, ../sass/_theme.scss */
+/* line 115, ../sass/_theme.scss */
 #loader {
   background-color: #ff6666;
 }

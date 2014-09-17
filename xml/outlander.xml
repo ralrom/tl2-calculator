@@ -2,128 +2,128 @@
 <skillset>
   <tree name="Warfare">
     <skill name="Rapid Fire">
-      <active xPos="1" yPos="1"/>
-      <inactive xPos="1" yPos="1"/>
+      <inactive xPos="199" yPos="793"/>
+      <active xPos="265" yPos="793"/>
     </skill>
     <skill name="Rune Vault">
-      <active xPos="1" yPos="1"/>
-      <inactive xPos="1" yPos="1"/>
+      <inactive xPos="133" yPos="991"/>
+      <active xPos="199" yPos="991"/>
     </skill>
     <skill name="Chaos Burst">
-      <active xPos="1" yPos="1"/>
-      <inactive xPos="1" yPos="1"/>
+      <inactive xPos="1" yPos="2179"/>
+      <active xPos="67" yPos="2179"/>
     </skill>
     <skill name="Cursed Daggers">
-      <active xPos="1" yPos="1"/>
-      <inactive xPos="1" yPos="1"/>
+      <inactive xPos="67" yPos="1981"/>
+      <active xPos="133" yPos="1981"/>
     </skill>
     <skill name="Vortex Hex">
-      <active xPos="1" yPos="1"/>
-      <inactive xPos="1" yPos="1"/>
+      <inactive xPos="331" yPos="859"/>
+      <active xPos="397" yPos="859"/>
     </skill>
     <skill name="Shattering Glaive">
-      <active xPos="1" yPos="1"/>
-      <inactive xPos="1" yPos="1"/>
+      <inactive xPos="1" yPos="1783"/>
+      <active xPos="67" yPos="1783"/>
     </skill>
     <skill name="Venemous Hail">
-      <active xPos="1" yPos="1"/>
-      <inactive xPos="1" yPos="1"/>
+      <inactive xPos="331" yPos="925"/>
+      <active xPos="397" yPos="925"/>
     </skill>
     <skill name="Long Range Mastery">
-      <active xPos="1" yPos="1"/>
-      <inactive xPos="1" yPos="1"/>
+      <inactive xPos="67" yPos="1189"/>
+      <active xPos="133" yPos="1189"/>
     </skill>
     <skill name="Shotgonne Mastery">
-      <active xPos="1" yPos="1"/>
-      <inactive xPos="1" yPos="1"/>
+      <inactive xPos="67" yPos="397"/>
+      <active xPos="133" yPos="397"/>
     </skill>
     <skill name="Akimbo">
-      <active xPos="1" yPos="1"/>
-      <inactive xPos="1" yPos="1"/>
+      <inactive xPos="1" yPos="1911"/>
+      <active xPos="67" yPos="1911"/>
     </skill>
   </tree>
   <tree name="Lore">
     <skill name="Glaive Throw">
-      <active xPos="1" yPos="1"/>
-      <inactive xPos="1" yPos="1"/>
+      <inactive xPos="1" yPos="199"/>
+      <active xPos="67" yPos="199"/>
     </skill>
     <skill name="Tangling Shot">
-      <active xPos="1" yPos="1"/>
-      <inactive xPos="1" yPos="1"/>
+      <inactive xPos="133" yPos="199"/>
+      <active xPos="199" yPos="199"/>
     </skill>
     <skill name="Glaive Sweep">
-      <active xPos="1" yPos="1"/>
-      <inactive xPos="1" yPos="1"/>
+      <inactive xPos="265" yPos="1387"/>
+      <active xPos="331" yPos="1387"/>
     </skill>
     <skill name="Sandstorm">
-      <active xPos="1" yPos="1"/>
-      <inactive xPos="1" yPos="1"/>
+      <inactive xPos="199" yPos="661"/>
+      <active xPos="265" yPos="661"/>
     </skill>
     <skill name="Bramble Wall">
-      <active xPos="1" yPos="1"/>
-      <inactive xPos="1" yPos="1"/>
+      <inactive xPos="397" yPos="2179"/>
+      <active xPos="1" yPos="2245"/>
     </skill>
     <skill name="Burning Leap">
-      <active xPos="1" yPos="1"/>
-      <inactive xPos="1" yPos="1"/>
+      <inactive xPos="397" yPos="595"/>
+      <active xPos="1" yPos="661"/>
     </skill>
-    <skill name="Flaiming Glaive">
-      <active xPos="1" yPos="1"/>
-      <inactive xPos="1" yPos="1"/>
+    <skill name="Flaming Glaive">
+      <inactive xPos="133" yPos="1651"/>
+      <active xPos="199" yPos="1651"/>
     </skill>
     <skill name="Dodge Mastery">
-      <active xPos="1" yPos="1"/>
-      <inactive xPos="1" yPos="1"/>
+      <inactive xPos="133" yPos="1915"/>
+      <active xPos="199" yPos="1915"/>
     </skill>
     <skill name="Poison Burst">
-      <active xPos="1" yPos="1"/>
-      <inactive xPos="1" yPos="1"/>
+      <inactive xPos="199" yPos="925"/>
+      <active xPos="265" yPos="925"/>
     </skill>
     <skill name="Share the Wealth">
-      <active xPos="1" yPos="1"/>
-      <inactive xPos="1" yPos="1"/>
+      <inactive xPos="133" yPos="2045"/>
+      <active xPos="199" yPos="2045"/>
     </skill>
   </tree>
   <tree name="Sigil">
     <skill name="Blade Pact">
-      <active xPos="1" yPos="1"/>
-      <inactive xPos="1" yPos="1"/>
+      <inactive xPos="199" yPos="1981"/>
+      <active xPos="265" yPos="1981"/>
     </skill>
     <skill name="Shadowshot">
-      <active xPos="1" yPos="1"/>
-      <inactive xPos="1" yPos="1"/>
+      <inactive xPos="1" yPos="595"/>
+      <active xPos="67" yPos="595"/>
     </skill>
     <skill name="Bane Breath">
-      <active xPos="1" yPos="1"/>
-      <inactive xPos="1" yPos="1"/>
+      <inactive xPos="67" yPos="1"/>
+      <active xPos="133" yPos="1"/>
     </skill>
     <skill name="Repulsion Hex">
-      <active xPos="1" yPos="1"/>
-      <inactive xPos="1" yPos="1"/>
+      <inactive xPos="1" yPos="727"/>
+      <active xPos="67" yPos="727"/>
     </skill>
     <skill name="Stone Pact">
-      <active xPos="1" yPos="1"/>
-      <inactive xPos="1" yPos="1"/>
+      <inactive xPos="199" yPos="2377"/>
+      <active xPos="265" yPos="2377"/>
     </skill>
     <skill name="Shadowmantle">
-      <active xPos="1" yPos="1"/>
-      <inactive xPos="1" yPos="1"/>
+      <inactive xPos="133" yPos="595"/>
+      <active xPos="199" yPos="595"/>
     </skill>
     <skill name="Shadowling Brute">
-      <active xPos="1" yPos="1"/>
-      <inactive xPos="1" yPos="1"/>
+      <inactive xPos="331" yPos="529"/>
+      <active xPos="397" yPos="529"/>
     </skill>
     <skill name="Master of the Elements">
-      <active xPos="1" yPos="1"/>
-      <inactive xPos="1" yPos="1"/>
+      <inactive xPos="199" yPos="1057"/>
+      <active xPos="265" yPos="1057"/>
     </skill>
     <skill name="Shadowling Ammo">
-      <active xPos="1" yPos="1"/>
-      <inactive xPos="1" yPos="1"/>
+      <inactive xPos="199" yPos="1"/>
+      <active xPos="265" yPos="1"/>
     </skill>
     <skill name="Death Ritual">
-      <active xPos="1" yPos="1"/>
-      <inactive xPos="1" yPos="1"/>
+      <inactive xPos="397" yPos="1915"/>
+      <active xPos="1" yPos="1981"/>
     </skill>
   </tree>
 </skillset>

@@ -100,14 +100,14 @@ function checkPoint(point){
   var p = Number(point);
   if(p){
     if (p > 15) {
-      point = 15;
+      p = 15;
     } else if (p < 0) {
-      point = 0;
+      p = 0;
     }
   } else {
-    point = 0;
+    p = 0;
   }
-  return point;
+  return p;
 }
 
 //Get Points from URL Parameter and generate an array from it;
@@ -116,14 +116,19 @@ function getURLPoints(){
   var points = getURLParameter("points") ? getURLParameter("points").split(",", 30) : [];
   //Get length (for efficiency)
   var length = points.length;
-  //Check if correct length
-  if (length == 30) {
-    for (var i = 0; i < length; i++) {
-      points[i] = checkPoint(points[i]);
-    }
-  } else if(length > 0) {
+  //Counts total skill points spent so far
+  var total = 0;
+  if(length > 0) { //points parameter was given
+    /* Get through all skills (30 skils per class).
+    This works even if points parameter is shorter than expected
+     because points are are set to 0 by sanitizer if null */
     for(var i = 0; i < 30; i++){
+      //Sanitize point data
       points[i] = checkPoint(points[i]);
+      //Make sure maximum skill points not exceeded
+      points[i] = points[i] + total > 132 ? 132 - total : points[i];
+      //Update to new total
+      total += points[i];
     }
   } else {
     points = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
@@ -204,7 +209,7 @@ function levelSkill(event) {
   var dataLevel = elemSkill.getElementsByClassName("skill-level-bar")[0].getAttribute("data-level");
   //Manage change
   if(change == "plus"){
-    if (dataLevel < 15) {
+    if (dataLevel < 15 && (getTreePointTotal(0)+getTreePointTotal(1)+getTreePointTotal(2)) < 132) { // Check max skill & max total points
       updateSkill(elemSkill, dataSkill, Number(dataLevel) + 1);
     }
   } else if (change == "minus"){
@@ -229,7 +234,9 @@ function getTreePointTotal(tree){
 //Updates the skill point distribution bar
 function updatePointDistributionBar(){
   for(var i = 0; i < 3; i++){
-    document.getElementById("points-bar-"+i).style.width = 100*getTreePointTotal(i)/132+"%";
+    var treeTotal = getTreePointTotal(i);
+    document.getElementById("points-bar-"+i).style.width = 100*treeTotal/132+"%";
+    document.getElementById("tree-"+i+"-total").innerHTML = treeTotal;
   }
 }
 
