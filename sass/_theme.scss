@@ -115,3 +115,14 @@ body {
 #loader {
   background-color: $accent-color;
 }
+
+/*****************************/
+/* Note */
+/*****************************/
+
+.note a {
+  color: $accent-color;
+}
+.note a:hover {
+  color: $dark-color;
+}
