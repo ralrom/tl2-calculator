@@ -60,8 +60,7 @@ input[type=text] {
 
 /* line 25, ../sass/_layout.scss */
 .note p {
-  font-size: 1.1em;
-  margin: 0.25em;
+  margin: 1em;
 }
 
 /* line 1, ../sass/modules/_tabs.scss */
