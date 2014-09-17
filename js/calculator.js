@@ -281,13 +281,28 @@ function switchTab(event) {
   var elemTabs = document.getElementsByClassName("tab");
   //Hide all Skill-Trees & change all tabs to unselected
   for (var i = 0, m = elemTrees.length; i < m; i++) {
-    elemTrees[i].className = "skill-tree";
-    elemTabs[i].className = "tab";
+    elemTrees[i].className = removeClass("current-tree", elemTrees[i].className);
+    elemTabs[i].className = removeClass("current-tab", elemTabs[i].className);
   }
   //Get requested Skill-Tree
   var reqTree = event.target.getAttribute("data-tree");
   //Display requested Skill-Tree
-  document.getElementById("tree-" + reqTree).className = "skill-tree current-tree";
+  document.getElementById("tree-" + reqTree).className = addClass("current-tree", document.getElementById("tree-" + reqTree).className);
   //Select current tab
-  document.getElementById("tree-" + reqTree + "-title").className = "tab current-tab";
+  document.getElementById("tree-" + reqTree + "-title").className = addClass("current-tab", document.getElementById("tree-" + reqTree + "-title").className);
+}
+
+
+//Adds CSS class (if not already there)
+function addClass(c, className){
+  if ( !className.match(new RegExp('(?:^|\s)'+c+'(?!\S)')) ) {
+    return className += " "+c;
+  }
+}
+
+//Removes CSS class
+function removeClass(c, className){
+  console.log(c);
+  return className.replace( new RegExp('(?:^|\\s)' + c + '(?!\\S)', 'g') , '' );
+
 }

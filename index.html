@@ -14,21 +14,16 @@
     <a href="?class=engineer" id="portrait-engineer" class="class engineer"></a>
   </div>
   <div class="container">
-    <nav class="tabs-container">
+    <nav class="tabs">
       <ul>
-        <li>
-          <a href="javascript:;" class="tab current-tab" id="tree-0-title" data-tree="0">Tree</a>
-        </li>
-        <li>
-          <a href="javascript:;" class="tab" id="tree-1-title" data-tree="1">Tree</a>
-        </li>
-        <li>
-          <a href="javascript:;" class="tab" id="tree-2-title" data-tree="2">Tree</a>
-        </li>
+        <li><a href="javascript:;" class="tab current-tab tree-0-theme" id="tree-0-title" data-tree="0">Tree</a></li>
+        <li><a href="javascript:;" class="tab tree-1-theme" id="tree-1-title" data-tree="1">Tree</a></li>
+        <li><a href="javascript:;" class="tab tree-2-theme" id="tree-2-title" data-tree="2">Tree</a></li>
+        <div class="cf"></div>
       </ul>
     </nav>
-    <!-- First Tree -->
-    <div id="tree-0" class="skill-tree current-tree">
+  <!-- First Tree -->
+    <div id="tree-0" class="skill-tree current-tree tree-0-theme">
       <!-- First Row -->
       <div class="skill-row">
         <div id="tree-0-skill-0" class="skill-box" data-tree="0" data-skill="0">
@@ -223,7 +218,7 @@
       </div><!-- /Row -->
     </div><!-- /Tree -->
     <!-- Second  Tree -->
-    <div id="tree-1" class="skill-tree">
+    <div id="tree-1" class="skill-tree tree-1-theme">
       <!-- First Row -->
       <div class="skill-row">
         <div id="tree-1-skill-0" class="skill-box" data-tree="1" data-skill="0">
@@ -418,7 +413,7 @@
       </div><!-- /Row -->
     </div><!-- /Tree -->
     <!-- Third Tree -->
-    <div id="tree-2" class="skill-tree">
+    <div id="tree-2" class="skill-tree tree-2-theme">
       <!-- First Row -->
       <div class="skill-row">
         <div id="tree-2-skill-0" class="skill-box" data-tree="2" data-skill="0">
@@ -616,9 +611,9 @@
       <h1 class="extend-title">Skill Distribution</h1>
       <div class="points-box">
         <div class="skill-level-number"><span id="tree-0-total">0</span> . <span id="tree-1-total">0</span> . <span id="tree-2-total">0</span></div>
-        <div id="points-bar-0" class="points-bar points-bar-0"></div>
-        <div id="points-bar-1" class="points-bar points-bar-1"></div>
-        <div id="points-bar-2" class="points-bar points-bar-2"></div>
+        <div id="points-bar-0" class="points-bar tree-0-theme"></div>
+        <div id="points-bar-1" class="points-bar tree-1-theme"></div>
+        <div id="points-bar-2" class="points-bar tree-2-theme"></div>
       </div>
     </div>
     <!-- Link Generator -->

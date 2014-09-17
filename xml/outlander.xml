@@ -38,8 +38,8 @@
       <active xPos="133" yPos="397"/>
     </skill>
     <skill name="Akimbo">
-      <inactive xPos="1" yPos="1911"/>
-      <active xPos="67" yPos="1911"/>
+      <inactive xPos="1" yPos="1915"/>
+      <active xPos="67" yPos="1915"/>
     </skill>
   </tree>
   <tree name="Lore">
@@ -80,8 +80,8 @@
       <active xPos="265" yPos="925"/>
     </skill>
     <skill name="Share the Wealth">
-      <inactive xPos="133" yPos="2045"/>
-      <active xPos="199" yPos="2045"/>
+      <inactive xPos="133" yPos="2047"/>
+      <active xPos="199" yPos="2047"/>
     </skill>
   </tree>
   <tree name="Sigil">

@@ -8,15 +8,11 @@
   display: block;
 }
 
-.skill-row:before,
 .skill-row:after {
-    content: " ";
-    display: table;
+  content: "";
+  display: table;
+  clear: both;
 }
-.skill-row:after {
-    clear: both;
-}
-
 .skill-box {
   width: 33.333%;
   display: block;
