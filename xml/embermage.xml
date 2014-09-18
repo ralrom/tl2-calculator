@@ -34,8 +34,8 @@
       <active xPos="133" yPos="2113"/>
     </skill>
     <skill name="Elemental Attunement">
-      <inactive xPos="199" yPos="1849"/>
-      <active xPos="265" yPos="1849"/>
+      <inactive xPos="397" yPos="1123"/>
+      <active xPos="1" yPos="1189"/>
     </skill>
     <skill name="Fire Brand">
       <inactive xPos="265" yPos="1651"/>
