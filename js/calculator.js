@@ -25,6 +25,38 @@ var Calculator = {
   }
 }
 
+var Compressor = {
+  //Convert decimal to hex (15 -> f)
+  atob: function (a){
+    a = Number(a);
+    return a.toString(16);
+  },
+  //Convert hex to decimal (f -> 15)
+  btoa: function (b){
+    b = String(b);
+    return parseInt(b, 16);
+  },
+  //Convert points string to hex string
+  compress: function (points){
+    var compressed = "";
+    points = points.split(",");
+    for(var i = 0, m = points.length; i < m; i++){
+      compressed += this.atob(points[i]);
+    }
+    return compressed;
+  },
+  //Convert hex points string to decimal array
+  decompress: function (pointsHex){
+    var decompressed = "";
+    pointsHex = pointsHex.split("");
+    for(var i = 0, m = pointsHex.length; i < m; i++){
+      decompressed += this.btoa(pointsHex[i])+",";
+    }
+    //Return as array of numbers
+    return decompressed.replace(/,$/, "").split(",");
+  }
+}
+
 //Begin on DOMContent load
 window.addEventListener("DOMContentLoaded", initialize);
 
@@ -113,7 +145,7 @@ function checkPoint(point){
 //Get Points from URL Parameter and generate an array from it;
 function getURLPoints(){
   //Get Points from GET Parameter
-  var points = getURLParameter("points") ? getURLParameter("points").split(",", 30) : [];
+  var points = getURLParameter("points") ? Compressor.decompress(getURLParameter("points")) : [];
   //Get length (for efficiency)
   var length = points.length;
   //Counts total skill points spent so far
@@ -266,9 +298,9 @@ function shareLink() {
   var elemLink = document.getElementById("share-link");
   //Add current character to Link
   link += "?class=" + Calculator.selectedCharacter;
-  //Add points to Link
+  //Add points (compressed) to Link
   var dataPoints = getPointDistribution();
-  link += "&points=" + dataPoints.toString();
+  link += "&points=" + Compressor.compress(dataPoints.toString());
   //Display Link in Link input element
   elemLink.value = link;
 }
@@ -304,5 +336,4 @@ function addClass(c, className){
 function removeClass(c, className){
   console.log(c);
   return className.replace( new RegExp('(?:^|\\s)' + c + '(?!\\S)', 'g') , '' );
-
 }
