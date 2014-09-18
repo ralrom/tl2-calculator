@@ -11,15 +11,17 @@ html {
 
 /* line 10, ../sass/_base.scss */
 html,
-input[type=text] {
+textarea {
   font-family: 'Open Sans', sans-serif;
 }
 
 /* line 15, ../sass/_base.scss */
-input[type=text] {
+textarea {
   font-size: 1em;
   line-height: 1;
   margin: 0;
+  width: 100%;
+  resize: vertical;
 }
 
 /* line 1, ../sass/_layout.scss */
@@ -190,7 +192,7 @@ input[type=text] {
 
 /* line 78, ../sass/modules/_skills.scss */
 .skill-plus {
-  left: 0;
+  left: 66.666%;
 }
 
 /* line 82, ../sass/modules/_skills.scss */
@@ -203,7 +205,7 @@ input[type=text] {
 
 /* line 89, ../sass/modules/_skills.scss */
 .skill-clear {
-  left: 66.666%;
+  left: 0;
 }
 
 /* line 93, ../sass/modules/_skills.scss */

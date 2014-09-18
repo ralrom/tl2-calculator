@@ -168,7 +168,7 @@ function getURLPoints(){
   return points;
 }
 
-//Fill skills (run once)
+//Update UI (run once)
 function updateUI() {
   //Get Tab elements
   var elemTabs = document.getElementsByClassName("tab");
@@ -302,7 +302,7 @@ function shareLink() {
   var dataPoints = getPointDistribution();
   link += "&points=" + Compressor.compress(dataPoints.toString());
   //Display Link in Link input element
-  elemLink.value = link;
+  elemLink.innerHTML = link;
   //Display current skill point distribution in browser bar (Browser support: IE10+)
   history.replaceState({calc: "points"}, "TL2 Calc Saved Points", link);
 }

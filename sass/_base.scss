@@ -8,12 +8,14 @@ html {
 }
 
 html,
-input[type=text] {
+textarea {
   font-family: 'Open Sans', sans-serif;
 }
 
-input[type=text]{
+textarea{
   font-size: 1em;
   line-height: 1;
   margin: 0;
+  width: 100%;
+  resize: vertical;
 }
