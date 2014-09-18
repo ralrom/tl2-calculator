@@ -4,6 +4,7 @@
 
 ### Functional ###
 - URL is now compressed. **Previous share links will not work**
+- Images have been compressed (73% reduction). Certain skill icons are pixelated now but the page loads MUCH faster for new visitors..
 - Share Link section has been changed to show the full link without scrolling
 - URL is now updated as skill point are spent; work is no longer lost on page refresh. (Only on supported browsers IE10+)
 
