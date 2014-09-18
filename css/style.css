@@ -10,15 +10,12 @@ html {
 }
 
 /* line 10, ../sass/_base.scss */
-html,
-textarea {
+html {
   font-family: 'Open Sans', sans-serif;
 }
 
-/* line 15, ../sass/_base.scss */
+/* line 14, ../sass/_base.scss */
 textarea {
-  font-size: 1em;
-  line-height: 1;
   margin: 0;
   width: 100%;
   resize: vertical;
