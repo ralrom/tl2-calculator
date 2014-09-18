@@ -303,6 +303,8 @@ function shareLink() {
   link += "&points=" + Compressor.compress(dataPoints.toString());
   //Display Link in Link input element
   elemLink.value = link;
+  //Display current skill point distribution in browser bar (Browser support: IE10+)
+  history.replaceState({calc: "points"}, "TL2 Calc Saved Points", link);
 }
 
 //Show current tab view and hide other ones
