@@ -153,7 +153,7 @@ function getURLPoints(){
   if(length > 0) { //points parameter was given
     /* Get through all skills (30 skils per class).
     This works even if points parameter is shorter than expected
-     because points are are set to 0 by sanitizer if null */
+    because points are are set to 0 by sanitizer if null */
     for(var i = 0; i < 30; i++){
       //Sanitize point data
       points[i] = checkPoint(points[i]);
@@ -198,6 +198,9 @@ function updateUI() {
       elemSkills[j].getElementsByClassName("skill-icon")[0].setAttribute("alt", dataSkills[j].getAttribute("name"));
       //Update Skill level
       updateSkill(elemSkills[j], dataSkills[j], dataPoints[10 * i + j]);
+      //Add Skill-Box listeners
+      elemSkills[j].addEventListener("mouseenter", skillDescription, false);
+      elemSkills[j].addEventListener("mouseleave", hideDescription);
       //Add Skill-Buttons listeners
       var elemButtons = elemSkills[j].getElementsByClassName("skill-button");
       for (var k = 0, o = elemButtons.length; k < o; k++) {
@@ -251,6 +254,44 @@ function levelSkill(event) {
   } else if(change == "clear"){
     updateSkill(elemSkill, dataSkill, 0);
   }
+}
+
+
+function skillDescription(event){
+  var descriptor = document.getElementById("descriptor");
+  //Get skill data
+  var tree = event.target.getAttribute("data-tree");
+  var skill = event.target.getAttribute("data-skill");
+  //Change side on which description is displayed for last column of skills
+  if(skill == 2 || skill == 5 || skill == 9){
+    descriptor.className = removeClass("right", descriptor.className);
+    descriptor.className = addClass("left", descriptor.className);
+  } else {
+    descriptor.className = removeClass("left", descriptor.className);
+    descriptor.className = addClass("right", descriptor.className);
+  }
+  var dataSkill = Calculator.skillsetData.getElementsByTagName("tree")[tree].getElementsByTagName("skill")[skill];
+  //Set title
+  document.getElementById("skill-title").innerHTML = dataSkill.getAttribute("name");
+  //Set description
+  document.getElementById("description").innerHTML = dataSkill.getElementsByTagName("description")[0].innerHTML;
+  //Get Tier data
+  var dataTiers = dataSkill.getElementsByTagName("tier");
+  var elemTiers = document.getElementsByClassName("tier-description");
+  //Loop through Tier elements & fill them
+  for(var i = 0, m = dataTiers.length; i < m; i++){
+    elemTiers[i].innerHTML = dataTiers[i].innerHTML;
+  }
+  if(m == 0){ // If no tiers are available (passives) hide tier bonuses
+    document.getElementById("tiers").style.display = "none";
+  } else {
+    document.getElementById("tiers").style.display = "block";
+  }
+  document.getElementById("descriptor").style.display = "block";
+}
+
+function hideDescription(event){
+  document.getElementById("descriptor").style.display = "none";
 }
 
 //Returns the total skill points spent in a given tree
@@ -329,13 +370,14 @@ function switchTab(event) {
 
 //Adds CSS class (if not already there)
 function addClass(c, className){
-  if ( !className.match(new RegExp('(?:^|\s)'+c+'(?!\S)')) ) {
+  if ( !className.match(new RegExp('(?:^|\\s)' + c + '(?!\\S)', 'g'))) {
     return className += " "+c;
+  } else {
+    return className;
   }
 }
 
 //Removes CSS class
 function removeClass(c, className){
-  console.log(c);
-  return className.replace( new RegExp('(?:^|\\s)' + c + '(?!\\S)', 'g') , '' );
+  return className.replace(new RegExp('(?:^|\\s)' + c + '(?!\\S)', 'g'), '');
 }

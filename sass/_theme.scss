@@ -50,13 +50,22 @@ body {
 }
 
 .skill-level-number {
-  color: #333;
-  color: rgba(0,0,0,0.7);
-  text-shadow: 1px 1px 0 rgba(255,255,255,0.15);
+  color: #000;
+  color: rgba(0,0,0,0.85);
+  text-shadow: 1px 1px 0 rgba(255,255,255,0.10);
 }
 .skill-tier2,
 .skill-tier3 {
   border-color: $light-color;
+}
+
+/*****************************/
+/* Description */
+/*****************************/
+
+.descriptor{
+  color: shade($light-color, 5%);
+  background-color: $dark-color;
 }
 
 /*****************************/
