@@ -121,7 +121,7 @@
     <skill name="Sandstorm">
       <inactive xPos="199" yPos="661"/>
       <active xPos="265" yPos="661"/>
-      <description>You hurl your glaive, generating a whirlwind that cuts through foes and saps their health. The sandstorm travels 20 meters and generates 1.5% of your charge bar |c00ff9933Charge|u for every enemy hit.</description>
+      <description>You hurl your glaive, generating a whirlwind that cuts through foes and saps their health. The sandstorm travels 20 meters and generates 1.5% of your charge bar Charge for every enemy hit.</description>
       <tiers>
         <tier>Killed foes emit clouds of plague flies</tier>
         <tier>Range extended to 40 meters</tier>
@@ -171,7 +171,7 @@
     <skill name="Share the Wealth">
       <inactive xPos="133" yPos="2047"/>
       <active xPos="199" yPos="2047"/>
-      <description>You share a percentage of your |c00ff9933Charge|u benefits with all pets and allies within 16 meters, and you gain the same percentage as an additional bonus to your own benefits.</description>
+      <description>You share a percentage of your Charge benefits with all pets and allies within 16 meters, and you gain the same percentage as an additional bonus to your own benefits.</description>
     </skill>
   </tree>
   <tree name="Sigil">
