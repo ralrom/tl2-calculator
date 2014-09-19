@@ -68,6 +68,13 @@ body {
   background-color: $dark-color;
 }
 
+/* Tiers */
+
+.tier-description.tier-obtained,
+.tier-title.tier-obtained {
+  color: #FFD700;
+}
+
 /*****************************/
 /* Points */
 /*****************************/

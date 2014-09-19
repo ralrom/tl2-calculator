@@ -16,7 +16,7 @@
   display: table;
   clear: both;
 }
-.skill-box {
+.skill {
   width: 31%;
   display: block;
   float: left;
@@ -24,11 +24,11 @@
   margin: 4% 3.5% 4% 0;
 }
 
-.skill-box:last-child {
+.skill:last-child {
   margin-right: 0;
 }
 
-.third-row .skill-box {
+.third-row .skill {
   float: none;
   margin: 4% auto;
 }

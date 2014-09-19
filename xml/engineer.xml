@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <skillset>
   <tree name="Blitz">
-    <skill name="Flame Hammer">
+    <skill>
+      <name>Flame Hammer</name>
       <inactive xPos="67" yPos="1585"/>
       <active xPos="133" yPos="1585"/>
       <description>Your weapon crushes foes it strikes, creating 4 flaming splinters that seek out enemies within 5 meters. If available, a Charge is consumed to generate two additional blasts.</description>
@@ -11,7 +12,8 @@
         <tier>Creates 7 flaming splinters travelling 14 meters</tier>
       </tiers>
     </skill>
-    <skill name="Seismic Slam">
+    <skill>
+      <name>Seismic Slam</name>
       <inactive xPos="67" yPos="661"/>
       <active xPos="133" yPos="661"/>
       <description>Your mechanically-assisted stomp stuns and burns all enemies in a 4 meter radius around you.</description>
@@ -21,7 +23,8 @@
         <tier>Radius increased to 10 meters</tier>
       </tiers>
     </skill>
-    <skill name="Ember Hammer">
+    <skill>
+      <name>Ember Hammer</name>
       <inactive xPos="133" yPos="1783"/>
       <active xPos="199" yPos="1783"/>
       <description>You deliver a powerful sidelong swing which channels ember energy into a wide, 270 degree arc, destroying shields. Ember Hammer does not gain Charge.</description>
@@ -31,7 +34,8 @@
         <tier>Damage is amplified by 15% for every Charge</tier>
       </tiers>
     </skill>
-    <skill name="Onslaught">
+    <skill>
+      <name>Onslaught</name>
       <inactive xPos="397" yPos="991"/>
       <active xPos="1" yPos="1057"/>
       <description>You leap forward, slamming your melee weapon into the ground. Foes at the point of impact are damaged and slowed significantly. Onslaught gains half of normal Charge.</description>
@@ -41,7 +45,8 @@
         <tier>Mana cost reduced by 60%</tier>
       </tiers>
     </skill>
-    <skill name="Ember Reach">
+    <skill>
+      <name>Ember Reach</name>
       <inactive xPos="265" yPos="859"/>
       <active xPos="1" yPos="925"/>
       <description>A focused surge of energy draws a foe into striking range. You gain a 20% chance to stun for 3 seconds for every Charge you have, but the skill itself neither gains nor expends Charge. </description>
@@ -51,7 +56,8 @@
         <tier>Mana cost reduced by 60%. Damage Taken effect lasts 8 seconds.</tier>
       </tiers>
     </skill>
-    <skill name="Storm Burst">
+    <skill>
+      <name>Storm Burst</name>
       <inactive xPos="199" yPos="397"/>
       <active xPos="265" yPos="397"/>
       <description>A blast from your pack rockets you swiftly forward, knocking back foes. 3 bolts of energy discharge from your suit on impact, striking remote enemies. Every enemy hit also recharges your mana by 5%, for up to 5 targets.</description>
@@ -61,7 +67,8 @@
         <tier>Cooldown reduced to 1 second</tier>
       </tiers>
     </skill>
-    <skill name="Emberquake">
+    <skill>
+      <name>Emberquake</name>
       <inactive xPos="265" yPos="1783"/>
       <active xPos="331" yPos="1783"/>
       <description>A huge overhand smash sends out 8 radiating magma fissures to seek and destroy your enemies.</description>
@@ -71,24 +78,28 @@
         <tier>Fire damage increased by 60%</tier>
       </tiers>
     </skill>
-    <skill name="Heavy Lifting">
+    <skill>
+      <name>Heavy Lifting</name>
       <inactive xPos="397" yPos="2443"/>
       <active xPos="1" yPos="2509"/>
       <description>Your skill with giant weaponry allows you to attack faster and adds a chance to stun your foes.</description>
     </skill>
-    <skill name="Supercharge">
+    <skill>
+      <name>Supercharge</name>
       <inactive xPos="331" yPos="133"/>
       <active xPos="397" yPos="133"/>
       <description>When you hit foes with a melee weapon, you have a chance to direct excess energy into your weapon and then discharge it during attacks over the next 10 seconds. While supercharged you gain additional Charge.</description>
     </skill>
-    <skill name="Coup-de-Grace">
+    <skill>
+      <name>Coup-de-Grace</name>
       <inactive xPos="331" yPos="1981"/>
       <active xPos="397" yPos="1981"/>
       <description>When you hit a stunned target, an electrical surge helps finish the foe off. This ability cannot trigger more than one time per second.</description>
     </skill>
   </tree>
   <tree name="Construction">
-    <skill name="Healing Bot">
+    <skill>
+      <name>Healing Bot</name>
       <inactive xPos="397" yPos="199"/>
       <active xPos="1" yPos="265"/>
       <description>You deploy a small drone that generates energy pulses, healing both you and your allies.</description>
@@ -98,7 +109,8 @@
         <tier>The Engineer and allies also get a 16% Armor boost</tier>
       </tiers>
     </skill>
-    <skill name="Blast Cannon">
+    <skill>
+      <name>Blast Cannon</name>
       <inactive xPos="331" yPos="2245"/>
       <active xPos="397" yPos="2245"/>
       <description>You fire a long-range, piercing projectile from your cannon. At higher ranks, the blast leaves foes more susceptible to further fire and physical damage.</description>
@@ -108,7 +120,8 @@
         <tier>75% chance to Blind foes for 4 seconds</tier>
       </tiers>
     </skill>
-    <skill name="Spider Mines">
+    <skill>
+      <name>Spider Mines</name>
       <inactive xPos="265" yPos="331"/>
       <active xPos="331" yPos="331"/>
       <description>You deploy a trio of spider drones that charge the nearest foes and explode in a 3 meter radius. Upgraded mines do 20% more damage with a 5 meter radius, a 2 second stun, and electric damage over time.</description>
@@ -118,7 +131,8 @@
         <tier>Mana cost reduced by 60%</tier>
       </tiers>
     </skill>
-    <skill name="Gun Bot">
+    <skill>
+      <name>Gun Bot</name>
       <inactive xPos="1" yPos="1387"/>
       <active xPos="67" yPos="1387"/>
       <description>You deploy a small drone that assaults your enemies with a hail of gunfire, firing 5 rounds per second. Each rank increases the bot's damage potential.</description>
@@ -128,7 +142,8 @@
         <tier>Triple-spread shots<br/><br/>Summoning cooldown reduced to 1.5 minutes</tier>
       </tiers>
     </skill>
-    <skill name="Shock Grenade">
+    <skill>
+      <name>Shock Grenade</name>
       <inactive xPos="265" yPos="463"/>
       <active xPos="331" yPos="463"/>
       <description>You lob a grenade, which shocks and stuns enemies in a 4 meter radius. Consumes one Charge for two additional grenades.</description>
@@ -138,7 +153,8 @@
         <tier>Grenade shock radius grows to 6 meters and stun time increased to 6 seconds</tier>
       </tiers>
     </skill>
-    <skill name="Fusillade">
+    <skill>
+      <name>Fusillade</name>
       <inactive xPos="67" yPos="1453"/>
       <active xPos="133" yPos="1453"/>
       <description>You unleash a continuous barrage of long-range, homing rockets from your cannon. Bursts of 2 rockets keep firing as long as the mouse button is held down.</description>
@@ -148,7 +164,8 @@
         <tier>4 rockets are released per burst</tier>
       </tiers>
     </skill>
-    <skill name="Sledgebot">
+    <skill>
+      <name>Sledgebot</name>
       <inactive xPos="199" yPos="1321"/>
       <active xPos="265" yPos="1321"/>
       <description>You construct a powerful Sledgebot to pulverize your foes.</description>
@@ -158,24 +175,28 @@
         <tier>Sledgebot gains rocket attack</tier>
       </tiers>
     </skill>
-    <skill name="Bulwark">
+    <skill>
+      <name>Bulwark</name>
       <inactive xPos="331" yPos="2377"/>
       <active xPos="397" yPos="2377"/>
       <description>Your expertise with armor lets you get the most out of it, increasing its effectiveness, and reducing any damage that actually gets through.</description>
     </skill>
-    <skill name="Fire and Spark">
+    <skill>
+      <name>Fire and Spark</name>
       <inactive xPos="199" yPos="1717"/>
       <active xPos="265" yPos="1717"/>
       <description>The spark to make things work ... and fire to make things die.<br/><br/>Each level adds 5% to all fire and electric-based damage inflicted by the Engineer.</description>
     </skill>
-    <skill name="Charge Domination">
+    <skill>
+      <name>Charge Domination</name>
       <inactive xPos="331" yPos="2113"/>
       <active xPos="397" yPos="2113"/>
       <description>When you slay an enemy, you have a chance to absorb enough energy to fill your Charge bar. This ability cannot trigger more often than once every three seconds.</description>
     </skill>
   </tree>
   <tree name="Aegis">
-    <skill name="Shield Bash">
+    <skill>
+      <name>Shield Bash</name>
       <inactive xPos="67" yPos="529"/>
       <active xPos="133" yPos="529"/>
       <description>You smash enemies in front of you, stunning them, slowing their attacks and knocking them back. Damage is equal to 5 times your shield's Armor value. Each Charge you currently have provides an additional 10% damage bonus. </description>
@@ -185,7 +206,8 @@
         <tier>Damage is increased to 12.5 times your Shield's Armor</tier>
       </tiers>
     </skill>
-    <skill name="Forcefield">
+    <skill>
+      <name>Forcefield</name>
       <inactive xPos="397" yPos="1519"/>
       <active xPos="1" yPos="1585"/>
       <description>Your armor projects Ember energy, creating a forcefield around you, and a half-strength forcefield around allies. Once the forcefield absorbs its maximum damage it dissipates, removing all benefits.<br/><br/>Forcefield uses all available Charges to increase damage absorbtion by 50% per Charge.</description>
@@ -195,7 +217,8 @@
         <tier>Mana cost and casting time are reduced by 50%</tier>
       </tiers>
     </skill>
-    <skill name="Overload">
+    <skill>
+      <name>Overload</name>
       <inactive xPos="265" yPos="991"/>
       <active xPos="331" yPos="991"/>
       <description>You overload your armor's circuits to project a nova of Ember energy, electrocuting up to 5 foes in a 6 meter radius around you. Overload uses all available Charges to increase its damage by 50% per Charge.</description>
@@ -205,7 +228,8 @@
         <tier>Up to 11 foes in a 12 meter radius are electrocuted</tier>
       </tiers>
     </skill>
-    <skill name="Dynamo Field">
+    <skill>
+      <name>Dynamo Field</name>
       <inactive xPos="331" yPos="1849"/>
       <active xPos="331" yPos="1849"/>
       <description>You tap into your armor's energy to project an electrical burst in a 5 meter radius. This electrical surge generates charge for each enemy that is struck, up to five per field.</description>
@@ -215,7 +239,8 @@
         <tier>Field radius increased to 11 meters. Interrupt chance increased to 110%.</tier>
       </tiers>
     </skill>
-    <skill name="Tremor">
+    <skill>
+      <name>Tremor</name>
       <inactive xPos="67" yPos="133"/>
       <active xPos="133" yPos="133"/>
       <description>Discharging the energy from your suit into the earth causes a massive shockwave to expand outward, knocking back and weakening foes within 24 meters. Tremor only does the listed damage when it uses one Charge.</description>
@@ -225,7 +250,8 @@
         <tier>All targets are stunned for 2 seconds</tier>
       </tiers>
     </skill>
-    <skill name="Fire Bash">
+    <skill>
+      <name>Fire Bash</name>
       <inactive xPos="67" yPos="1717"/>
       <active xPos="133" yPos="1717"/>
       <description>You channel a potent blast of energy through your shield up to 6 meters away. Damage is derived from your shield's Armor value. Initial physical damage is tripled and the blast range is increased to 9 meters with one Charge. </description>
@@ -235,7 +261,8 @@
         <tier>Targets take 50% additional fire damage while burning</tier>
       </tiers>
     </skill>
-    <skill name="Immobilization Copter">
+    <skill>
+      <name>Immobilization Copter</name>
       <inactive xPos="397" yPos="331"/>
       <active xPos="1" yPos="397"/>
       <description>You deploy an immobilization drone which slows enemies within range of its beam. A maximum of 3 targets may be effected at once.</description>
@@ -245,17 +272,20 @@
         <tier>Targets are intermittently interrupted </tier>
       </tiers>
     </skill>
-    <skill name="Sword and Board">
+    <skill>
+      <name>Sword and Board</name>
       <inactive xPos="265" yPos="199"/>
       <active xPos="331" yPos="199"/>
       <description>Your skill with a shield goes beyond "defense" and straight to "offense," adding some of your shield's armor value directly to your melee attacks as physical damage.</description>
     </skill>
-    <skill name="Aegis of Fate">
+    <skill>
+      <name>Aegis of Fate</name>
       <inactive xPos="331" yPos="1717"/>
       <active xPos="397" yPos="1717"/>
       <description>When foes attack you, your armor has a chance to generate a defensive "bubble" around you that prevents further damage. The amount of damage this shield can absorb is equal to 200% of your Armor plus 100. While the Aegis is active, you also get 50% Knockback Resistance.</description>
     </skill>
-    <skill name="Charge Reconstitution">
+    <skill>
+      <name>Charge Reconstitution</name>
       <inactive xPos="265" yPos="2047"/>
       <active xPos="331" yPos="2047"/>
       <description>When you use Charge for skills, you regain some of your Health.</description>

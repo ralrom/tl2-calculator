@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <skillset>
   <tree name="Inferno">
-    <skill name="Magma Spear">
+    <skill>
+      <name>Magma Spear</name>
       <inactive xPos="1" yPos="1123"/>
       <active xPos="67" yPos="1123"/>
       <description>You fire a channeled barrage of magma, piercing foes and setting them aflame. Range is 16 meters.</description>
@@ -11,7 +12,8 @@
         <tier>Magma Spears ricochet</tier>
       </tiers>
     </skill>
-    <skill name="Magma Mace">
+    <skill>
+      <name>Magma Mace</name>
       <inactive xPos="133" yPos="1123"/>
       <active xPos="199" yPos="1123"/>
       <description>You summon an enormous mace of fire that channels the energy of your weapons, stunning foes in a 5 meter arc and setting them ablaze. Magma Mace does not build Charge.</description>
@@ -21,7 +23,8 @@
         <tier>Hit slows enemy attacks by 67% for 3 seconds</tier>
       </tiers>
     </skill>
-    <skill name="Firebombs">
+    <skill>
+      <name>Firebombs</name>
       <inactive xPos="397" yPos="1651"/>
       <active xPos="1" yPos="1717"/>
       <description>You hurl three gouts of flame that ignite the ground for 3 seconds and sometimes cause foes to stumble in panic as they burn. Firebombs gain no Charge.</description>
@@ -31,7 +34,8 @@
         <tier>Pools of flame last 6 seconds. Cooldown time reduced to .8 seconds.</tier>
       </tiers>
     </skill>
-    <skill name="Blazing Pillar">
+    <skill>
+      <name>Blazing Pillar</name>
       <inactive xPos="133" yPos="2245"/>
       <active xPos="199" yPos="2245"/>
       <description>You create 4 giant pillars of intense flame that seek out and immolate nearby foes. Blazing Pillar is good at building Charge.</description>
@@ -41,7 +45,8 @@
         <tier>7 pillars of flame are created</tier>
       </tiers>
     </skill>
-    <skill name="Infernal Collapse">
+    <skill>
+      <name>Infernal Collapse</name>
       <inactive xPos="199" yPos="1189"/>
       <active xPos="265" yPos="1189"/>
       <description>You create a concentrated sphere of heat, which suddenly expands outward in a devastating 4 meter blast.</description>
@@ -51,7 +56,8 @@
         <tier>Blast radius increased to 7 meters. Increased Knockback.</tier>
       </tiers>
     </skill>
-    <skill name="Immolation Aura">
+    <skill>
+      <name>Immolation Aura</name>
       <inactive xPos="199" yPos="1585"/>
       <active xPos="265" yPos="1585"/>
       <description>A vortex of flame surrounds you, damaging foes within a 3 meter radius.</description>
@@ -61,7 +67,8 @@
         <tier>The aura absorbs 15% of all incoming damage</tier>
       </tiers>
     </skill>
-    <skill name="Firestorm">
+    <skill>
+      <name>Firestorm</name>
       <inactive xPos="1" yPos="1651"/>
       <active xPos="67" yPos="1651"/>
       <description>You call down burning cinders from the sky over a 15 meter radius, setting foes alight and increasing their susceptability to fire damage. Firestorm gains no Charge.</description>
@@ -71,24 +78,28 @@
         <tier>Burning splinter range doubled</tier>
       </tiers>
     </skill>
-    <skill name="Charge Mastery">
+    <skill>
+      <name>Charge Mastery</name>
       <inactive xPos="67" yPos="2113"/>
       <active xPos="133" yPos="2113"/>
       <description>Your expertise with Charge lets you gain it faster, and retain it longer.</description>
     </skill>
-    <skill name="Elemental Attunement">
+    <skill>
+      <name>Elemental Attunement</name>
       <inactive xPos="397" yPos="1123"/>
       <active xPos="1" yPos="1189"/>
       <description>The Embermage is finely attuned to the elements, inflicting elemental effects on nearby enemies and extending the duration of all elemental effects.</description>
     </skill>
-    <skill name="Fire Brand">
+    <skill>
+      <name>Fire Brand</name>
       <inactive xPos="265" yPos="1651"/>
       <active xPos="331" yPos="1651"/>
       <description>When you hit a burning enemy, you do an additional burst of fire damage.</description>
     </skill>
   </tree>
   <tree name="Frost">
-    <skill name="Icy Blast">
+    <skill>
+      <name>Icy Blast</name>
       <inactive xPos="265" yPos="1255"/>
       <active xPos="331" yPos="1255"/>
       <description>You unleash a hail of 5 ricocheting icy bolts to slow and immobilize your foes. </description>
@@ -98,7 +109,8 @@
         <tier>Increases to 7 bolts over a wider arc</tier>
       </tiers>
     </skill>
-    <skill name="Hailstorm">
+    <skill>
+      <name>Hailstorm</name>
       <inactive xPos="331" yPos="1321"/>
       <active xPos="397" yPos="1321"/>
       <description>You call down shards of ice from the sky, pummeling foes within a 15 meter radius. Hailstorm gains no Charge.</description>
@@ -108,7 +120,8 @@
         <tier>Targets become 60% more susceptible to Ice and Electric damage for 6 seconds</tier>
       </tiers>
     </skill>
-    <skill name="Frost Phase">
+    <skill>
+      <name>Frost Phase</name>
       <inactive xPos="133" yPos="1519"/>
       <active xPos="199" yPos="1519"/>
       <description>You vanish from one location and instantly reappear in another, dealing cold damage in both places within a 2.5 meter burst.</description>
@@ -118,7 +131,8 @@
         <tier>Burst radius increased to 6.25 meters</tier>
       </tiers>
     </skill>
-    <skill name="Elemental Boon">
+    <skill>
+      <name>Elemental Boon</name>
       <inactive xPos="199" yPos="1849"/>
       <active xPos="265" yPos="1849"/>
       <description>You imbue yourself with a bolstering aura which increases your elemental damages and resistances. Boon's benefits are also applied to any allies within 12 meters.</description>
@@ -128,7 +142,8 @@
         <tier>Faster cast and less mana</tier>
       </tiers>
     </skill>
-    <skill name="Frost Wave">
+    <skill>
+      <name>Frost Wave</name>
       <inactive xPos="1" yPos="1519"/>
       <active xPos="67" yPos="1519"/>
       <description>You hurl forth a wave of ice shards, impaling and freezing foes in its path.</description>
@@ -138,7 +153,8 @@
         <tier>A spread of 5 frost waves are released</tier>
       </tiers>
     </skill>
-    <skill name="Ice Prison">
+    <skill>
+      <name>Ice Prison</name>
       <inactive xPos="133" yPos="1255"/>
       <active xPos="199" yPos="1255"/>
       <description>You summon pillars of ice around a target, trapping it within. You, however, can pass through the barrier. Pillars reflect damage back at foes attacking them.</description>
@@ -148,7 +164,8 @@
         <tier>Cooldown reduced to 2 seconds.</tier>
       </tiers>
     </skill>
-    <skill name="Astral Ally">
+    <skill>
+      <name>Astral Ally</name>
       <inactive xPos="397" yPos="1783"/>
       <active xPos="1" yPos="1849"/>
       <description>You summon an astral clone of a fellow Embermage, who joins you in battle with powerful spells.</description>
@@ -158,24 +175,28 @@
         <tier>The Astral Ally lasts for 50 seconds</tier>
       </tiers>
     </skill>
-    <skill name="Staff Mastery">
+    <skill>
+      <name>Staff Mastery</name>
       <inactive xPos="133" yPos="331"/>
       <active xPos="199" yPos="331"/>
       <description>Your skill with staves lowers the elemental resistances of enemies when you strike them. These effects are also applied to the Magma Mace, Magma Spear, Icy Blast and Shockbolts skills.</description>
     </skill>
-    <skill name="Frozen Fate">
+    <skill>
+      <name>Frozen Fate</name>
       <inactive xPos="199" yPos="1453"/>
       <active xPos="265" yPos="1453"/>
       <description>When you kill an enemy, you have chance to freeze up to 4 additional enemies within a 7 meter radius.</description>
     </skill>
-    <skill name="Ice Brand">
+    <skill>
+      <name>Ice Brand</name>
       <inactive xPos="331" yPos="1189"/>
       <active xPos="397" yPos="1189"/>
       <description>When you hit a frozen enemy, you do an additional burst of ice damage.</description>
     </skill>
   </tree>
   <tree name="Storm">
-    <skill name="Prismatic Bolt">
+    <skill>
+      <name>Prismatic Bolt</name>
       <inactive xPos="67" yPos="925"/>
       <active xPos="133" yPos="925"/>
       <description>You unleash a flurry of 5 prismatic bolts that seek out nearby foes.</description>
@@ -185,7 +206,8 @@
         <tier>Damage increased by 30%</tier>
       </tiers>
     </skill>
-    <skill name="Shocking Burst">
+    <skill>
+      <name>Shocking Burst</name>
       <inactive xPos="133" yPos="463"/>
       <active xPos="199" yPos="463"/>
       <description>You unleash channeled bursts of crackling energy, shocking and stunning all foes up to 8 meters away in a 75 degree angle.The energy burst continues and drains mana while the mouse button is held down.</description>
@@ -195,7 +217,8 @@
         <tier>Arc widened to 165 degrees</tier>
       </tiers>
     </skill>
-    <skill name="Thunder Locus">
+    <skill>
+      <name>Thunder Locus</name>
       <inactive xPos="199" yPos="265"/>
       <active xPos="67" yPos="331"/>
       <description>You summon a concentrated thunderstorm at a target location, which blasts foes within 7 meters for the duration of its existence. Thunder Locus does not build Charge.</description>
@@ -205,7 +228,8 @@
         <tier>The Locus can blast four foes at once</tier>
       </tiers>
     </skill>
-    <skill name="Arc Beam">
+    <skill>
+      <name>Arc Beam</name>
       <inactive xPos="1" yPos="2443"/>
       <active xPos="67" yPos="2443"/>
       <description>You pierce your foes with a channeled beam of energy from your weapons. Destroyed enemies split the beam and strike nearby targets as a secondary effect.</description>
@@ -215,7 +239,8 @@
         <tier>The beam can split to new targets up to 5 times</tier>
       </tiers>
     </skill>
-    <skill name="Death's Bounty">
+    <skill>
+      <name>Death's Bounty</name>
       <inactive xPos="265" yPos="727"/>
       <active xPos="331" yPos="727"/>
       <description>You bind the lifeforce of all foes within 6 meters of the target. Upon their death, their life and mana are drawn to you or other players through 3 soul bolts. Stated health and mana recovery is per soul bolt.</description>
@@ -225,7 +250,8 @@
         <tier>6 soul bolts are released and enemies are stunned for 1 second</tier>
       </tiers>
     </skill>
-    <skill name="Shockbolts">
+    <skill>
+      <name>Shockbolts</name>
       <inactive xPos="397" yPos="463"/>
       <active xPos="1" yPos="529"/>
       <description>You release 4 electrically charged bolts, which follow the ground and ricochet off neighboring objects</description>
@@ -235,7 +261,8 @@
         <tier>Increases to 5 bolts at launch</tier>
       </tiers>
     </skill>
-    <skill name="Shocking Orb">
+    <skill>
+      <name>Shocking Orb</name>
       <inactive xPos="1" yPos="463"/>
       <active xPos="67" yPos="463"/>
       <description>You release a slow-moving electrical orb, which discharges energy into foes as it passes</description>
@@ -245,17 +272,20 @@
         <tier>Discharge range increased 50%</tier>
       </tiers>
     </skill>
-    <skill name="Prismatic Rift">
+    <skill>
+      <name>Prismatic Rift</name>
       <inactive xPos="67" yPos="1849"/>
       <active xPos="133" yPos="1849"/>
       <description>Your chaotic energy teleports enemies away when they strike you, with a chance of random elemental effects.</description>
     </skill>
-    <skill name="Wand Chaos">
+    <skill>
+      <name>Wand Chaos</name>
       <inactive xPos="397" yPos="67"/>
       <active xPos="1" yPos="133"/>
       <description>Attacks using your wand can result in bizarre, random elemental disturbances. These effects can also happen with the Magma Mace, Magma Spear, Icy Blast and Shockbolts skills.</description>
     </skill>
-    <skill name="Lightning Brand">
+    <skill>
+      <name>Lightning Brand</name>
       <inactive xPos="67" yPos="265"/>
       <active xPos="133" yPos="265"/>
       <description>When you hit a shocked enemy, you do an additional burst of lightning damage.</description>

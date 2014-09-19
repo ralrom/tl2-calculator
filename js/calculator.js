@@ -228,6 +228,24 @@ function updateSkill(element, data, level) {
   updatePointDistributionBar();
   //Generate new share link
   shareLink();
+  //Show tier 
+  if(level >= 5){
+    document.getElementById("tier-0-title").className = addClass("tier-obtained", document.getElementById("tier-0-title").className);
+    document.getElementById("tier-0-description").className = addClass("tier-obtained", document.getElementById("tier-0-description").className);
+  } else {
+    for(var i = 0; i < 3; i++){
+      document.getElementById("tier-"+i+"-title").className = removeClass("tier-obtained", document.getElementById("tier-"+i+"-title").className);
+      document.getElementById("tier-"+i+"-description").className = removeClass("tier-obtained", document.getElementById("tier-"+i+"-description").className);
+    }
+  }
+  if(level >= 10){
+    document.getElementById("tier-1-title").className = addClass("tier-obtained", document.getElementById("tier-1-title").className);
+    document.getElementById("tier-1-description").className = addClass("tier-obtained", document.getElementById("tier-1-description").className);
+  }
+  if(level == 15){
+    document.getElementById("tier-2-title").className = addClass("tier-obtained", document.getElementById("tier-2-title").className);
+    document.getElementById("tier-2-description").className = addClass("tier-obtained", document.getElementById("tier-2-description").className);
+  }
 }
 
 //Change skill level
@@ -253,131 +271,130 @@ function levelSkill(event) {
     }
   } else if(change == "clear"){
     updateSkill(elemSkill, dataSkill, 0);
-  }
-}
+  }}
 
 
-function skillDescription(event){
-  var descriptor = document.getElementById("descriptor");
-  //Get skill data
-  var tree = event.target.getAttribute("data-tree");
-  var skill = event.target.getAttribute("data-skill");
-  //Change side on which description is displayed for last column of skills
-  if(skill == 2 || skill == 5 || skill == 9){
-    descriptor.className = removeClass("right", descriptor.className);
-    descriptor.className = addClass("left", descriptor.className);
-  } else {
-    descriptor.className = removeClass("left", descriptor.className);
-    descriptor.className = addClass("right", descriptor.className);
+  function skillDescription(event){
+    var descriptor = document.getElementById("descriptor");
+    //Get skill data
+    var tree = event.target.getAttribute("data-tree");
+    var skill = event.target.getAttribute("data-skill");
+    var dataSkill = Calculator.skillsetData.getElementsByTagName("tree")[tree].getElementsByTagName("skill")[skill];
+    //Change side on which description is displayed for last column of skills
+    if(skill == 2 || skill == 5 || skill == 9){
+      descriptor.className = removeClass("right", descriptor.className);
+      descriptor.className = addClass("left", descriptor.className);
+    } else {
+      descriptor.className = removeClass("left", descriptor.className);
+      descriptor.className = addClass("right", descriptor.className);
+    }
+    //Set title
+    document.getElementById("skill-title").innerHTML = dataSkill.getAttribute("name");
+    //Set description
+    document.getElementById("description").innerHTML = dataSkill.getElementsByTagName("description")[0].innerHTML;
+    //Get Tier data
+    var dataTiers = dataSkill.getElementsByTagName("tier");
+    var elemTiers = document.getElementsByClassName("tier-description");
+    //Loop through Tier elements & fill them
+    for(var i = 0, m = dataTiers.length; i < m; i++){
+      elemTiers[i].innerHTML = dataTiers[i].innerHTML;
+    }
+    if(m == 0){ // If no tiers are available (passives) hide tier bonuses
+      document.getElementById("tiers").style.display = "none";
+    } else {
+      document.getElementById("tiers").style.display = "block";
+    }
+    document.getElementById("descriptor").style.display = "block";
   }
-  var dataSkill = Calculator.skillsetData.getElementsByTagName("tree")[tree].getElementsByTagName("skill")[skill];
-  //Set title
-  document.getElementById("skill-title").innerHTML = dataSkill.getAttribute("name");
-  //Set description
-  document.getElementById("description").innerHTML = dataSkill.getElementsByTagName("description")[0].innerHTML;
-  //Get Tier data
-  var dataTiers = dataSkill.getElementsByTagName("tier");
-  var elemTiers = document.getElementsByClassName("tier-description");
-  //Loop through Tier elements & fill them
-  for(var i = 0, m = dataTiers.length; i < m; i++){
-    elemTiers[i].innerHTML = dataTiers[i].innerHTML;
-  }
-  if(m == 0){ // If no tiers are available (passives) hide tier bonuses
-    document.getElementById("tiers").style.display = "none";
-  } else {
-    document.getElementById("tiers").style.display = "block";
-  }
-  document.getElementById("descriptor").style.display = "block";
-}
 
-function hideDescription(event){
-  document.getElementById("descriptor").style.display = "none";
-}
-
-//Returns the total skill points spent in a given tree
-function getTreePointTotal(tree){
-  var points = getPointDistribution()[tree];
-  var total = 0;
-  for(var i = 0, m = points.length; i < m; i++){
-    total += Number(points[i]);
+  function hideDescription(event){
+    document.getElementById("descriptor").style.display = "none";
   }
-  return total;
-}
 
-//Updates the skill point distribution bar
-function updatePointDistributionBar(){
-  for(var i = 0; i < 3; i++){
-    var treeTotal = getTreePointTotal(i);
-    document.getElementById("points-bar-"+i).style.width = 100*treeTotal/132+"%";
-    document.getElementById("tree-"+i+"-total").innerHTML = treeTotal;
+  //Returns the total skill points spent in a given tree
+  function getTreePointTotal(tree){
+    var points = getPointDistribution()[tree];
+    var total = 0;
+    for(var i = 0, m = points.length; i < m; i++){
+      total += Number(points[i]);
+    }
+    return total;
   }
-}
 
-//Returns a 2D array containing all Skill points distribution
-function getPointDistribution() {
-  //Get all Skill-Tree elments
-  var elemTrees = document.getElementsByClassName("skill-tree");
-  //Variable to hold all Skill-Box level data
-  var points = [];
-  //Loop through all Skill-Boxes to fill dataTrees
-  for (var i = 0, m = elemTrees.length; i < m; i++) {
-    points[i] = [];
-    var elemSkills = elemTrees[i].getElementsByClassName("skill-box");
-    for (var j = 0, n = elemSkills.length; j < n; j++) {
-      //Get current skill level
-      points[i][j] = elemSkills[j].getElementsByClassName("skill-level-bar")[0].getAttribute("data-level");
+  //Updates the skill point distribution bar
+  function updatePointDistributionBar(){
+    for(var i = 0; i < 3; i++){
+      var treeTotal = getTreePointTotal(i);
+      document.getElementById("points-bar-"+i).style.width = 100*treeTotal/132+"%";
+      document.getElementById("tree-"+i+"-total").innerHTML = treeTotal;
     }
   }
-  return points;
-}
 
-//Create & Display a share link so build can be shared
-function shareLink() {
-  //Start Link as current page without query string
-  var link = [location.protocol, '//', location.host, location.pathname].join('');
-  //Get Link input element
-  var elemLink = document.getElementById("share-link");
-  //Add current character to Link
-  link += "?class=" + Calculator.selectedCharacter;
-  //Add points (compressed) to Link
-  var dataPoints = getPointDistribution();
-  link += "&points=" + Compressor.compress(dataPoints.toString());
-  //Display Link in Link input element
-  elemLink.innerHTML = link;
-  //Display current skill point distribution in browser bar (Browser support: IE10+)
-  history.replaceState({calc: "points"}, "TL2 Calc Saved Points", link);
-}
-
-//Show current tab view and hide other ones
-function switchTab(event) {
-  //Get Skill-Tree elements
-  var elemTrees = document.getElementsByClassName("skill-tree");
-  //Get Tab elements
-  var elemTabs = document.getElementsByClassName("tab");
-  //Hide all Skill-Trees & change all tabs to unselected
-  for (var i = 0, m = elemTrees.length; i < m; i++) {
-    elemTrees[i].className = removeClass("current-tree", elemTrees[i].className);
-    elemTabs[i].className = removeClass("current-tab", elemTabs[i].className);
+  //Returns a 2D array containing all Skill points distribution
+  function getPointDistribution() {
+    //Get all Skill-Tree elments
+    var elemTrees = document.getElementsByClassName("skill-tree");
+    //Variable to hold all Skill-Box level data
+    var points = [];
+    //Loop through all Skill-Boxes to fill dataTrees
+    for (var i = 0, m = elemTrees.length; i < m; i++) {
+      points[i] = [];
+      var elemSkills = elemTrees[i].getElementsByClassName("skill-box");
+      for (var j = 0, n = elemSkills.length; j < n; j++) {
+        //Get current skill level
+        points[i][j] = elemSkills[j].getElementsByClassName("skill-level-bar")[0].getAttribute("data-level");
+      }
+    }
+    return points;
   }
-  //Get requested Skill-Tree
-  var reqTree = event.target.getAttribute("data-tree");
-  //Display requested Skill-Tree
-  document.getElementById("tree-" + reqTree).className = addClass("current-tree", document.getElementById("tree-" + reqTree).className);
-  //Select current tab
-  document.getElementById("tree-" + reqTree + "-title").className = addClass("current-tab", document.getElementById("tree-" + reqTree + "-title").className);
-}
 
-
-//Adds CSS class (if not already there)
-function addClass(c, className){
-  if ( !className.match(new RegExp('(?:^|\\s)' + c + '(?!\\S)', 'g'))) {
-    return className += " "+c;
-  } else {
-    return className;
+  //Create & Display a share link so build can be shared
+  function shareLink() {
+    //Start Link as current page without query string
+    var link = [location.protocol, '//', location.host, location.pathname].join('');
+    //Get Link input element
+    var elemLink = document.getElementById("share-link");
+    //Add current character to Link
+    link += "?class=" + Calculator.selectedCharacter;
+    //Add points (compressed) to Link
+    var dataPoints = getPointDistribution();
+    link += "&points=" + Compressor.compress(dataPoints.toString());
+    //Display Link in Link input element
+    elemLink.innerHTML = link;
+    //Display current skill point distribution in browser bar (Browser support: IE10+)
+    history.replaceState({calc: "points"}, "TL2 Calc Saved Points", link);
   }
-}
 
-//Removes CSS class
-function removeClass(c, className){
-  return className.replace(new RegExp('(?:^|\\s)' + c + '(?!\\S)', 'g'), '');
-}
+  //Show current tab view and hide other ones
+  function switchTab(event) {
+    //Get Skill-Tree elements
+    var elemTrees = document.getElementsByClassName("skill-tree");
+    //Get Tab elements
+    var elemTabs = document.getElementsByClassName("tab");
+    //Hide all Skill-Trees & change all tabs to unselected
+    for (var i = 0, m = elemTrees.length; i < m; i++) {
+      elemTrees[i].className = removeClass("current-tree", elemTrees[i].className);
+      elemTabs[i].className = removeClass("current-tab", elemTabs[i].className);
+    }
+    //Get requested Skill-Tree
+    var reqTree = event.target.getAttribute("data-tree");
+    //Display requested Skill-Tree
+    document.getElementById("tree-" + reqTree).className = addClass("current-tree", document.getElementById("tree-" + reqTree).className);
+    //Select current tab
+    document.getElementById("tree-" + reqTree + "-title").className = addClass("current-tab", document.getElementById("tree-" + reqTree + "-title").className);
+  }
+
+
+  //Adds CSS class (if not already there)
+  function addClass(c, className){
+    if ( !className.match(new RegExp('(?:^|\\s)' + c + '(?!\\S)', 'g'))) {
+      return className += " "+c;
+    } else {
+      return className;
+    }
+  }
+
+  //Removes CSS class
+  function removeClass(c, className){
+    return className.replace(new RegExp('(?:^|\\s)' + c + '(?!\\S)', 'g'), '');
+  }

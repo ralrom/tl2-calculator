@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <skillset>
   <tree name="Hunter">
-    <skill name="Eviscerate">
+    <skill>
+      <name>Eviscerate</name>
       <active xPos="198" yPos="2509"/>
       <inactive xPos="133" yPos="2509"/>
       <description>You tear into all enemies directly in front of you, leaving them bleeding for 6 seconds. Base range is 2.7 meters within a 120 degree arc. Eviscerate has a 67% Charge rate penalty.</description>
@@ -11,7 +12,8 @@
         <tier>Range increased to 4 meters</tier>
       </tiers>
     </skill>
-    <skill name="Howl">
+    <skill>
+      <name>Howl</name>
       <active xPos="1" yPos="1321"/>
       <inactive xPos="397" yPos="1255"/>
       <description>You howl in fury, filling nearby foes with terror. Affected foes are slowed and become less able to defend themselves for several seconds.</description>
@@ -21,7 +23,8 @@
         <tier>Range increased to 12.5 meters</tier>
       </tiers>
     </skill>
-    <skill name="Raze">
+    <skill>
+      <name>Raze</name>
       <active xPos="67" yPos="2311"/>
       <inactive xPos="1" yPos="2311"/>
       <description>You perform a devastating uppercut that inflicts heavy damage on a single target. With each successive hit, you grow in power. Raze does not generate Charge.</description>
@@ -31,7 +34,8 @@
         <tier>Target is stunned</tier>
       </tiers>
     </skill>
-    <skill name="Wolfstrike">
+    <skill>
+      <name>Wolfstrike</name>
       <active xPos="397" yPos="1"/>
       <inactive xPos="331" yPos="1"/>
       <description>You lunge forward in a 6 meter dash, claws slashing, rending all foes in your path.</description>
@@ -41,7 +45,8 @@
         <tier>Lunge distance increased to 9 meters</tier>
       </tiers>
     </skill>
-    <skill name="Battle Rage">
+    <skill>
+      <name>Battle Rage</name>
       <active xPos="331" yPos="2311"/>
       <inactive xPos="265" yPos="2311"/>
       <description>You enter an enraged state during which your damage is amplified based on the number of foes within 4 meters. The rage lasts for 60 seconds.</description>
@@ -51,7 +56,8 @@
         <tier>Aura range increases to 6 meters</tier>
       </tiers>
     </skill>
-    <skill name="Rupture">
+    <skill>
+      <name>Rupture</name>
       <active xPos="265" yPos="2245"/>
       <inactive xPos="67" yPos="2245"/>
       <description>You knock a single enemy back with a devastating strike. After a brief delay, the target explodes, damaging all foes within 4 meters.</description>
@@ -61,7 +67,8 @@
         <tier>Explosion radius increased to 7 meters</tier>
       </tiers>
     </skill>
-    <skill name="Ravage">
+    <skill>
+      <name>Ravage</name>
       <active xPos="133" yPos="793"/>
       <inactive xPos="67" yPos="793"/>
       <description>You execute a brutal series of slashes, inflicting three strikes on all foes within 4 meters. Enemy armor is weakened with each strike.</description>
@@ -71,24 +78,28 @@
         <tier>Range increased to 5 meters</tier>
       </tiers>
     </skill>
-    <skill name="Blood Hunger">
+    <skill>
+      <name>Blood Hunger</name>
       <active xPos="199" yPos="727"/>
       <inactive xPos="133" yPos="727"/>
       <description>Whenever you land a critical strike with a melee weapon, you draw life essence from the carnage, healing your wounds.</description>
     </skill>
-    <skill name="Executioner">
+    <skill>
+      <name>Executioner</name>
       <active xPos="397" yPos="661"/>
       <inactive xPos="331" yPos="661"/>
       <description>Your ferocity in combat enables you to more frequently strike with two weapons at once. When you successfully execute, you gain Charge more quickly for a short period of time.</description>
     </skill>
-    <skill name="Rampage">
+    <skill>
+      <name>Rampage</name>
       <active xPos="67" yPos="859"/>
       <inactive xPos="1" yPos="859"/>
       <description>Each enemy you kill with a melee weapon has a chance of spurring you into an adrenaline-fueled rampage.<br/><br/>Faster Attack for 5 seconds<br/><br/>25% Cast Speed for 5 seconds<br/><br/>12% Movement Speed for 5 seconds</description>
     </skill>
   </tree>
   <tree name="Tundra">
-    <skill name="Frost Breath">
+    <skill>
+      <name>Frost Breath</name>
       <active xPos="331" yPos="1519"/>
       <inactive xPos="265" yPos="1519"/>
       <description>You channel the frigid north winds to unleash a blast of icy breath, which immobilizes enemies and makes them more susceptible to damage. The blast reaches 5 meters at a 90 degree angle.</description>
@@ -98,7 +109,8 @@
         <tier>Range is increased to 8 meters at a 150 degree angle. Allows use of health and mana steal abilities.</tier>
       </tiers>
     </skill>
-    <skill name="Stormclaw">
+    <skill>
+      <name>Stormclaw</name>
       <active xPos="1" yPos="331"/>
       <inactive xPos="397" yPos="265"/>
       <description>You imbue your weapons with an electrical energy. This power can cause a lightning bolt to arc toward nearby targets when you strike a foe. The lightning can chain up to 2 times.</description>
@@ -108,7 +120,8 @@
         <tier>Lightning can chain up to 5 times</tier>
       </tiers>
     </skill>
-    <skill name="Storm Hatchet">
+    <skill>
+      <name>Storm Hatchet</name>
       <active xPos="331" yPos="265"/>
       <inactive xPos="265" yPos="265"/>
       <description>You draw wild northern lightning out of your weapon to create an electrical throwing axe with a range of 15 meters.</description>
@@ -118,7 +131,8 @@
         <tier>Hatchets shatter shields</tier>
       </tiers>
     </skill>
-    <skill name="Northern Rage">
+    <skill>
+      <name>Northern Rage</name>
       <active xPos="397" yPos="1453"/>
       <inactive xPos="331" yPos="1453"/>
       <description>You unleash an arctic blast from deep inside you, throwing out shards of ice to knock back and freeze nearby foes.</description>
@@ -128,7 +142,8 @@
         <tier>The blast is strengthened to 6 fissures that travel further than tier II</tier>
       </tiers>
     </skill>
-    <skill name="Ice Shield">
+    <skill>
+      <name>Ice Shield</name>
       <active xPos="67" yPos="1255"/>
       <inactive xPos="1" yPos="1255"/>
       <description>You call forth an ice shield which reflects projectile missiles back at attackers. You also have a chance to gain 10% of your Charge Bar when the shield is struck. The shield lasts for 10 seconds.</description>
@@ -138,7 +153,8 @@
         <tier>The shield reflects 125% of the missile damage</tier>
       </tiers>
     </skill>
-    <skill name="Permafrost">
+    <skill>
+      <name>Permafrost</name>
       <active xPos="67" yPos="991"/>
       <inactive xPos="1" yPos="991"/>
       <description>The bone-cracking cold of the north expands outward from you, slowly sapping the life of all foes within 16 meters.</description>
@@ -148,7 +164,8 @@
         <tier>Chance to immobilize foes is increased to 50%</tier>
       </tiers>
     </skill>
-    <skill name="Glacial Shatter">
+    <skill>
+      <name>Glacial Shatter</name>
       <active xPos="1" yPos="1452"/>
       <inactive xPos="397" yPos="1387"/>
       <description>The earth is sundered and 5 geysers burst forth at the target location, blinding and damaging foes with superheated air and water.</description>
@@ -158,24 +175,28 @@
         <tier>9 geysers are created</tier>
       </tiers>
     </skill>
-    <skill name="Cold Steel Mastery">
+    <skill>
+      <name>Cold Steel Mastery</name>
       <active xPos="67" yPos="2047"/>
       <inactive xPos="1" yPos="2047"/>
       <description>The only thing harder than steel is cold steel. Increases melee and frost damage.</description>
     </skill>
-    <skill name="Shatter Storm">
+    <skill>
+      <name>Shatter Storm</name>
       <active xPos="265" yPos="529"/>
       <inactive xPos="199" yPos="529"/>
       <description>When you kill frozen enemies, you blast nearby foes in a 4 meter ring of frost, leaving them more susceptible to further ice attacks.</description>
     </skill>
-    <skill name="Rage Retaliation">
+    <skill>
+      <name>Rage Retaliation</name>
       <active xPos="199" yPos="859"/>
       <inactive xPos="133" yPos="859"/>
       <description>When you are struck by a nearby enemy, your inner rage physically manifests and retaliates against that foe. Damage is equal to 120% of your weapon's DPS. Individual targets can only be hit once per second at most.</description>
     </skill>
   </tree>
   <tree name="Shadow">
-    <skill name="Shadow Burst">
+    <skill>
+      <name>Shadow Burst</name>
       <active xPos="331" yPos="595"/>
       <inactive xPos="265" yPos="595"/>
       <description>You transform into a spectral wolf and lunge through your enemies, damaging them even as you heal your own body. The healing is limited to a maximum of 2 targets per Burst.</description>
@@ -185,7 +206,8 @@
         <tier>Healing can be derived from 5 targets per Burst. Chance to destroy shields is increased to 100%.</tier>
       </tiers>
     </skill>
-    <skill name="Wolf Shade">
+    <skill>
+      <name>Wolf Shade</name>
       <active xPos="67" yPos="67"/>
       <inactive xPos="1" yPos="67"/>
       <description>You summon a Wolf Shade ally to sink its icy fangs into your enemies and heal you with their lifeforce. The Shade can be summoned once every minute.</description>
@@ -195,7 +217,8 @@
         <tier>Summoning duration increased to 1 minute</tier>
       </tiers>
     </skill>
-    <skill name="Shadowbind">
+    <skill>
+      <name>Shadowbind</name>
       <active xPos="265" yPos="2113"/>
       <inactive xPos="199" yPos="2113"/>
       <description>You bind a group of foes within a 5 meter radius of your target location. All your subsequent melee attacks transfer a percentage of damage to all shadowbound targets.</description>
@@ -205,7 +228,8 @@
         <tier>Radius of effect increased to 11 meters</tier>
       </tiers>
     </skill>
-    <skill name="Savage Rush">
+    <skill>
+      <name>Savage Rush</name>
       <active xPos="331" yPos="67"/>
       <inactive xPos="265" yPos="67"/>
       <description>The shadow wolf spirit overtakes you! While the skill remains active, you dash continuously through foes, leaving them bleeding in your wake.</description>
@@ -215,7 +239,8 @@
         <tier>Enemy Armor decreased by 40% for 10 seconds</tier>
       </tiers>
     </skill>
-    <skill name="Chain Snare">
+    <skill>
+      <name>Chain Snare</name>
       <active xPos="199" yPos="2179"/>
       <inactive xPos="133" yPos="2179"/>
       <description>Spearing all enemies within 6 meters, you draw them swiftly into melee range.</description>
@@ -225,7 +250,8 @@
         <tier>Shatters shields</tier>
       </tiers>
     </skill>
-    <skill name="Battle Standard">
+    <skill>
+      <name>Battle Standard</name>
       <active xPos="199" yPos="2311"/>
       <inactive xPos="133" yPos="2311"/>
       <description>The ancient standard of your tribe imbues you and your allies with increased evasion, resistance to knockback, and increased charge gain while within its 9 meter influence.</description>
@@ -235,7 +261,8 @@
         <tier>Standard duration doubled</tier>
       </tiers>
     </skill>
-    <skill name="Wolfpack">
+    <skill>
+      <name>Wolfpack</name>
       <active xPos="199" yPos="67"/>
       <inactive xPos="133" yPos="67"/>
       <description>You unleash a pack of 5 spectral wolves that spread out and attack enemies all around you.</description>
@@ -245,17 +272,20 @@
         <tier>Mana cost decreased</tier>
       </tiers>
     </skill>
-    <skill name="Frenzy Mastery">
+    <skill>
+      <name>Frenzy Mastery</name>
       <active xPos="133" yPos="2377"/>
       <inactive xPos="67" yPos="2377"/>
       <description>Your feral nature grows more powerful and harder to suppress, increasing the duration of your Frenzy states (acquired from filling the Charge Bar).</description>
     </skill>
-    <skill name="Shred Armor">
+    <skill>
+      <name>Shred Armor</name>
       <active xPos="397" yPos="1717"/>
       <inactive xPos="331" yPos="1717"/>
       <description>Your inner savagery rips into your enemies' armor, leaving them more vulnerable with each hit, while at the same time stealing some of their armor for yourself.</description>
     </skill>
-    <skill name="Red Wolf">
+    <skill>
+      <name>Red Wolf</name>
       <active xPos="1" yPos="793"/>
       <inactive xPos="397" yPos="727"/>
       <description>Whenever you inflict a critical hit, up to two neighboring enemies may be savaged by a manifestation of your bloodlust.</description>
