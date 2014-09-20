@@ -1,6 +1,7 @@
 /*
 Torchlight II Skill Builder
 Browser Support: IE9+
+Works.
 */
 var Calculator = {
   //Set default character to outlander
@@ -228,7 +229,7 @@ function updateSkill(element, data, level) {
   updatePointDistributionBar();
   //Generate new share link
   shareLink();
-  //Show tier 
+  //Show tier
   if(level >= 5){
     document.getElementById("tier-0-title").className = addClass("tier-obtained", document.getElementById("tier-0-title").className);
     document.getElementById("tier-0-description").className = addClass("tier-obtained", document.getElementById("tier-0-description").className);

@@ -1,13 +1,13 @@
 .trees {
   position: relative;
 }
-.skill-tree {
+.tree {
   display: none;
   padding: 0 1.5em 1.5em 1.5em;
   border-top: none;
 }
 
-.skill-tree.current-tree {
+.tree.current-tree {
   display: block;
 }
 

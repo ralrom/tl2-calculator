@@ -105,14 +105,14 @@ textarea {
 }
 
 /* line 4, ../sass/modules/_skills.scss */
-.skill-tree {
+.tree {
   display: none;
   padding: 0 1.5em 1.5em 1.5em;
   border-top: none;
 }
 
 /* line 10, ../sass/modules/_skills.scss */
-.skill-tree.current-tree {
+.tree.current-tree {
   display: block;
 }
 
@@ -209,7 +209,7 @@ textarea {
   left: 0;
 }
 
-/* line 96, ../sass/modules/_skills.scss */
+/* line 95, ../sass/modules/_skills.scss */
 .skill-level-box,
 .skill-level-bar {
   height: 31px;
@@ -262,13 +262,13 @@ textarea {
   left: 66.666%;
 }
 
-/* line 141, ../sass/modules/_skills.scss */
+/* line 140, ../sass/modules/_skills.scss */
 .skill-tier2,
 .skill-tier3 {
   border-left: solid 1px;
 }
 
-/* line 2, ../sass/modules/_linker.scss */
+/* line 1, ../sass/modules/_linker.scss */
 .linker input[type=text],
 .linker label {
   border: none;
@@ -371,7 +371,7 @@ textarea {
   margin: 0.5em 0 0 0;
 }
 
-/* line 24, ../sass/modules/_description.scss */
+/* line 23, ../sass/modules/_description.scss */
 .descriptor.left,
 .descriptor.right {
   display: block;
@@ -399,13 +399,13 @@ body {
 /* Skills */
 /*****************************/
 /* line 20, ../sass/_theme.scss */
-.skill-tree {
-  background: white;
+.tree {
+  background: #FFF;
 }
 
 /* line 23, ../sass/_theme.scss */
 .skill-icon {
-  background-color: #333333;
+  background-color: #333;
 }
 
 /* line 27, ../sass/_theme.scss */
@@ -415,28 +415,28 @@ body {
 
 /* line 31, ../sass/_theme.scss */
 .skill-level-bar {
-  color: white;
+  color: #FFF;
 }
 
 /* line 34, ../sass/_theme.scss */
 .tree-0-theme .skill-level-bar {
-  background-color: #fe4445;
+  background-color: #FE4445;
 }
 
 /* line 37, ../sass/_theme.scss */
 .tree-1-theme .skill-level-bar {
-  background-color: #0099cb;
+  background-color: #0099CB;
 }
 
 /* line 40, ../sass/_theme.scss */
 .tree-2-theme .skill-level-bar {
-  background-color: #c02cca;
+  background-color: #C02CCA;
 }
 
 /* line 43, ../sass/_theme.scss */
 .skill-button:hover {
-  background-color: #333333;
-  color: white;
+  background-color: #333;
+  color: #FFF;
 }
 
 /* line 48, ../sass/_theme.scss */
@@ -451,10 +451,10 @@ body {
   text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.1);
 }
 
-/* line 58, ../sass/_theme.scss */
+/* line 57, ../sass/_theme.scss */
 .skill-tier2,
 .skill-tier3 {
-  border-color: white;
+  border-color: #FFF;
 }
 
 /*****************************/
@@ -463,11 +463,11 @@ body {
 /* line 66, ../sass/_theme.scss */
 .descriptor {
   color: #f2f2f2;
-  background-color: #333333;
+  background-color: #333;
 }
 
 /* Tiers */
-/* line 74, ../sass/_theme.scss */
+/* line 73, ../sass/_theme.scss */
 .tier-description.tier-obtained,
 .tier-title.tier-obtained {
   color: #FFD700;
@@ -483,17 +483,17 @@ body {
 
 /* line 85, ../sass/_theme.scss */
 .points-bar.tree-0-theme {
-  background-color: #fe4445;
+  background-color: #FE4445;
 }
 
 /* line 88, ../sass/_theme.scss */
 .points-bar.tree-1-theme {
-  background-color: #0099cb;
+  background-color: #0099CB;
 }
 
 /* line 91, ../sass/_theme.scss */
 .points-bar.tree-2-theme {
-  background-color: #c02cca;
+  background-color: #C02CCA;
 }
 
 /*****************************/
@@ -501,47 +501,47 @@ body {
 /*****************************/
 /* line 99, ../sass/_theme.scss */
 .tab {
-  color: white;
+  color: #FFF;
 }
 
 /* line 103, ../sass/_theme.scss */
 .tab {
-  background-color: #ff6666;
-  border-color: #ff6666;
+  background-color: #f66;
+  border-color: #f66;
 }
 
 /* line 108, ../sass/_theme.scss */
 .tab.tree-0-theme {
-  border-color: #fe4445;
-  background-color: #fe4445;
+  border-color: #FE4445;
+  background-color: #FE4445;
 }
 
 /* line 112, ../sass/_theme.scss */
 .tab.tree-1-theme {
-  border-color: #0099cb;
-  background-color: #0099cb;
+  border-color: #0099CB;
+  background-color: #0099CB;
 }
 
 /* line 116, ../sass/_theme.scss */
 .tab.tree-2-theme {
-  border-color: #c02cca;
-  background-color: #c02cca;
+  border-color: #C02CCA;
+  background-color: #C02CCA;
 }
 
-/* line 122, ../sass/_theme.scss */
+/* line 121, ../sass/_theme.scss */
 .tab:hover,
 .tab:focus {
-  background-color: #333333;
+  background-color: #333;
 }
 
 /* line 126, ../sass/_theme.scss */
 .tab.current-tab {
-  color: #333333;
+  color: #333;
 }
 
 /* line 130, ../sass/_theme.scss */
 .tab.current-tab {
-  background-color: white;
+  background-color: #FFF;
 }
 
 /*****************************/
@@ -549,7 +549,7 @@ body {
 /*****************************/
 /* line 139, ../sass/_theme.scss */
 .extend {
-  background-color: white;
+  background-color: #FFF;
   border-color: #eae9ea;
 }
 
@@ -558,13 +558,13 @@ body {
 /*****************************/
 /* line 148, ../sass/_theme.scss */
 .class {
-  border-color: white;
+  border-color: #FFF;
 }
 
-/* line 153, ../sass/_theme.scss */
+/* line 152, ../sass/_theme.scss */
 .class:hover,
 .class.class-selected {
-  border-color: #ff6666;
+  border-color: #f66;
 }
 
 /*****************************/
@@ -572,7 +572,7 @@ body {
 /*****************************/
 /* line 161, ../sass/_theme.scss */
 #loader {
-  background-color: #ff6666;
+  background-color: #f66;
 }
 
 /*****************************/
@@ -580,10 +580,10 @@ body {
 /*****************************/
 /* line 169, ../sass/_theme.scss */
 .note a {
-  color: #ff6666;
+  color: #f66;
 }
 
 /* line 172, ../sass/_theme.scss */
 .note a:hover {
-  color: #333333;
+  color: #333;
 }

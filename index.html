@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" type="text/css" href="css/style.css" />
-  <script type="text/javascript" src="js/calc_new2.js"></script>
+  <script type="text/javascript" src="js/calc_modular.js"></script>
 </head>
 <body>
   <div id="loader" class="loader"></div>
@@ -14,7 +14,7 @@
     <a href="?class=engineer" id="portrait-engineer" class="class engineer"></a>
   </div>
   <div class="container">
-    <nav class="tabs">
+    <nav id="tabs" class="tabs">
       <ul>
         <li><a href="javascript:;" class="tab current-tab tree-0-theme" id="tree-0-title" data-tree="0">Tree</a></li>
         <li><a href="javascript:;" class="tab tree-1-theme" id="tree-1-title" data-tree="1">Tree</a></li>
@@ -22,7 +22,7 @@
         <div class="cf"></div>
       </ul>
     </nav>
-    <div class="trees">
+    <div id="trees" class="trees">
       <!-- Skill Description -->
       <div id="descriptor" class="descriptor">
         <h1 id="description-title">Skill Name</h1>
@@ -30,14 +30,14 @@
         <div id="tiers">
           <h2 id="tier-0-title" class="tier-title">Tier I</h2>
           <span id="tier-0-description" class="tier-description"></span>
-          <h2 id="tier-1-title"class="tier-title">Tier II</h2>
+          <h2 id="tier-1-title" class="tier-title">Tier II</h2>
           <span id="tier-1-description" class="tier-description"></span>
           <h2 id="tier-2-title" class="tier-title ">Tier III</h2>
           <span id="tier-2-description" class="tier-description"></span>
         </div>
       </div>
       <!-- First Tree -->
-      <div id="tree-0" class="skill-tree current-tree tree-0-theme">
+      <div id="tree-0" class="tree current-tree tree-0-theme">
         <!-- First Row -->
         <div class="skill-row">
           <div id="tree-0-skill-0" class="skill">
@@ -232,7 +232,7 @@
         </div><!-- /Row -->
       </div><!-- /Tree -->
       <!-- Second  Tree -->
-      <div id="tree-1" class="skill-tree tree-1-theme">
+      <div id="tree-1" class="tree tree-1-theme">
         <!-- First Row -->
         <div class="skill-row">
           <div id="tree-1-skill-0" class="skill">
@@ -427,7 +427,7 @@
         </div><!-- /Row -->
       </div><!-- /Tree -->
       <!-- Third Tree -->
-      <div id="tree-2" class="skill-tree tree-2-theme">
+      <div id="tree-2" class="tree tree-2-theme">
         <!-- First Row -->
         <div class="skill-row">
           <div id="tree-2-skill-0" class="skill">
