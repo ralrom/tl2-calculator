@@ -445,6 +445,8 @@ TL2CALC.UI.ShareLink = function(){
       var link = [location.protocol, '//', location.host, location.pathname].join('');
       link += '?class='+player+'&points='+points;
       element.innerHTML = link;
+      //Display current skill point distribution in browser bar (Browser support: IE10+)
+      history.replaceState({calc: "points"}, "TL2 Calc Saved Points", link);
     }
     TL2CALC.CORE.Postman.subscribe('TL2CALC.RESPONSE.Player', this, setPlayer);
     TL2CALC.CORE.Postman.subscribe('TL2CALC.RESPONSE.SerializedPoints', this, setPoints);
