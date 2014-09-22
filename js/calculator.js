@@ -44,8 +44,9 @@ var TL2CALC = function(){
       level = level > constants.POINT_MAX ? 15 : level;
       level = level < constants.POINT_MIN ? 0 : level;
       //Make sure we don't spend more points than given
-      var spent = this.getSpent();
+      var spent = this.getSpent() - this.getPoint(tree, skill);
       level = spent + level > constants.POINTS_GIVEN ? constants.POINTS_GIVEN - spent : level;
+      console.log(level, spent, constants.POINTS_GIVEN - spent);
       //Update point
       points[tree][skill] = level;
       //Notify subscribers
@@ -597,7 +598,6 @@ TL2CALC.UI.Description = function(){
 TL2CALC.UI.Portraits = function(){
   var Portrait = function(element, player){
     var setFront = function(){
-      console.log('front');
       element.className = TL2CALC.CORE.Classes.add('class-selected', element.className);
     }
     var setBack = function(){
