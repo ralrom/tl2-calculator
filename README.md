@@ -5,6 +5,8 @@
 ### Under the Hood ###
 - Calculator has been rewritten on the Pub/Sub design pattern
 - Needs MAJOR code cleanup, but much easier to maintain now.
+- XML files are no longer used. Moved to JSON strings which are smaller and easier to access;
+
 
 ## 18 Sept 2014
 
