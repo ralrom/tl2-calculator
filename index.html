@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" type="text/css" href="css/style.css" />
-  <script type="text/javascript" src="js/calc_modular.js"></script>
+  <script type="text/javascript" src="js/calc_wip2.js"></script>
 </head>
 <body>
   <div id="loader" class="loader"></div>
@@ -16,9 +16,9 @@
   <div class="container">
     <nav id="tabs" class="tabs">
       <ul>
-        <li><a href="javascript:;" class="tab current-tab tree-0-theme" id="tree-0-title" data-tree="0">Tree</a></li>
-        <li><a href="javascript:;" class="tab tree-1-theme" id="tree-1-title" data-tree="1">Tree</a></li>
-        <li><a href="javascript:;" class="tab tree-2-theme" id="tree-2-title" data-tree="2">Tree</a></li>
+        <li><a href="javascript:;" class="tab current-tab tree-0-theme" data-tree="0">Tree</a></li>
+        <li><a href="javascript:;" class="tab tree-1-theme" data-tree="1">Tree</a></li>
+        <li><a href="javascript:;" class="tab tree-2-theme" data-tree="2">Tree</a></li>
         <div class="cf"></div>
       </ul>
     </nav>
@@ -37,10 +37,10 @@
         </div>
       </div>
       <!-- First Tree -->
-      <div id="tree-0" class="tree current-tree tree-0-theme">
+      <div class="tree current-tree tree-0-theme">
         <!-- First Row -->
         <div class="skill-row">
-          <div id="tree-0-skill-0" class="skill">
+          <div class="skill">
             <h1 class="skill-title">Skill Name</h1>
             <div class="skill-inner">
               <img class="skill-icon" src="img/small.gif" />
@@ -58,7 +58,7 @@
               </div>
             </div>
           </div><!-- /Skill -->
-          <div id="tree-0-skill-1" class="skill">
+          <div class="skill">
             <h1 class="skill-title">Skill Name</h1>
             <div class="skill-inner">
               <img class="skill-icon" src="img/small.gif" />
@@ -76,7 +76,7 @@
               </div>
             </div>
           </div><!-- /Skill -->
-          <div id="tree-0-skill-2" class="skill">
+          <div class="skill">
             <h1 class="skill-title">Skill Name</h1>
             <div class="skill-inner">
               <img class="skill-icon" src="img/small.gif" />
@@ -97,7 +97,7 @@
         </div><!-- /Row -->
         <!-- Second Row -->
         <div class="skill-row">
-          <div id="tree-0-skill-3" class="skill">
+          <div class="skill">
             <h1 class="skill-title">Skill Name</h1>
             <div class="skill-inner">
               <img class="skill-icon" src="img/small.gif" />
@@ -115,7 +115,7 @@
               </div>
             </div>
           </div><!-- /Skill -->
-          <div id="tree-0-skill-4" class="skill">
+          <div class="skill">
             <h1 class="skill-title">Skill Name</h1>
             <div class="skill-inner">
               <img class="skill-icon" src="img/small.gif" />
@@ -133,7 +133,7 @@
               </div>
             </div>
           </div><!-- /Skill -->
-          <div id="tree-0-skill-5" class="skill">
+          <div class="skill">
             <h1 class="skill-title">Skill Name</h1>
             <div class="skill-inner">
               <img class="skill-icon" src="img/small.gif" />
@@ -154,7 +154,7 @@
         </div><!-- /Row -->
         <!-- Third Row -->
         <div class="skill-row third-row">
-          <div id="tree-0-skill-6" class="skill">
+          <div class="skill">
             <h1 class="skill-title">Skill Name</h1>
             <div class="skill-inner">
               <img class="skill-icon" src="img/small.gif" />
@@ -175,7 +175,7 @@
         </div><!-- /Row -->
         <!-- Fourth Row -->
         <div class="skill-row">
-          <div id="tree-0-skill-7" class="skill">
+          <div class="skill">
             <h1 class="skill-title">Skill Name</h1>
             <div class="skill-inner">
               <img class="skill-icon" src="img/small.gif" />
@@ -193,7 +193,7 @@
               </div>
             </div>
           </div><!-- /Skill -->
-          <div id="tree-0-skill-8" class="skill">
+          <div class="skill">
             <h1 class="skill-title">Skill Name</h1>
             <div class="skill-inner">
               <img class="skill-icon" src="img/small.gif" />
@@ -211,7 +211,7 @@
               </div>
             </div>
           </div><!-- /Skill -->
-          <div id="tree-0-skill-9" class="skill">
+          <div class="skill">
             <h1 class="skill-title">Skill Name</h1>
             <div class="skill-inner">
               <img class="skill-icon" src="img/small.gif" />
@@ -232,10 +232,10 @@
         </div><!-- /Row -->
       </div><!-- /Tree -->
       <!-- Second  Tree -->
-      <div id="tree-1" class="tree tree-1-theme">
+      <div class="tree tree-1-theme">
         <!-- First Row -->
         <div class="skill-row">
-          <div id="tree-1-skill-0" class="skill">
+          <div class="skill">
             <h1 class="skill-title">Skill Name</h1>
             <div class="skill-inner">
               <img class="skill-icon" src="img/small.gif" />
@@ -253,7 +253,7 @@
               </div>
             </div>
           </div><!-- /Skill -->
-          <div id="tree-1-skill-1" class="skill">
+          <div class="skill">
             <h1 class="skill-title">Skill Name</h1>
             <div class="skill-inner">
               <img class="skill-icon" src="img/small.gif" />
@@ -271,7 +271,7 @@
               </div>
             </div>
           </div><!-- /Skill -->
-          <div id="tree-1-skill-2" class="skill">
+          <div class="skill">
             <h1 class="skill-title">Skill Name</h1>
             <div class="skill-inner">
               <img class="skill-icon" src="img/small.gif" />
@@ -292,7 +292,7 @@
         </div><!-- /Row -->
         <!-- Second Row -->
         <div class="skill-row">
-          <div id="tree-1-skill-3" class="skill">
+          <div class="skill">
             <h1 class="skill-title">Skill Name</h1>
             <div class="skill-inner">
               <img class="skill-icon" src="img/small.gif" />
@@ -310,7 +310,7 @@
               </div>
             </div>
           </div><!-- /Skill -->
-          <div id="tree-1-skill-4" class="skill">
+          <div class="skill">
             <h1 class="skill-title">Skill Name</h1>
             <div class="skill-inner">
               <img class="skill-icon" src="img/small.gif" />
@@ -328,7 +328,7 @@
               </div>
             </div>
           </div><!-- /Skill -->
-          <div id="tree-1-skill-5" class="skill">
+          <div class="skill">
             <h1 class="skill-title">Skill Name</h1>
             <div class="skill-inner">
               <img class="skill-icon" src="img/small.gif" />
@@ -349,7 +349,7 @@
         </div><!-- /Row -->
         <!-- Third Row -->
         <div class="skill-row third-row">
-          <div id="tree-1-skill-6" class="skill">
+          <div class="skill">
             <h1 class="skill-title">Skill Name</h1>
             <div class="skill-inner">
               <img class="skill-icon" src="img/small.gif" />
@@ -370,7 +370,7 @@
         </div><!-- /Row -->
         <!-- Fourth Row -->
         <div class="skill-row">
-          <div id="tree-1-skill-7" class="skill">
+          <div class="skill">
             <h1 class="skill-title">Skill Name</h1>
             <div class="skill-inner">
               <img class="skill-icon" src="img/small.gif" />
@@ -388,7 +388,7 @@
               </div>
             </div>
           </div><!-- /Skill -->
-          <div id="tree-1-skill-8" class="skill">
+          <div class="skill">
             <h1 class="skill-title">Skill Name</h1>
             <div class="skill-inner">
               <img class="skill-icon" src="img/small.gif" />
@@ -406,7 +406,7 @@
               </div>
             </div>
           </div><!-- /Skill -->
-          <div id="tree-1-skill-9" class="skill">
+          <div class="skill">
             <h1 class="skill-title">Skill Name</h1>
             <div class="skill-inner">
               <img class="skill-icon" src="img/small.gif" />
@@ -427,10 +427,10 @@
         </div><!-- /Row -->
       </div><!-- /Tree -->
       <!-- Third Tree -->
-      <div id="tree-2" class="tree tree-2-theme">
+      <div class="tree tree-2-theme">
         <!-- First Row -->
         <div class="skill-row">
-          <div id="tree-2-skill-0" class="skill">
+          <div class="skill">
             <h1 class="skill-title">Skill Name</h1>
             <div class="skill-inner">
               <img class="skill-icon" src="img/small.gif" />
@@ -448,7 +448,7 @@
               </div>
             </div>
           </div><!-- /Skill -->
-          <div id="tree-2-skill-1" class="skill">
+          <div class="skill">
             <h1 class="skill-title">Skill Name</h1>
             <div class="skill-inner">
               <img class="skill-icon" src="img/small.gif" />
@@ -466,7 +466,7 @@
               </div>
             </div>
           </div><!-- /Skill -->
-          <div id="tree-2-skill-2" class="skill">
+          <div class="skill">
             <h1 class="skill-title">Skill Name</h1>
             <div class="skill-inner">
               <img class="skill-icon" src="img/small.gif" />
@@ -487,7 +487,7 @@
         </div><!-- /Row -->
         <!-- Second Row -->
         <div class="skill-row">
-          <div id="tree-2-skill-3" class="skill">
+          <div class="skill">
             <h1 class="skill-title">Skill Name</h1>
             <div class="skill-inner">
               <img class="skill-icon" src="img/small.gif" />
@@ -505,7 +505,7 @@
               </div>
             </div>
           </div><!-- /Skill -->
-          <div id="tree-2-skill-4" class="skill">
+          <div class="skill">
             <h1 class="skill-title">Skill Name</h1>
             <div class="skill-inner">
               <img class="skill-icon" src="img/small.gif" />
@@ -523,7 +523,7 @@
               </div>
             </div>
           </div><!-- /Skill -->
-          <div id="tree-2-skill-5" class="skill">
+          <div class="skill">
             <h1 class="skill-title">Skill Name</h1>
             <div class="skill-inner">
               <img class="skill-icon" src="img/small.gif" />
@@ -544,7 +544,7 @@
         </div><!-- /Row -->
         <!-- Third Row -->
         <div class="skill-row third-row">
-          <div id="tree-2-skill-6" class="skill">
+          <div class="skill">
             <h1 class="skill-title">Skill Name</h1>
             <div class="skill-inner">
               <img class="skill-icon" src="img/small.gif" />
@@ -565,7 +565,7 @@
         </div><!-- /Row -->
         <!-- Fourth Row -->
         <div class="skill-row">
-          <div id="tree-2-skill-7" class="skill">
+          <div class="skill">
             <h1 class="skill-title">Skill Name</h1>
             <div class="skill-inner">
               <img class="skill-icon" src="img/small.gif" />
@@ -583,7 +583,7 @@
               </div>
             </div>
           </div><!-- /Skill -->
-          <div id="tree-2-skill-8" class="skill">
+          <div class="skill">
             <h1 class="skill-title">Skill Name</h1>
             <div class="skill-inner">
               <img class="skill-icon" src="img/small.gif" />
@@ -601,7 +601,7 @@
               </div>
             </div>
           </div><!-- /Skill -->
-          <div id="tree-2-skill-9" class="skill">
+          <div class="skill">
             <h1 class="skill-title">Skill Name</h1>
             <div class="skill-inner">
               <img class="skill-icon" src="img/small.gif" />
@@ -624,11 +624,11 @@
     </div><!-- /Trees -->
     <div class="extend points-spent">
       <h1 class="extend-title">Skill Distribution</h1>
-      <div class="points-box">
-        <div class="skill-level-number"><span id="tree-0-total">0</span> / <span id="tree-1-total">0</span> / <span id="tree-2-total">0</span></div>
-        <div id="points-bar-0" class="points-bar tree-0-theme"></div>
-        <div id="points-bar-1" class="points-bar tree-1-theme"></div>
-        <div id="points-bar-2" class="points-bar tree-2-theme"></div>
+      <div id="points-box" class="points-box">
+        <div class="skill-level-number"><span class="tree-total">0</span> / <span class="tree-total">0</span> / <span class="tree-total">0</span></div>
+        <div class="points-bar tree-0-theme"></div>
+        <div class="points-bar tree-1-theme"></div>
+        <div class="points-bar tree-2-theme"></div>
       </div>
     </div>
     <!-- Link Generator -->

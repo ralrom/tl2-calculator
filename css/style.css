@@ -163,7 +163,7 @@ textarea {
   vertical-align: middle;
   width: 66px;
   height: 66px;
-  background-image: url("../img/skills.png");
+  background-image: url("../img/skills.jpg");
   background-repeat: no-repeat;
 }
 
@@ -209,7 +209,7 @@ textarea {
   left: 0;
 }
 
-/* line 95, ../sass/modules/_skills.scss */
+/* line 96, ../sass/modules/_skills.scss */
 .skill-level-box,
 .skill-level-bar {
   height: 31px;
@@ -226,7 +226,7 @@ textarea {
 /* line 107, ../sass/modules/_skills.scss */
 .skill-level-bar {
   width: 0%;
-  transition: width 0.3s ease;
+  transition: width 0.2s ease;
 }
 
 /* line 112, ../sass/modules/_skills.scss */
@@ -262,13 +262,13 @@ textarea {
   left: 66.666%;
 }
 
-/* line 140, ../sass/modules/_skills.scss */
+/* line 141, ../sass/modules/_skills.scss */
 .skill-tier2,
 .skill-tier3 {
   border-left: solid 1px;
 }
 
-/* line 1, ../sass/modules/_linker.scss */
+/* line 2, ../sass/modules/_linker.scss */
 .linker input[type=text],
 .linker label {
   border: none;
@@ -371,7 +371,7 @@ textarea {
   margin: 0.5em 0 0 0;
 }
 
-/* line 23, ../sass/modules/_description.scss */
+/* line 24, ../sass/modules/_description.scss */
 .descriptor.left,
 .descriptor.right {
   display: block;
@@ -400,12 +400,12 @@ body {
 /*****************************/
 /* line 20, ../sass/_theme.scss */
 .tree {
-  background: #FFF;
+  background: white;
 }
 
 /* line 23, ../sass/_theme.scss */
 .skill-icon {
-  background-color: #333;
+  background-color: #333333;
 }
 
 /* line 27, ../sass/_theme.scss */
@@ -415,28 +415,28 @@ body {
 
 /* line 31, ../sass/_theme.scss */
 .skill-level-bar {
-  color: #FFF;
+  color: white;
 }
 
 /* line 34, ../sass/_theme.scss */
 .tree-0-theme .skill-level-bar {
-  background-color: #FE4445;
+  background-color: #fe4445;
 }
 
 /* line 37, ../sass/_theme.scss */
 .tree-1-theme .skill-level-bar {
-  background-color: #0099CB;
+  background-color: #0099cb;
 }
 
 /* line 40, ../sass/_theme.scss */
 .tree-2-theme .skill-level-bar {
-  background-color: #C02CCA;
+  background-color: #c02cca;
 }
 
 /* line 43, ../sass/_theme.scss */
 .skill-button:hover {
-  background-color: #333;
-  color: #FFF;
+  background-color: #333333;
+  color: white;
 }
 
 /* line 48, ../sass/_theme.scss */
@@ -451,10 +451,10 @@ body {
   text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.1);
 }
 
-/* line 57, ../sass/_theme.scss */
+/* line 58, ../sass/_theme.scss */
 .skill-tier2,
 .skill-tier3 {
-  border-color: #FFF;
+  border-color: white;
 }
 
 /*****************************/
@@ -463,11 +463,11 @@ body {
 /* line 66, ../sass/_theme.scss */
 .descriptor {
   color: #f2f2f2;
-  background-color: #333;
+  background-color: #333333;
 }
 
 /* Tiers */
-/* line 73, ../sass/_theme.scss */
+/* line 74, ../sass/_theme.scss */
 .tier-description.tier-obtained,
 .tier-title.tier-obtained {
   color: #FFD700;
@@ -483,17 +483,17 @@ body {
 
 /* line 85, ../sass/_theme.scss */
 .points-bar.tree-0-theme {
-  background-color: #FE4445;
+  background-color: #fe4445;
 }
 
 /* line 88, ../sass/_theme.scss */
 .points-bar.tree-1-theme {
-  background-color: #0099CB;
+  background-color: #0099cb;
 }
 
 /* line 91, ../sass/_theme.scss */
 .points-bar.tree-2-theme {
-  background-color: #C02CCA;
+  background-color: #c02cca;
 }
 
 /*****************************/
@@ -501,47 +501,47 @@ body {
 /*****************************/
 /* line 99, ../sass/_theme.scss */
 .tab {
-  color: #FFF;
+  color: white;
 }
 
 /* line 103, ../sass/_theme.scss */
 .tab {
-  background-color: #f66;
-  border-color: #f66;
+  background-color: #ff6666;
+  border-color: #ff6666;
 }
 
 /* line 108, ../sass/_theme.scss */
 .tab.tree-0-theme {
-  border-color: #FE4445;
-  background-color: #FE4445;
+  border-color: #fe4445;
+  background-color: #fe4445;
 }
 
 /* line 112, ../sass/_theme.scss */
 .tab.tree-1-theme {
-  border-color: #0099CB;
-  background-color: #0099CB;
+  border-color: #0099cb;
+  background-color: #0099cb;
 }
 
 /* line 116, ../sass/_theme.scss */
 .tab.tree-2-theme {
-  border-color: #C02CCA;
-  background-color: #C02CCA;
+  border-color: #c02cca;
+  background-color: #c02cca;
 }
 
-/* line 121, ../sass/_theme.scss */
+/* line 122, ../sass/_theme.scss */
 .tab:hover,
 .tab:focus {
-  background-color: #333;
+  background-color: #333333;
 }
 
 /* line 126, ../sass/_theme.scss */
 .tab.current-tab {
-  color: #333;
+  color: #333333;
 }
 
 /* line 130, ../sass/_theme.scss */
 .tab.current-tab {
-  background-color: #FFF;
+  background-color: white;
 }
 
 /*****************************/
@@ -549,7 +549,7 @@ body {
 /*****************************/
 /* line 139, ../sass/_theme.scss */
 .extend {
-  background-color: #FFF;
+  background-color: white;
   border-color: #eae9ea;
 }
 
@@ -558,13 +558,13 @@ body {
 /*****************************/
 /* line 148, ../sass/_theme.scss */
 .class {
-  border-color: #FFF;
+  border-color: white;
 }
 
-/* line 152, ../sass/_theme.scss */
+/* line 153, ../sass/_theme.scss */
 .class:hover,
 .class.class-selected {
-  border-color: #f66;
+  border-color: #ff6666;
 }
 
 /*****************************/
@@ -572,7 +572,7 @@ body {
 /*****************************/
 /* line 161, ../sass/_theme.scss */
 #loader {
-  background-color: #f66;
+  background-color: #ff6666;
 }
 
 /*****************************/
@@ -580,10 +580,10 @@ body {
 /*****************************/
 /* line 169, ../sass/_theme.scss */
 .note a {
-  color: #f66;
+  color: #ff6666;
 }
 
 /* line 172, ../sass/_theme.scss */
 .note a:hover {
-  color: #333;
+  color: #333333;
 }

@@ -1,6 +1,12 @@
 # Changelog #
 
-## 18 September 2014
+## 21 Sept 2014 ##
+
+### Under the Hood ###
+- Calculator has been rewritten on the Pub/Sub design pattern
+- Needs MAJOR code cleanup, but much easier to maintain now.
+
+## 18 Sept 2014
 
 ### Functional ###
 - URL is now compressed. **Previous share links will not work**
