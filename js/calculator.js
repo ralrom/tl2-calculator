@@ -45,7 +45,7 @@ var TL2CALC = function(){
       level = level < constants.POINT_MIN ? 0 : level;
       //Make sure we don't spend more points than given
       var spent = this.getSpent();
-      level = spent + level > constants.POINT_GIVEN ? constants.POINT_GIVEN - spent : level;
+      level = spent + level > constants.POINTS_GIVEN ? constants.POINTS_GIVEN - spent : level;
       //Update point
       points[tree][skill] = level;
       //Notify subscribers
