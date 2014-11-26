@@ -164,8 +164,6 @@ TL2CALC.UrlManager = function () {
     var loadPoints = function () {
         var points = getParameter("points").split("");
         
-        console.log(points);
-
         if (points == null || points == "") { // No points parameter set all to 0
             points = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
         } else if (points.length < 30) {
@@ -175,8 +173,6 @@ TL2CALC.UrlManager = function () {
             }
         }
         
-        console.log(points);
-
         //Set points
         for (var i = 0; i < 3; i++) {
             for (var j = 0; j < 10; j++) {
