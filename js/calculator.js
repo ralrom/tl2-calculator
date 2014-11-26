@@ -163,16 +163,19 @@ TL2CALC.UrlManager = function () {
 
     var loadPoints = function () {
         var points = getParameter("points").split("");
+        
+        console.log(points);
 
         if (points == null || points == "") { // No points parameter set all to 0
             points = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
         } else if (points.length < 30) {
-
             //Fill missing numbers
             for (var i = points.length; i < 30; i++) {
                 points[i] = 0;
             }
         }
+        
+        console.log(points);
 
         //Set points
         for (var i = 0; i < 3; i++) {
@@ -220,10 +223,10 @@ TL2CALC.UrlManager = function () {
         //Update browser URL link
         history.replaceState({calc: "points"}, "TL2 Calculator Saved Build", link);
         TL2CALC.Mailman.publish('linkChange', link);
+        TL2CALC.Mailman.subscribe('playerChange', this, shareLink);
     }
 
     TL2CALC.Mailman.subscribe('uiReady', this, loadBuild);
-    TL2CALC.Mailman.subscribe('playerChange', this, shareLink);
     TL2CALC.Mailman.subscribe('pointChange', this, shareLink);
 }();
 
