@@ -186,6 +186,7 @@ TL2CALC.UrlManager = function () {
 
         //Run once
         TL2CALC.Mailman.unsubscribe("skillsetLoaded", this, loadPoints);
+        TL2CALC.Mailman.subscribe("playerChange", this, shareLink);
     }
 
     // f -> 15
@@ -223,7 +224,6 @@ TL2CALC.UrlManager = function () {
         //Update browser URL link
         history.replaceState({calc: "points"}, "TL2 Calculator Saved Build", link);
         TL2CALC.Mailman.publish('linkChange', link);
-        TL2CALC.Mailman.subscribe('playerChange', this, shareLink);
     }
 
     TL2CALC.Mailman.subscribe('uiReady', this, loadBuild);
