@@ -100,11 +100,12 @@ html {
     
     //Image
     background-image: url('../img/classes.png');
-    background-position: -5px -5px;
+    background-position: -5px -133px;
     
     cursor: pointer;
     text-decoration: none;
-    transition: all 0.25s ease;
+    opacity: 0.5;
+    transition: margin-right 0.25s ease, opacity 0.25s ease;
 }
 
 .players li:last-child .player {
@@ -126,24 +127,45 @@ html {
 .player.active .name {
     opacity: 1;
 }
+
 .player.active,
 .player:hover {
-    box-shadow: inset 0 0 1rem 0.2rem $dark;
+    opacity: 1;
 }
 
 .player.active {
     margin-right: 15rem !important;
 }
 
+.berserker:hover,
+.active.berserker {
+    background-position: -5px -5px;
+}
+
 .embermage {
+    background-position: -133px -133px;
+}
+
+.embermage:hover,
+.active.embermage {
     background-position: -133px -5px;
 }
 
 .outlander {
+    background-position: -389px -133px;
+}
+
+.outlander:hover,
+.active.outlander {
     background-position: -389px -5px;
 }
 
 .engineer {
+    background-position: -261px -133px;
+}
+
+.engineer:hover,
+.active.engineer {
     background-position: -261px -5px;
 }
 
@@ -270,6 +292,12 @@ html {
     width: 64px;
     height: 64px;
     background-image: url('../img/skills.jpg');
+    opacity: 0.5;
+    transition: opacity 0.25s ease;
+}
+
+.skill-icon.active {
+    opacity: 1;
 }
 
 .skill-button {

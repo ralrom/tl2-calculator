@@ -349,9 +349,17 @@ TL2CALC.UI.SkillIcon = function (_element, _tree, _skill) {
             if (level > 0) {
                 _element.style.backgroundPositionX = -icon.active.xPos + "px";
                 _element.style.backgroundPositionY = -icon.active.yPos + "px";
+                
+                //Add active class
+                if (!_element.className.match(new RegExp('(?:^|\\s)' + 'active' + '(?!\\S)', 'g'))) {
+                    _element.className += " active";
+                }
             } else {
                 _element.style.backgroundPositionX = -icon.inactive.xPos + "px";
                 _element.style.backgroundPositionY = -icon.inactive.yPos + "px";
+                
+                //Remove active class
+                _element.className = _element.className.replace(new RegExp('(?:^|\\s)' + 'active' + '(?!\\S)', 'g'), '');
             }
         }
     }

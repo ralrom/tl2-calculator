@@ -50,12 +50,24 @@ module.exports = function (grunt) {
         watch: {
             styles: {
                 // We watch and compile sass files as normal but don't live reload here
-                files: ['src/sass/*.scss'],
+                files: ['src/sass/main.scss'],
                 tasks: ['sass'],
             },
             scripts: {
-                files: ['src/js/*.js'],
+                files: ['src/js/calculator.js'],
                 tasks: ['uglify']
+            },
+            html: {
+                files: ['src/index.html'],
+                tasks: ['htmlmin']
+            },
+            json: {
+                files: ['src/data/*.json'],
+                tasks: ['jsonmin']
+            },
+            copy: {
+                files: ['src/img/**', 'src/font/**'],
+                tasks: ['copy']
             }
         }
     });
