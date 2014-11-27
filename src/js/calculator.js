@@ -7,7 +7,6 @@ if (typeof TL2CALC !== 'undefined') {
  * CORE
  * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  */
-
 var TL2CALC = function () {
     var player = "berserker"; // Default player
     var points = [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]];
@@ -25,7 +24,7 @@ var TL2CALC = function () {
             //Set level within boundaries
             level = level > skillMax ? skillMax : level;
             level = level < 0 ? 0 : level;
-
+            
             //Make sure we don't spend more points than allowed (but spend maximum possible)
             var pointsSpent = this.getPointsSpent();
             level = level - points[tree][skill] + pointsSpent > pointsMax ? pointsMax - pointsSpent + points[tree][skill] : level;
