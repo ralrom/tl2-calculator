@@ -176,11 +176,27 @@ html {
     line-height: 2rem;
     position: relative;
     cursor: pointer;
+    border-bottom: solid 2px transparent;
 }
 
 .tab,
 .tab .point {
-    transition: color 0.25s ease;
+    transition: all 0.25s ease;
+}
+
+.tab.color-1.active,
+.tab.color-1:hover {
+    border-color: $color1;
+}
+
+.tab.color-2.active,
+.tab.color-2:hover {
+    border-color: $color2;
+}
+
+.tab.color-3.active,
+.tab.color-3:hover {
+    border-color: $color3;
 }
 
 .tab.color-1:hover,
