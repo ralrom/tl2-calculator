@@ -68,6 +68,31 @@ html {
     padding: 0;
 }
 
+.trees {
+	position: relative;
+	overflow: hidden;
+}
+
+#description {
+	background-color: #f9f9f9;
+	opacity: 0.95;
+	position: absolute;
+	width: 100%;
+	top: 50%;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 1000;
+	transition: left 0.15s ease;
+}
+
+#description.alternate {
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 50%;
+}
+
 .players li,
 .tabs li,
 .skills li {
@@ -76,8 +101,21 @@ html {
 }
 
 .skills li,
-.tabs li {
+.tabs li,
+.tiers li {
     width: 33.333%;
+}
+
+.description-content,
+.tiers {
+	margin: 0.5rem 0 0 0;
+	padding: 0;
+}
+
+.tiers li {
+	text-align: left;
+	display: inline-block;
+	font-size: 1.2rem;
 }
 
 .players {
@@ -291,10 +329,20 @@ html {
 }
 
 .skill-name,
-.skill-level {
+.skill-level,
+.description-name,
+.description-content {
     font-size: 1.35rem;
     line-height: 2rem;
     left: 5rem;
+}
+
+.description-name {
+	font-weight: bold;
+}
+
+#description {
+	padding: 1rem;
 }
 
 .skill-name {

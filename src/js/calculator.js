@@ -136,6 +136,18 @@ TL2CALC.SkillsetLoader = function () {
     TL2CALC.Mailman.subscribe('playerChange', this, load);
 }();
 
+TL2CALC.SkillDescriptor = function () {
+	var _data;
+	var setData = function(data){
+		_data = data;
+	}
+	var getSkill = function(_tree, _skill){
+		TL2CALC.Mailman.publish('skillDescriptionResponse', _data.skillset.tree[_tree].skill[_skill], _skill);
+	}
+	TL2CALC.Mailman.subscribe('skillsetLoaded', this, setData);
+	TL2CALC.Mailman.subscribe('skillRequest', this, getSkill);
+}();
+
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  * URL MANAGER MODULE
  * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -333,6 +345,7 @@ TL2CALC.UI.SkillLevel = function (_element, _tree, _skill) {
 
 TL2CALC.UI.SkillIcon = function (_element, _tree, _skill) {
     var icon = {};
+		var description = "";
     var setIcon = function (data) {
         icon.inactive = {
             "xPos": data.skillset.tree[_tree].skill[_skill].icons.inactive.xPos,
@@ -361,8 +374,50 @@ TL2CALC.UI.SkillIcon = function (_element, _tree, _skill) {
             }
         }
     }
+		var mouseover = function (e){
+			TL2CALC.Mailman.publish('skillHover', _tree, _skill);
+		}
+
+		var mouseout = function (e){
+			TL2CALC.Mailman.publish('skillHoverOut', '1');
+		}
     TL2CALC.Mailman.subscribe('skillsetLoaded', this, setIcon);
     TL2CALC.Mailman.subscribe('pointChange', this, updateIcon);
+    _element.addEventListener('mouseover', mouseover);
+    _element.addEventListener('mouseout', mouseout);
+};
+
+TL2CALC.UI.SkillDescription = function (_element) {
+		var requestUpdate = function(_tree, _skill){
+				TL2CALC.Mailman.publish('skillRequest', _tree, _skill);
+		}
+		var update = function(skill, position){
+				if(position > 5){
+					if (!_element.className.match(new RegExp('(?:^|\\s)' + 'alternate' + '(?!\\S)', 'g'))) {
+          	_element.className += "alternate";
+          }
+				} else {
+          _element.className = _element.className.replace(new RegExp('(?:^|\\s)' + 'alternate' + '(?!\\S)', 'g'), '');
+				}
+				_element.style.left = '0';
+				_element.getElementsByClassName('description-name')[0].innerHTML = skill.name;
+				_element.getElementsByClassName('description-content')[0].innerHTML = skill.description;
+				if(typeof skill.tiers === 'undefined'){
+					_element.getElementsByClassName('tier-1')[0].innerHTML = '';
+					_element.getElementsByClassName('tier-2')[0].innerHTML = '';
+					_element.getElementsByClassName('tier-3')[0].innerHTML = '';
+				} else {
+					_element.getElementsByClassName('tier-1')[0].innerHTML = skill.tiers.tier[0];
+					_element.getElementsByClassName('tier-2')[0].innerHTML = skill.tiers.tier[1];
+					_element.getElementsByClassName('tier-3')[0].innerHTML = skill.tiers.tier[2];
+				}
+		}
+		var hide = function(){
+			_element.style.left = '100%';
+		}
+		TL2CALC.Mailman.subscribe('skillDescriptionResponse', this, update);
+		TL2CALC.Mailman.subscribe('skillHover', this, requestUpdate);
+		TL2CALC.Mailman.subscribe('skillHoverOut', this, hide);
 };
 
 TL2CALC.UI.ShareLink = function(_element) {
@@ -384,6 +439,7 @@ window.onload = function () {
     var tabs = [];
     var trees = [];
     var shareLink;
+		var description;
 
     //Loop through players
     var playerElems = document.getElementsByClassName("player");
@@ -426,6 +482,7 @@ window.onload = function () {
         }
     }
     
+		description = new TL2CALC.UI.SkillDescription(document.getElementById("description"));
     shareLink = new TL2CALC.UI.ShareLink(document.getElementById("share-link"));
 
     TL2CALC.Mailman.publish('uiReady');
