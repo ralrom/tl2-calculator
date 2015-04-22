@@ -130,7 +130,7 @@ TL2CALC.SkillsetLoader = function () {
         request.addEventListener('load', transferComplete);
         request.addEventListener('error', transferFailed);
         request.addEventListener('abort', transferFailed);
-        request.open('GET', 'data/' + player + '.min.json', true);
+        request.open('GET', 'data/' + player + '.json', true);
         request.send();
     }
     TL2CALC.Mailman.subscribe('playerChange', this, load);
@@ -347,16 +347,14 @@ TL2CALC.UI.SkillIcon = function (_element, _tree, _skill) {
     var updateIcon = function (tree, skill, level) {
         if (_tree == tree && _skill == skill) {
             if (level > 0) {
-                _element.style.backgroundPositionX = -icon.active.xPos + "px";
-                _element.style.backgroundPositionY = -icon.active.yPos + "px";
+                _element.style.backgroundPosition = -icon.active.xPos + "px " + -icon.active.yPos + "px";
                 
                 //Add active class
                 if (!_element.className.match(new RegExp('(?:^|\\s)' + 'active' + '(?!\\S)', 'g'))) {
                     _element.className += " active";
                 }
             } else {
-                _element.style.backgroundPositionX = -icon.inactive.xPos + "px";
-                _element.style.backgroundPositionY = -icon.inactive.yPos + "px";
+                _element.style.backgroundPosition = -icon.inactive.xPos + "px " + -icon.inactive.yPos + "px";
                 
                 //Remove active class
                 _element.className = _element.className.replace(new RegExp('(?:^|\\s)' + 'active' + '(?!\\S)', 'g'), '');
