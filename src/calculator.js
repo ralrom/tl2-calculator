@@ -154,7 +154,7 @@ Tl2calc.Core = function() {
 */
 
 Tl2calc.Mailman = function() {
-	var subscribers = [];
+	var subscriptions = [];
 	return {
 
 		/*
@@ -166,74 +166,104 @@ Tl2calc.Mailman = function() {
 		 * @param callback:function called when there's a publication
 		 * @param priority:number(0-10) priority for the callback
 		 */
-		subscribe: function(topic, context, callback, priority) {
+publish: function( topic ) {
+		if ( typeof topic !== "string" ) {
+			throw new Error( "You must provide a valid topic to publish." );
+		}
 
-			var priority = priority || 5;
-			priority = priority > 10 ? 10 : priority;
-			priority = priority < 0 ? 0 : priority;
+		var args = [].slice.call( arguments, 1 ),
+			topicSubscriptions,
+			subscription,
+			length,
+			i = 0,
+			ret;
 
-			// Make sure a topic is provided
-			if (typeof topic !== 'string') {
-				throw new Error('You must provide a topic as a string!');
+		if ( !subscriptions[ topic ] ) {
+			return true;
+		}
+
+		topicSubscriptions = subscriptions[ topic ].slice();
+		for ( length = topicSubscriptions.length; i < length; i++ ) {
+			subscription = topicSubscriptions[ i ];
+			ret = subscription.callback.apply( subscription.context, args );
+			if ( ret === false ) {
+				break;
+			}
+		}
+		return ret !== false;
+	},
+
+	subscribe: function( topic, context, callback, priority ) {
+		if ( typeof topic !== "string" ) {
+			throw new Error( "You must provide a valid topic to create a subscription." );
+		}
+
+		priority = priority || 5;
+
+		var topicIndex = 0,
+			topics = topic.split( /\s/ ),
+			topicLength = topics.length,
+			added;
+		for ( ; topicIndex < topicLength; topicIndex++ ) {
+			topic = topics[ topicIndex ];
+			added = false;
+			if ( !subscriptions[ topic ] ) {
+				subscriptions[ topic ] = [];
 			}
 
-			// Create a new channel for the topic if it doesn't exist
-			if (typeof subscribers[topic] === 'undefined') {
-				subscribers[topic] = [];
-			}
+			var i = subscriptions[ topic ].length - 1,
+				subscriptionInfo = {
+					callback: callback,
+					context: context,
+					priority: priority
+				};
 
-			// Create a new priority for the topic if it doesn't exist
-			if (typeof subscribers[topic]['priority:' + priority] === 'undefined') {
-				subscribers[topic]['priority:' + priority] = [];
-			}
-
-			// Register the subscriber on the publisher's list
-			subscribers[topic]['priority:' + priority].push({
-				context: context,
-				callback: callback
-			});
-		},
-
-		/*
-		 * Remove a specific subscription on a topic
-		 */
-		unsubscribe: function(topic, context, callback) {
-			for (var i = 0; i <= 10; i++) {
-				if(typeof subscribers[topic]['priority:' + i] !== 'undefined'){
-					for (var j = 0; j < subscribers[topic]['priority:' + i].length; j++) {
-						if (subscribers[topic]['priority:' + i][j].callback === callback && subscribers[topic]['priority:' + i][j].context == context) {
-							subscribers[topic]['priority:' + i].splice(j, 1);
-							j--;
-						}
-					}
+			for ( ; i >= 0; i-- ) {
+				if ( subscriptions[ topic ][ i ].priority <= priority ) {
+					subscriptions[ topic ].splice( i + 1, 0, subscriptionInfo );
+					added = true;
+					break;
 				}
 			}
-		},
 
-		/*
-		 * Create a publication and send it to all subscribers of that topic
-		 */
-		publish: function(topic) {
-
-			//Get arguments (except topic) as array
-			var args = [].slice.call(arguments, 1);
-
-			//Stop if there are no subscribers
-			if (typeof subscribers[topic] === 'undefined') {
-				return true;
+			if ( !added ) {
+				subscriptions[ topic ].unshift( subscriptionInfo );
 			}
+		}
 
-			//Callback all subscribers
-			for (var i = 0; i <= 10; i++) {
-				if(typeof subscribers[topic]['priority:' + i] !== 'undefined'){
-					for (var j = 0, u = subscribers[topic]['priority:' + i].length; j < u; j++) {
-						subscribers[topic]['priority:' + i][j].callback.apply(
-							subscribers[topic]['priority:' + i][j].context, args);
-					}
+		return callback;
+	},
+
+	unsubscribe: function( topic, context, callback ) {
+		if ( typeof topic !== "string" ) {
+			throw new Error( "You must provide a valid topic to remove a subscription." );
+		}
+
+		if ( arguments.length === 2 ) {
+			callback = context;
+			context = null;
+		}
+
+		if ( !subscriptions[ topic ] ) {
+			return;
+		}
+
+		var length = subscriptions[ topic ].length,
+			i = 0;
+
+		for ( ; i < length; i++ ) {
+			if ( subscriptions[ topic ][ i ].callback === callback ) {
+				if ( !context || subscriptions[ topic ][ i ].context === context ) {
+					subscriptions[ topic ].splice( i, 1 );
+					
+					// Adjust counter and length for removed item
+					i--;
+					length--;
 				}
 			}
 		}
 	}
+}
 }();
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -244,6 +274,8 @@ Tl2calc.Mailman = function() {
 */
 
 Tl2calc.SkillsetFetcher = function() {
+
+	var that = this;
 
 	/*
 	 * Called during transfer progress
@@ -259,7 +291,7 @@ Tl2calc.SkillsetFetcher = function() {
 		if (event.target.status === 200) {
 			data = JSON.parse(event.target.responseText);
 			Tl2calc.Mailman.publish('skillsetLoaded', data.skillset);
-			Tl2calc.Mailman.subscribe('characterChanged', this, fetch);
+			Tl2calc.Mailman.subscribe('characterChanged', that, fetch);
 		}
 	};
 
@@ -274,7 +306,7 @@ Tl2calc.SkillsetFetcher = function() {
 	 * Asynchronously load the given character's skillset
 	*/
 	var fetch = function(character) {
-		Tl2calc.Mailman.unsubscribe('characterChanged', this, fetch);
+		Tl2calc.Mailman.unsubscribe('characterChanged', that, fetch);
 		// Ajax request
 		var request = new XMLHttpRequest();
 		request.addEventListener('progress', transferProgress);
@@ -286,7 +318,7 @@ Tl2calc.SkillsetFetcher = function() {
 		request.send();
 	}
 
-	Tl2calc.Mailman.subscribe('characterChanged', this, fetch);
+	Tl2calc.Mailman.subscribe('characterChanged', that, fetch);
 }();
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -306,7 +338,6 @@ Tl2calc.SkillsetDescriptor = function(){
 	*/
 	var update = function(skillset) {
 		_skillset = skillset;
-		Tl2calc.Mailman.subscribe('describeProperty', this, describe);
 	}
 
 	var describe = function(property, options) {
@@ -346,6 +377,7 @@ Tl2calc.SkillsetDescriptor = function(){
 		}
 	}
 
+	Tl2calc.Mailman.subscribe('describeProperty', this, describe);
 	Tl2calc.Mailman.subscribe('skillsetLoaded', this, update, 0);
 }();
 
@@ -568,7 +600,6 @@ Tl2calc.Tabs = function() {
 		 * Request the tab name
 		*/
 		var request = function() {
-			Tl2calc.Mailman.subscribe('propertyDescribed:treeName,' + tree, this, update);
 			Tl2calc.Mailman.publish('describeProperty', 'treeName', { tree: tree });
 		}
 
@@ -576,6 +607,7 @@ Tl2calc.Tabs = function() {
 		element.addEventListener('click', display);
 
 		Tl2calc.Mailman.subscribe('showTree', this, toggle);
+		Tl2calc.Mailman.subscribe('propertyDescribed:treeName,' + tree, this, update);
 		Tl2calc.Mailman.subscribe('skillsetLoaded', this, request, 10); 
 	}
 
@@ -851,7 +883,7 @@ Tl2calc.SkillLevels = function() {
 	}
 
 	// Initialize after DOM is ready
-	Tl2calc.Mailman.subscribe('windowLoaded', this, initialize, 10);
+	Tl2calc.Mailman.subscribe('windowLoaded', this, initialize);
 }();
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -888,19 +920,23 @@ Tl2calc.SkillNames = function() {
 			element.innerHTML = name;
 		}
 
+		var request = function(){
+			Tl2calc.Mailman.publish(
+				'describeProperty',
+				'skillName',
+				{ tree: tree, skill: skill});
+		}
+
+		// Initialize after DOM is ready (low priority)
 		Tl2calc.Mailman.subscribe(
 			'propertyDescribed:skillName,' + tree + ',' + skill,
 			this,
 			update);
-
-		Tl2calc.Mailman.publish(
-			'describeProperty',
-			'skillName',
-			{ tree: tree, skill: skill});
+		Tl2calc.Mailman.subscribe('skillsetLoaded', this, request, 10);
 	}
 
 	// Initialize after DOM is ready (low priority)
-	Tl2calc.Mailman.subscribe('skillsetLoaded', this, initialize, 10);
+	Tl2calc.Mailman.subscribe('windowLoaded', this, initialize);
 }();
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
