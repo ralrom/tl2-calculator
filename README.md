@@ -4,6 +4,21 @@
 
 # Changelog #
 
+## 4 May 2015
+
+- Rewrote the calculator
+- New skill bars to make setting the level easier
+- Levels can also be entered in the text input
+
+### New file structure
+
+- Each character now has its own folder containing:
+ * Skill Icons
+ * Portrait
+ * Skill Descriptions
+- You can now add your own characters by adding those files in a new folder.
+The displayed character name in the calculator is taken from the folder name.
+
 ## 26 November 2014
 
 - Rewrote the calculator
