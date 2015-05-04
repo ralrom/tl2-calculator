@@ -97,7 +97,9 @@ gulp.task('uglify', function() {
 			trees: trees,
 			skills: skills
 		}))
-		//.pipe(uglify())
+		.pipe(uglify({
+			preserveComments: 'some'
+		}))
 		.pipe(gulp.dest('./dist'))
 });
 

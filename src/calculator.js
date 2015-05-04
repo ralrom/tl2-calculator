@@ -151,11 +151,43 @@ Tl2calc.Core = function() {
  * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  *
  * Allows communication between modules by using the subscribe/publish pattern
+/
+
+/*!
+ * Modified from amplify.js [http://amplifyjs.com]
+ * Copyright (c) 2011 appendTo LLC.
+ * Dual licensed under the MIT or GPL licenses.
 */
 
 Tl2calc.Mailman = function() {
 	var subscriptions = [];
 	return {
+		publish: function( topic ) {
+			if ( typeof topic !== "string" ) {
+				throw new Error( "You must provide a valid topic to publish." );
+			}
+
+			var args = [].slice.call( arguments, 1 ),
+				topicSubscriptions,
+				subscription,
+				length,
+				i = 0,
+				ret;
+
+			if ( !subscriptions[ topic ] ) {
+				return true;
+			}
+
+			topicSubscriptions = subscriptions[ topic ].slice();
+			for ( length = topicSubscriptions.length; i < length; i++ ) {
+				subscription = topicSubscriptions[ i ];
+				ret = subscription.callback.apply( subscription.context, args );
+				if ( ret === false ) {
+					break;
+				}
+			}
+			return ret !== false;
+		},
 
 		/*
 		 * Subscribe to a topic and provide a callback for when there is a
@@ -164,106 +196,79 @@ Tl2calc.Mailman = function() {
 		 * @param topic:string the topic to subscribe to
 		 * @param context used to keep "this" in context
 		 * @param callback:function called when there's a publication
-		 * @param priority:number(0-10) priority for the callback
+		 * @param priority:number priority for the callback
 		 */
-publish: function( topic ) {
-		if ( typeof topic !== "string" ) {
-			throw new Error( "You must provide a valid topic to publish." );
-		}
-
-		var args = [].slice.call( arguments, 1 ),
-			topicSubscriptions,
-			subscription,
-			length,
-			i = 0,
-			ret;
-
-		if ( !subscriptions[ topic ] ) {
-			return true;
-		}
-
-		topicSubscriptions = subscriptions[ topic ].slice();
-		for ( length = topicSubscriptions.length; i < length; i++ ) {
-			subscription = topicSubscriptions[ i ];
-			ret = subscription.callback.apply( subscription.context, args );
-			if ( ret === false ) {
-				break;
-			}
-		}
-		return ret !== false;
-	},
-
-	subscribe: function( topic, context, callback, priority ) {
-		if ( typeof topic !== "string" ) {
-			throw new Error( "You must provide a valid topic to create a subscription." );
-		}
-
-		priority = priority || 5;
-
-		var topicIndex = 0,
-			topics = topic.split( /\s/ ),
-			topicLength = topics.length,
-			added;
-		for ( ; topicIndex < topicLength; topicIndex++ ) {
-			topic = topics[ topicIndex ];
-			added = false;
-			if ( !subscriptions[ topic ] ) {
-				subscriptions[ topic ] = [];
+		subscribe: function( topic, context, callback, priority ) {
+			if ( typeof topic !== "string" ) {
+				throw new Error( "You must provide a valid topic to create a subscription." );
 			}
 
-			var i = subscriptions[ topic ].length - 1,
-				subscriptionInfo = {
-					callback: callback,
-					context: context,
-					priority: priority
-				};
+			priority = priority || 5;
 
-			for ( ; i >= 0; i-- ) {
-				if ( subscriptions[ topic ][ i ].priority <= priority ) {
-					subscriptions[ topic ].splice( i + 1, 0, subscriptionInfo );
-					added = true;
-					break;
+			var topicIndex = 0,
+				topics = topic.split( /\s/ ),
+				topicLength = topics.length,
+				added;
+			for ( ; topicIndex < topicLength; topicIndex++ ) {
+				topic = topics[ topicIndex ];
+				added = false;
+				if ( !subscriptions[ topic ] ) {
+					subscriptions[ topic ] = [];
+				}
+
+				var i = subscriptions[ topic ].length - 1,
+					subscriptionInfo = {
+						callback: callback,
+						context: context,
+						priority: priority
+					};
+
+				for ( ; i >= 0; i-- ) {
+					if ( subscriptions[ topic ][ i ].priority <= priority ) {
+						subscriptions[ topic ].splice( i + 1, 0, subscriptionInfo );
+						added = true;
+						break;
+					}
+				}
+
+				if ( !added ) {
+					subscriptions[ topic ].unshift( subscriptionInfo );
 				}
 			}
 
-			if ( !added ) {
-				subscriptions[ topic ].unshift( subscriptionInfo );
+			return callback;
+		},
+
+		unsubscribe: function( topic, context, callback ) {
+			if ( typeof topic !== "string" ) {
+				throw new Error( "You must provide a valid topic to remove a subscription." );
 			}
-		}
 
-		return callback;
-	},
+			if ( arguments.length === 2 ) {
+				callback = context;
+				context = null;
+			}
 
-	unsubscribe: function( topic, context, callback ) {
-		if ( typeof topic !== "string" ) {
-			throw new Error( "You must provide a valid topic to remove a subscription." );
-		}
+			if ( !subscriptions[ topic ] ) {
+				return;
+			}
 
-		if ( arguments.length === 2 ) {
-			callback = context;
-			context = null;
-		}
+			var length = subscriptions[ topic ].length,
+				i = 0;
 
-		if ( !subscriptions[ topic ] ) {
-			return;
-		}
-
-		var length = subscriptions[ topic ].length,
-			i = 0;
-
-		for ( ; i < length; i++ ) {
-			if ( subscriptions[ topic ][ i ].callback === callback ) {
-				if ( !context || subscriptions[ topic ][ i ].context === context ) {
-					subscriptions[ topic ].splice( i, 1 );
+			for ( ; i < length; i++ ) {
+				if ( subscriptions[ topic ][ i ].callback === callback ) {
+					if ( !context || subscriptions[ topic ][ i ].context === context ) {
+						subscriptions[ topic ].splice( i, 1 );
 					
-					// Adjust counter and length for removed item
-					i--;
-					length--;
+						// Adjust counter and length for removed item
+						i--;
+						length--;
+					}
 				}
 			}
 		}
 	}
-}
 }();
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -926,6 +931,23 @@ Tl2calc.SkillNames = function() {
 				'skillName',
 				{ tree: tree, skill: skill});
 		}
+
+		/*
+		 * Request the description to show
+		*/
+		var showDescription = function(e) {
+			Tl2calc.Mailman.publish('showDescription', tree, skill);
+		}
+
+		/*
+		 * Request the description to hide
+		*/
+		var hideDescription = function(e) {
+			Tl2calc.Mailman.publish('hideDescription');
+		}
+
+		element.addEventListener('mouseover', showDescription);
+		element.addEventListener('mouseout', hideDescription);
 
 		// Initialize after DOM is ready (low priority)
 		Tl2calc.Mailman.subscribe(
