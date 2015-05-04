@@ -1,0 +1,15 @@
+.container {
+	width: 100%;
+	max-width: 60rem;
+	margin: 0 auto;
+}
+
+.wrapper {
+	position: relative;
+	padding: $spacing;
+	background-color: $colorFg;
+	border-radius: 0 0 $borderRadius $borderRadius;
+	border: solid 1px #ddd;
+	border-top: none;
+	overflow: hidden;
+}

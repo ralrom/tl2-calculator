@@ -1,0 +1,89 @@
+.skill {
+	width: 33.333%;
+	display: inline-block;
+	position: relative;
+	box-sizing: border-box;
+	margin: $spacing 0;
+}
+
+.skill:nth-child(7) {
+	display: block;
+	margin: $spacing auto;
+}
+
+.skill-icon {
+	width: 64px;
+	height: 64px;
+	display: inline-block;
+	background-color: #eee;
+	cursor: pointer;
+}
+
+.skill-icon.inactive {
+	opacity: 0.5;
+}
+
+.skill-inner {
+	display: inline-block;
+	margin: 0 $spacing;
+	vertical-align: top;
+	position: relative;
+}
+
+.skill-name {
+	display: block;
+	margin-bottom: $spacing;
+	font-size: $textMedium;
+}
+
+.skill-level {
+	font-size: $textMedium;
+	height: $textMedium;
+	display: inline-block;
+	width: 1.2em;
+	border: none;
+	outline: none;
+}
+
+.skill-bar {
+	position: absolute;
+	bottom: 3px;
+	left: $spacingDouble;
+	width: 120px;
+	background: #ddd;
+	cursor: pointer;
+}
+
+.skill-bar-knob {
+	width: 16px;
+	top: 0;
+	left: 0;
+	position: absolute;
+	border: solid 2px #fff;
+	box-sizing: border-box;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.5);
+}
+
+.skill-bar,
+.skill-bar-knob,
+.skill-bar-fill {
+	height: 16px;
+	border-radius: 8px;
+}
+
+.skill-bar-knob,
+.skill-bar-fill {
+	pointer-events: none;
+}
+
+.skill-bar-fill {
+	width: 0;
+	border-radius: 8px 0 0 8px;
+}
+
+@for $i from 1 through 3 {
+	.tree.color-#{$i} .skill-bar-knob,
+	.tree.color-#{$i} .skill-bar-fill {
+		background-color: nth($colors, $i);
+	}
+}

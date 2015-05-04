@@ -1,0 +1,52 @@
+.tabs {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.tab {
+	width: 33.333%;
+	display: inline-block;
+	text-align: center;
+	padding: $spacing;
+	box-sizing: border-box;
+	position: relative;
+	cursor: pointer;
+	border-bottom: solid 1px #ddd;
+	border-radius: $borderRadius $borderRadius 0 0;
+	font-size: $textMedium;
+}
+
+.tab.active {
+	background-color: $colorFg;
+	border: solid 1px #ddd;
+	border-bottom: solid 1px $colorFg;
+}
+
+.tab .indicator {
+	position: absolute;
+	left: $spacing;
+	top: 50%;
+	margin-top: -$spacingHalf;
+	width: $spacing;
+	height: $spacing;
+	border-radius: 50%;
+}
+
+.tab .tab-points {
+	position: absolute;
+	left: $spacingDouble;
+	padding-left: $spacingHalf;
+}
+
+@for $i from 1 through 3 {
+	.tab.color-#{$i} .indicator,
+	.tab.color-#{$i}.active:after,
+	.tab.color-#{$i}:hover:after {
+		background-color: nth($colors, $i);
+	}
+	.tab.color-#{$i}:hover .tab-name,
+	.tab.color-#{$i} .tab-points {
+		color: nth($colors, $i);
+	}
+}

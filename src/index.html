@@ -1,339 +1,67 @@
-<!DOCTYPE html>
-<html>
-
+<!doctype html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <title>Torchlight II Calculator</title>
-    <link href="css/main.css" rel="stylesheet" type="text/css" />
-    <link href='http://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>
+	<meta charset="UTF-8">
+	<title>Torchlight II Calculator</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="container">
-        <ul class="players">
-            <li><a href="javascript:;" class="player outlander" title="Outlander" data-player="outlander"><span class="name">Outlander</span></a>
-            <li><a href="javascript:;" class="player embermage" title="Embermage" data-player="embermage"><span class="name">Embermage</span></a>
-            <li><a href="javascript:;" class="player berserker" title="Berserker" data-player="berserker"><span class="name">Berserker</span></a>
-            <li><a href="javascript:;" class="player engineer" title="Engineer" data-player="engineer"><span class="name">Engineer</span></a>
-        </ul>
-        <ul class="tabs">
-            <li><div class="tab active color-1"><span class="point">0</span><span class="name">Tree</span></div>
-            <li><div class="tab color-2"><span class="point">0</span><span class="name">Tree</span></div>
-            <li><div class="tab color-3"><span class="point">0</span><span class="name">Tree</span></div>
-        </ul>
-        <ul class="trees">
-						<li id="description" style="left:100%;">
-							<div class="description-name"></div>
-							<div class="description-content"></div>
-							<ul class="tiers">
-								<li class="tier-1"></li>
-								<li class="tier-2"></li>
-								<li class="tier-3"></li>
-							</ul>
-						</li>
-            <li>
-                <div class="tree active">
-                    <ul class="skills">
-                        <li>
-                            <div class="skill">
-                                <img class="skill-icon" src="img/tiny.gif" alt="Skill" title="Skill" />
-                                <div class="skill-name">Skill</div>
-                                <div class="skill-level">0</div>
-                                <a href="javascript:;" class="skill-button skill-clear" title="Clear" data-effect="clear"><i class="icon-clear"></i></a>
-                                <a href="javascript:;" class="skill-button skill-minus" data-effect="minus"><i class="icon-minus"></i></a>
-                                <a href="javascript:;" class="skill-button skill-plus" data-effect="plus"><i class="icon-plus"></i></a>
-                            </div>
-                        <li>
-                            <div class="skill">
-                                <img class="skill-icon" src="img/tiny.gif" alt="Skill" title="Skill" />
-                                <div class="skill-name">Skill</div>
-                                <div class="skill-level">0</div>
-                                <a href="javascript:;" class="skill-button skill-clear" title="Clear" data-effect="clear"><i class="icon-clear"></i></a>
-                                <a href="javascript:;" class="skill-button skill-minus" data-effect="minus"><i class="icon-minus"></i></a>
-                                <a href="javascript:;" class="skill-button skill-plus" data-effect="plus"><i class="icon-plus"></i></a>
-                            </div>
-                        <li>
-                            <div class="skill">
-                                <img class="skill-icon" src="img/tiny.gif" alt="Skill" title="Skill" />
-                                <div class="skill-name">Skill</div>
-                                <div class="skill-level">0</div>
-                                <a href="javascript:;" class="skill-button skill-clear" title="Clear" data-effect="clear"><i class="icon-clear"></i></a>
-                                <a href="javascript:;" class="skill-button skill-minus" data-effect="minus"><i class="icon-minus"></i></a>
-                                <a href="javascript:;" class="skill-button skill-plus" data-effect="plus"><i class="icon-plus"></i></a>
-                            </div>
-                        <!-- Row -->
-                        <li>
-                            <div class="skill">
-                                <img class="skill-icon" src="img/tiny.gif" alt="Skill" title="Skill" />
-                                <div class="skill-name">Skill</div>
-                                <div class="skill-level">0</div>
-                                <a href="javascript:;" class="skill-button skill-clear" title="Clear" data-effect="clear"><i class="icon-clear"></i></a>
-                                <a href="javascript:;" class="skill-button skill-minus" data-effect="minus"><i class="icon-minus"></i></a>
-                                <a href="javascript:;" class="skill-button skill-plus" data-effect="plus"><i class="icon-plus"></i></a>
-                            </div>
-                        <li>
-                            <div class="skill">
-                                <img class="skill-icon" src="img/tiny.gif" alt="Skill" title="Skill" />
-                                <div class="skill-name">Skill</div>
-                                <div class="skill-level">0</div>
-                                <a href="javascript:;" class="skill-button skill-clear" title="Clear" data-effect="clear"><i class="icon-clear"></i></a>
-                                <a href="javascript:;" class="skill-button skill-minus" data-effect="minus"><i class="icon-minus"></i></a>
-                                <a href="javascript:;" class="skill-button skill-plus" data-effect="plus"><i class="icon-plus"></i></a>
-                            </div>
-                        <li>
-                            <div class="skill">
-                                <img class="skill-icon" src="img/tiny.gif" alt="Skill" title="Skill" />
-                                <div class="skill-name">Skill</div>
-                                <div class="skill-level">0</div>
-                                <a href="javascript:;" class="skill-button skill-clear" title="Clear" data-effect="clear"><i class="icon-clear"></i></a>
-                                <a href="javascript:;" class="skill-button skill-minus" data-effect="minus"><i class="icon-minus"></i></a>
-                                <a href="javascript:;" class="skill-button skill-plus" data-effect="plus"><i class="icon-plus"></i></a>
-                            </div>
-                        <!-- Row -->
-                        <li class="fill">
-                            <div class="skill">
-                                <img class="skill-icon" src="img/tiny.gif" alt="Skill" title="Skill" />
-                                <div class="skill-name">Skill</div>
-                                <div class="skill-level">0</div>
-                                <a href="javascript:;" class="skill-button skill-clear" title="Clear" data-effect="clear"><i class="icon-clear"></i></a>
-                                <a href="javascript:;" class="skill-button skill-minus" data-effect="minus"><i class="icon-minus"></i></a>
-                                <a href="javascript:;" class="skill-button skill-plus" data-effect="plus"><i class="icon-plus"></i></a>
-                            </div>
-                        <!-- Row -->
-                        <li>
-                            <div class="skill">
-                                <img class="skill-icon" src="img/tiny.gif" alt="Skill" title="Skill" />
-                                <div class="skill-name">Skill</div>
-                                <div class="skill-level">0</div>
-                                <a href="javascript:;" class="skill-button skill-clear" title="Clear" data-effect="clear"><i class="icon-clear"></i></a>
-                                <a href="javascript:;" class="skill-button skill-minus" data-effect="minus"><i class="icon-minus"></i></a>
-                                <a href="javascript:;" class="skill-button skill-plus" data-effect="plus"><i class="icon-plus"></i></a>
-                            </div>
-                        <li>
-                            <div class="skill">
-                                <img class="skill-icon" src="img/tiny.gif" alt="Skill" title="Skill" />
-                                <div class="skill-name">Skill</div>
-                                <div class="skill-level">0</div>
-                                <a href="javascript:;" class="skill-button skill-clear" title="Clear" data-effect="clear"><i class="icon-clear"></i></a>
-                                <a href="javascript:;" class="skill-button skill-minus" data-effect="minus"><i class="icon-minus"></i></a>
-                                <a href="javascript:;" class="skill-button skill-plus" data-effect="plus"><i class="icon-plus"></i></a>
-                            </div>
-                        <li>
-                            <div class="skill">
-                                <img class="skill-icon" src="img/tiny.gif" alt="Skill" title="Skill" />
-                                <div class="skill-name">Skill</div>
-                                <div class="skill-level">0</div>
-                                <a href="javascript:;" class="skill-button skill-clear" title="Clear" data-effect="clear"><i class="icon-clear"></i></a>
-                                <a href="javascript:;" class="skill-button skill-minus" data-effect="minus"><i class="icon-minus"></i></a>
-                                <a href="javascript:;" class="skill-button skill-plus" data-effect="plus"><i class="icon-plus"></i></a>
-                            </div>
-                    </ul>
-                </div>
-            <li>
-                <div class="tree">
-                    <ul class="skills">
-                        <li>
-                            <div class="skill">
-                                <img class="skill-icon" src="img/tiny.gif" alt="Skill" title="Skill" />
-                                <div class="skill-name">Skill</div>
-                                <div class="skill-level">0</div>
-                                <a href="javascript:;" class="skill-button skill-clear" title="Clear" data-effect="clear"><i class="icon-clear"></i></a>
-                                <a href="javascript:;" class="skill-button skill-minus" data-effect="minus"><i class="icon-minus"></i></a>
-                                <a href="javascript:;" class="skill-button skill-plus" data-effect="plus"><i class="icon-plus"></i></a>
-                            </div>
-                        <li>
-                            <div class="skill">
-                                <img class="skill-icon" src="img/tiny.gif" alt="Skill" title="Skill" />
-                                <div class="skill-name">Skill</div>
-                                <div class="skill-level">0</div>
-                                <a href="javascript:;" class="skill-button skill-clear" title="Clear" data-effect="clear"><i class="icon-clear"></i></a>
-                                <a href="javascript:;" class="skill-button skill-minus" data-effect="minus"><i class="icon-minus"></i></a>
-                                <a href="javascript:;" class="skill-button skill-plus" data-effect="plus"><i class="icon-plus"></i></a>
-                            </div>
-                        <li>
-                            <div class="skill">
-                                <img class="skill-icon" src="img/tiny.gif" alt="Skill" title="Skill" />
-                                <div class="skill-name">Skill</div>
-                                <div class="skill-level">0</div>
-                                <a href="javascript:;" class="skill-button skill-clear" title="Clear" data-effect="clear"><i class="icon-clear"></i></a>
-                                <a href="javascript:;" class="skill-button skill-minus" data-effect="minus"><i class="icon-minus"></i></a>
-                                <a href="javascript:;" class="skill-button skill-plus" data-effect="plus"><i class="icon-plus"></i></a>
-                            </div>
-                        <!-- Row -->
-                        <li>
-                            <div class="skill">
-                                <img class="skill-icon" src="img/tiny.gif" alt="Skill" title="Skill" />
-                                <div class="skill-name">Skill</div>
-                                <div class="skill-level">0</div>
-                                <a href="javascript:;" class="skill-button skill-clear" title="Clear" data-effect="clear"><i class="icon-clear"></i></a>
-                                <a href="javascript:;" class="skill-button skill-minus" data-effect="minus"><i class="icon-minus"></i></a>
-                                <a href="javascript:;" class="skill-button skill-plus" data-effect="plus"><i class="icon-plus"></i></a>
-                            </div>
-                        <li>
-                            <div class="skill">
-                                <img class="skill-icon" src="img/tiny.gif" alt="Skill" title="Skill" />
-                                <div class="skill-name">Skill</div>
-                                <div class="skill-level">0</div>
-                                <a href="javascript:;" class="skill-button skill-clear" title="Clear" data-effect="clear"><i class="icon-clear"></i></a>
-                                <a href="javascript:;" class="skill-button skill-minus" data-effect="minus"><i class="icon-minus"></i></a>
-                                <a href="javascript:;" class="skill-button skill-plus" data-effect="plus"><i class="icon-plus"></i></a>
-                            </div>
-                        <li>
-                            <div class="skill">
-                                <img class="skill-icon" src="img/tiny.gif" alt="Skill" title="Skill" />
-                                <div class="skill-name">Skill</div>
-                                <div class="skill-level">0</div>
-                                <a href="javascript:;" class="skill-button skill-clear" title="Clear" data-effect="clear"><i class="icon-clear"></i></a>
-                                <a href="javascript:;" class="skill-button skill-minus" data-effect="minus"><i class="icon-minus"></i></a>
-                                <a href="javascript:;" class="skill-button skill-plus" data-effect="plus"><i class="icon-plus"></i></a>
-                            </div>
-                        <!-- Row -->
-                        <li class="fill">
-                            <div class="skill">
-                                <img class="skill-icon" src="img/tiny.gif" alt="Skill" title="Skill" />
-                                <div class="skill-name">Skill</div>
-                                <div class="skill-level">0</div>
-                                <a href="javascript:;" class="skill-button skill-clear" title="Clear" data-effect="clear"><i class="icon-clear"></i></a>
-                                <a href="javascript:;" class="skill-button skill-minus" data-effect="minus"><i class="icon-minus"></i></a>
-                                <a href="javascript:;" class="skill-button skill-plus" data-effect="plus"><i class="icon-plus"></i></a>
-                            </div>
-                        <!-- Row -->
-                        <li>
-                            <div class="skill">
-                                <img class="skill-icon" src="img/tiny.gif" alt="Skill" title="Skill" />
-                                <div class="skill-name">Skill</div>
-                                <div class="skill-level">0</div>
-                                <a href="javascript:;" class="skill-button skill-clear" title="Clear" data-effect="clear"><i class="icon-clear"></i></a>
-                                <a href="javascript:;" class="skill-button skill-minus" data-effect="minus"><i class="icon-minus"></i></a>
-                                <a href="javascript:;" class="skill-button skill-plus" data-effect="plus"><i class="icon-plus"></i></a>
-                            </div>
-                        <li>
-                            <div class="skill">
-                                <img class="skill-icon" src="img/tiny.gif" alt="Skill" title="Skill" />
-                                <div class="skill-name">Skill</div>
-                                <div class="skill-level">0</div>
-                                <a href="javascript:;" class="skill-button skill-clear" title="Clear" data-effect="clear"><i class="icon-clear"></i></a>
-                                <a href="javascript:;" class="skill-button skill-minus" data-effect="minus"><i class="icon-minus"></i></a>
-                                <a href="javascript:;" class="skill-button skill-plus" data-effect="plus"><i class="icon-plus"></i></a>
-                            </div>
-                        <li>
-                            <div class="skill">
-                                <img class="skill-icon" src="img/tiny.gif" alt="Skill" title="Skill" />
-                                <div class="skill-name">Skill</div>
-                                <div class="skill-level">0</div>
-                                <a href="javascript:;" class="skill-button skill-clear" title="Clear" data-effect="clear"><i class="icon-clear"></i></a>
-                                <a href="javascript:;" class="skill-button skill-minus" data-effect="minus"><i class="icon-minus"></i></a>
-                                <a href="javascript:;" class="skill-button skill-plus" data-effect="plus"><i class="icon-plus"></i></a>
-                            </div>
-                    </ul>
-                </div>
-            <li>
-                <div class="tree">
-                    <ul class="skills">
-                        <li>
-                            <div class="skill">
-                                <img class="skill-icon" src="img/tiny.gif" alt="Skill" title="Skill" />
-                                <div class="skill-name">Skill</div>
-                                <div class="skill-level">0</div>
-                                <a href="javascript:;" class="skill-button skill-clear" title="Clear" data-effect="clear"><i class="icon-clear"></i></a>
-                                <a href="javascript:;" class="skill-button skill-minus" data-effect="minus"><i class="icon-minus"></i></a>
-                                <a href="javascript:;" class="skill-button skill-plus" data-effect="plus"><i class="icon-plus"></i></a>
-                            </div>
-                        <li>
-                            <div class="skill">
-                                <img class="skill-icon" src="img/tiny.gif" alt="Skill" title="Skill" />
-                                <div class="skill-name">Skill</div>
-                                <div class="skill-level">0</div>
-                                <a href="javascript:;" class="skill-button skill-clear" title="Clear" data-effect="clear"><i class="icon-clear"></i></a>
-                                <a href="javascript:;" class="skill-button skill-minus" data-effect="minus"><i class="icon-minus"></i></a>
-                                <a href="javascript:;" class="skill-button skill-plus" data-effect="plus"><i class="icon-plus"></i></a>
-                            </div>
-                        <li>
-                            <div class="skill">
-                                <img class="skill-icon" src="img/tiny.gif" alt="Skill" title="Skill" />
-                                <div class="skill-name">Skill</div>
-                                <div class="skill-level">0</div>
-                                <a href="javascript:;" class="skill-button skill-clear" title="Clear" data-effect="clear"><i class="icon-clear"></i></a>
-                                <a href="javascript:;" class="skill-button skill-minus" data-effect="minus"><i class="icon-minus"></i></a>
-                                <a href="javascript:;" class="skill-button skill-plus" data-effect="plus"><i class="icon-plus"></i></a>
-                            </div>
-                        <!-- Row -->
-                        <li>
-                            <div class="skill">
-                                <img class="skill-icon" src="img/tiny.gif" alt="Skill" title="Skill" />
-                                <div class="skill-name">Skill</div>
-                                <div class="skill-level">0</div>
-                                <a href="javascript:;" class="skill-button skill-clear" title="Clear" data-effect="clear"><i class="icon-clear"></i></a>
-                                <a href="javascript:;" class="skill-button skill-minus" data-effect="minus"><i class="icon-minus"></i></a>
-                                <a href="javascript:;" class="skill-button skill-plus" data-effect="plus"><i class="icon-plus"></i></a>
-                            </div>
-                        <li>
-                            <div class="skill">
-                                <img class="skill-icon" src="img/tiny.gif" alt="Skill" title="Skill" />
-                                <div class="skill-name">Skill</div>
-                                <div class="skill-level">0</div>
-                                <a href="javascript:;" class="skill-button skill-clear" title="Clear" data-effect="clear"><i class="icon-clear"></i></a>
-                                <a href="javascript:;" class="skill-button skill-minus" data-effect="minus"><i class="icon-minus"></i></a>
-                                <a href="javascript:;" class="skill-button skill-plus" data-effect="plus"><i class="icon-plus"></i></a>
-                            </div>
-                        <li>
-                            <div class="skill">
-                                <img class="skill-icon" src="img/tiny.gif" alt="Skill" title="Skill" />
-                                <div class="skill-name">Skill</div>
-                                <div class="skill-level">0</div>
-                                <a href="javascript:;" class="skill-button skill-clear" title="Clear" data-effect="clear"><i class="icon-clear"></i></a>
-                                <a href="javascript:;" class="skill-button skill-minus" data-effect="minus"><i class="icon-minus"></i></a>
-                                <a href="javascript:;" class="skill-button skill-plus" data-effect="plus"><i class="icon-plus"></i></a>
-                            </div>
-                        <!-- Row -->
-                        <li class="fill">
-                            <div class="skill">
-                                <img class="skill-icon" src="img/tiny.gif" alt="Skill" title="Skill" />
-                                <div class="skill-name">Skill</div>
-                                <div class="skill-level">0</div>
-                                <a href="javascript:;" class="skill-button skill-clear" title="Clear" data-effect="clear"><i class="icon-clear"></i></a>
-                                <a href="javascript:;" class="skill-button skill-minus" data-effect="minus"><i class="icon-minus"></i></a>
-                                <a href="javascript:;" class="skill-button skill-plus" data-effect="plus"><i class="icon-plus"></i></a>
-                            </div>
-                        <!-- Row -->
-                        <li>
-                            <div class="skill">
-                                <img class="skill-icon" src="img/tiny.gif" alt="Skill" title="Skill" />
-                                <div class="skill-name">Skill</div>
-                                <div class="skill-level">0</div>
-                                <a href="javascript:;" class="skill-button skill-clear" title="Clear" data-effect="clear"><i class="icon-clear"></i></a>
-                                <a href="javascript:;" class="skill-button skill-minus" data-effect="minus"><i class="icon-minus"></i></a>
-                                <a href="javascript:;" class="skill-button skill-plus" data-effect="plus"><i class="icon-plus"></i></a>
-                            </div>
-                        <li>
-                            <div class="skill">
-                                <img class="skill-icon" src="img/tiny.gif" alt="Skill" title="Skill" />
-                                <div class="skill-name">Skill</div>
-                                <div class="skill-level">0</div>
-                                <a href="javascript:;" class="skill-button skill-clear" title="Clear" data-effect="clear"><i class="icon-clear"></i></a>
-                                <a href="javascript:;" class="skill-button skill-minus" data-effect="minus"><i class="icon-minus"></i></a>
-                                <a href="javascript:;" class="skill-button skill-plus" data-effect="plus"><i class="icon-plus"></i></a>
-                            </div>
-                        <li>
-                            <div class="skill">
-                                <img class="skill-icon" src="img/tiny.gif" alt="Skill" title="Skill" />
-                                <div class="skill-name">Skill</div>
-                                <div class="skill-level">0</div>
-                                <a href="javascript:;" class="skill-button skill-clear" title="Clear" data-effect="clear"><i class="icon-clear"></i></a>
-                                <a href="javascript:;" class="skill-button skill-minus" data-effect="minus"><i class="icon-minus"></i></a>
-                                <a href="javascript:;" class="skill-button skill-plus" data-effect="plus"><i class="icon-plus"></i></a>
-                            </div>
-                    </ul>
-                </div>
-        </ul>
-        <div class="extras share">
-            <span class="label">Share</span><span id="share-link" title="Share Build">Share Link</span>
-        </div>
-        <div class="extras">
-            <a class="github" href="https://github.com/ralrom/tl2-calculator"><i class="icon-github"></i><span class="tooltip">View on GitHub</span></a>
-        </div>
-    </div>
-    <script type="application/javascript" src="js/calculator.js" type="text/javascript"></script>
+	<div class="container">
+		<!-- Characters -->
+		<ul class="portraits">
+		{% for character in characters %}
+			<li class="portrait" data-character="{{ character }}">
+				<img src="characters/{{ character }}/portrait.jpg" class="portrait-image {{ character }}" alt="{{ character }}" title="{{ character }}" />
+				<span class="name">{{ character|capitalize }}</span>
+		{% endfor %}
+		</ul>
+		<!-- Tabs -->
+		<ul class="tabs">
+		{% for i in Array(trees) %}
+			<li class="tab color-{{ loop.index }} {% if loop.first %}active{% endif %}">
+				<div class="indicator" title="Points spent"></div>
+				<span class="tab-points" title="Points spent">0</span>
+				<span class="tab-name">Tree Name</span>
+			</li>
+		{% endfor %}
+		</ul>
+		<div class="wrapper">
+			<div class="description">
+				<div class="description-name"></div>
+				<div class="description-content"></div>
+				<div class="description-tiers">
+					<div class="description-tier"></div>
+					<div class="description-tier"></div>
+					<div class="description-tier"></div>
+				</div>
+			</div>
+			<!-- Trees -->
+			{% for i in Array(trees) %}
+				<div class="tree {% if loop.first %}active{% endif %} color-{{ loop.index }}">
+					{% for j in Array(skills) %}
+						<div class="skill">
+							<img class="skill-icon" src="tiny.gif" alt="Spell Icon" />
+							<div class="skill-inner">
+								<span class="skill-name">Skill Name</span>
+								<input type="text" class="skill-level" value="0" maxlength="2"/>
+								<div class="skill-bar">
+									<div class="skill-bar-knob"></div>
+									<div class="skill-bar-fill"></div>
+								</div>
+							</div>
+						</div>
+					{% endfor %}
+				</div>
+			{% endfor %}
+		</div><!-- Wrapper -->
+		<!-- Share Link -->
+		<div class="share">
+			<div class="label">Share:</div>
+			<div class="link">http://ralrom.github.io/tl2-calculator/?class=berserker&points=000000000050000000000000000000</div>
+		</div>
+		<div class="github"><a href="https://github.com/ralrom/tl2-calculator">View GitHub</a></div>
+		<script src="calculator.js" type="text/javascript"></script>
+	</div><!-- Container -->
 </body>
-
 </html>
