@@ -259,6 +259,7 @@ Tl2calc.SkillsetFetcher = function() {
 		if (event.target.status === 200) {
 			data = JSON.parse(event.target.responseText);
 			Tl2calc.Mailman.publish('skillsetLoaded', data.skillset);
+			Tl2calc.Mailman.subscribe('characterChanged', this, fetch);
 		}
 	};
 
@@ -273,6 +274,7 @@ Tl2calc.SkillsetFetcher = function() {
 	 * Asynchronously load the given character's skillset
 	*/
 	var fetch = function(character) {
+		Tl2calc.Mailman.unsubscribe('characterChanged', this, fetch);
 		// Ajax request
 		var request = new XMLHttpRequest();
 		request.addEventListener('progress', transferProgress);
