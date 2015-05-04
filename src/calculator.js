@@ -472,9 +472,10 @@ Tl2calc.BuildManager = function() {
 Tl2calc.Portraits = function() {
 
 	var initialize = function() {
+		var portraits = [];
 		var elements = document.getElementsByClassName('portrait');
 		for(var i = 0, u = elements.length; i < u; i++) {
-			new Portrait(elements[i], elements[i].getAttribute('data-character'));
+			portraits[i] = new Portrait(elements[i], elements[i].getAttribute('data-character'));
 		}
 	}
 
@@ -522,9 +523,10 @@ Tl2calc.Tabs = function() {
 	 * Initialize the Tab object on all tab elements
 	*/
 	var initialize = function() {
+		var tabs = [];
 		var elements = document.getElementsByClassName('tab');
 		for(var i = 0, u = elements.length; i < u; i++){
-			new Tab(elements[i], i);
+			tabs[i] =	new Tab(elements[i], i);
 		}
 	}
 
@@ -594,9 +596,10 @@ Tl2calc.TabPoints = function() {
 	 * Initialize the Tab object on all tab elements
 	*/
 	var initialize = function() {
+		var tabPoints = [];
 		var elements = document.getElementsByClassName('tab-points');
 		for(var i = 0, u = elements.length; i < u; i++){
-			new TabPoint(elements[i], i);
+			tabPoints[i] = new TabPoint(elements[i], i);
 		}
 	}
 
@@ -632,9 +635,10 @@ Tl2calc.Trees = function() {
 	 * Initialize the Tab object on all tab elements
 	*/
 	var initialize = function() {
+		var trees = [];
 		var elements = document.getElementsByClassName('tree');
 		for(var i = 0, u = elements.length; i < u; i++){
-			new Tree(elements[i], i);
+			trees[i] = new Tree(elements[i], i);
 		}
 	}
 
@@ -691,10 +695,11 @@ Tl2calc.SkillBars = function() {
 		stepSize = elements[0].offsetWidth / (skillMax+2);
 		knobWidth = elements[0].getElementsByClassName('skill-bar-knob')[0].offsetWidth;
 
+		var bars = [];
 		//Initiate SkillBar Objects
 		for(var i = 0, u = elements.length; i < u; i++){
 			var rowSize = Math.floor(i/skills);
-			new SkillBar(elements[i], rowSize, i - skills * rowSize);
+			bars[i] = new SkillBar(elements[i], rowSize, i - skills * rowSize);
 		}
 	}
 
@@ -780,9 +785,10 @@ Tl2calc.SkillLevels = function() {
 	var initialize = function() {
 		var elements = document.getElementsByClassName('skill-level');
 		var skills = Tl2calc.Core.getSkills();
+		var levels = [];
 		for(var i = 0, u = elements.length; i < u; i++){
 			var rowSize = Math.floor(i/skills);
-			new SkillLevel(elements[i], rowSize, i - skills * rowSize);
+			levels[i] = new SkillLevel(elements[i], rowSize, i - skills * rowSize);
 		}
 	}
 
@@ -861,11 +867,12 @@ Tl2calc.SkillNames = function() {
 	 * Initialize the SkillLevel object on all skill-level elements
 	*/
 	var initialize = function() {
+		var names = [];
 		var elements = document.getElementsByClassName('skill-name');
 		var skills = Tl2calc.Core.getSkills();
 		for(var i = 0, u = elements.length; i < u; i++){
 			var rowSize = Math.floor(i/skills);
-			new SkillName(elements[i], rowSize, i - skills * rowSize);
+			names[i] = new SkillName(elements[i], rowSize, i - skills * rowSize);
 		}
 	}
 
@@ -911,9 +918,10 @@ Tl2calc.SkillIcons = function() {
 	var initialize = function() {
 		var elements = document.getElementsByClassName('skill-icon');
 		var skills = Tl2calc.Core.getSkills();
+		var icons = [];
 		for(var i = 0, u = elements.length; i < u; i++){
 			var rowSize = Math.floor(i/skills);
-			new SkillIcon(elements[i], rowSize, i - skills * rowSize);
+			icons[i] = new SkillIcon(elements[i], rowSize, i - skills * rowSize);
 		}
 	}
 
