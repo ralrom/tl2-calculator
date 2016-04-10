@@ -24,7 +24,9 @@ export default class ShareLink extends React.Component {
         return (
             <div className="share-link">
                 <div className="share-link__label">Share:</div>
-                <input className="share-link__url" value={url} readOnly />
+                <div className="share-link__url-wrapper">
+                    <input className="share-link__url" value={url} readOnly />
+                </div>
             </div>
         );
     }

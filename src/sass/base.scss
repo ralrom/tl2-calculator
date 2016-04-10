@@ -1,6 +1,5 @@
 @import 'variables.scss';
 @import 'mixins.scss';
-
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600);
 
 html {
@@ -14,7 +13,71 @@ body {
 	background: #f8f8f8;
 }
 
-#the-dough {
+.layout {
+	position: relative;
 	max-width: 75rem;
-	margin: 1rem auto 0 auto;
+	margin: 0 auto;
+	padding: 1rem;
+	@include clearfix;
+}
+
+.layout__text {
+	margin-top: 1rem;
+}
+
+.github-link {
+	display: block;
+	padding: 0.75rem 1rem;
+	font-weight: 600;
+	text-decoration: none;
+	background: $light-gray;
+	color: #333;
+	text-align: center;
+	text-transform: uppercase;
+	border: solid 3px $light-gray;
+	&:hover {
+		background-color: lighten($light-gray, 4%);
+	}
+}
+
+.github-link__logo {
+	display: inline-block;
+	vertical-align: middle;
+	width: 36px;
+	height: 36px;
+	padding: 6px 0;
+	line-height: 1;
+	margin-right: 0.5rem;
+}
+
+.github-link__text {
+	vertical-align: middle;
+}
+
+@media (min-width: 40rem) {
+	.github-link__logo {
+		width: 48px;
+		height: 48px;
+	}
+}
+
+@media (min-width: 64rem) {
+	.layout__text {
+		margin-top: 0;
+		position: absolute;
+		top: 1rem;
+		right: 1rem;
+		bottom: 1rem;
+		width: 33.333%;
+		padding-left: 1rem;
+		box-sizing: border-box;
+	}
+	
+	.github-link__text {
+		font-size: 1.2rem;
+	}
+	.github-link__logo {
+		width: 52ppx;
+		height: 52px;
+	}
 }
