@@ -10,6 +10,8 @@ import CharacterSelect from "./CharacterSelect.jsx";
 
 require('../sass/modules/calculator.scss');
 
+const baseURL = [window.location.protocol, '//', window.location.host, window.location.pathname].join('');
+
 class Calculator extends React.Component {
     constructor(props) {
         super(props);
@@ -41,29 +43,28 @@ class Calculator extends React.Component {
         return total;
     }
     updateUrl() {
-        		
-		var encodePoint = function(point) {
-    		return parseInt(point, 10) ? point.toString(16) : 0;
-    	};
-    	
-        var pointString = "";
-		for(var i = 0; i < 3; i++) {
-			for(var j = 0; j < 10; j++) {
-				pointString += encodePoint(this.state.points[i][j]);
-			}
-		}
 
-    	
+        var encodePoint = function(point) {
+            return parseInt(point, 10) ? point.toString(16) : 0;
+        };
+
+        var pointString = "";
+        for (var i = 0; i < 3; i++) {
+            for (var j = 0; j < 10; j++) {
+                pointString += encodePoint(this.state.points[i][j]);
+            }
+        }
+
+
         var buildUrl =
-			[window.location.protocol, '//', window.location.host, window.location.pathname].join('')
-			+ '?class='	+ this.state.currentCharacter
-			+ '&points=' + pointString;
+            baseURL + '?class=' + this.state.currentCharacter + '&points=' + pointString;
 
         //Update browser URL
-        window.history.replaceState(
-    			{calc: "points"},
-    			"TL2 Calculator Saved Build",
-    			buildUrl);
+        window.history.replaceState({
+                calc: "points"
+            },
+            "TL2 Calculator Saved Build",
+            buildUrl);
     }
     handlePointChange(tree, skill, level) {
 
@@ -88,11 +89,12 @@ class Calculator extends React.Component {
         this.setState({
             points: newPoints
         });
-        
+
         this.updateUrl();
     }
     handleCharacterChange(character) {
-        microAjax("/characters/" + character + "/skillset.json", function(response) {
+        var url = baseURL + "characters/" + character + "/skillset.json";
+        microAjax(url, function(response) {
             this.setState({
                 skillset: response.skillset,
                 currentCharacter: character
@@ -123,7 +125,7 @@ class Calculator extends React.Component {
                 }
             }
         }.bind(this);
-        
+
         var getParameter = function(parameter) {
             return decodeURI(
                 window.location.search.replace(
@@ -141,7 +143,7 @@ class Calculator extends React.Component {
         var parsePoint = function(point) {
             return parseInt(point, 16) || 0;
         }
-        
+
         parseUrl();
     }
     render() {

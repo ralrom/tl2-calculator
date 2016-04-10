@@ -2,6 +2,7 @@ import React from 'react';
 
 require('../sass/modules/character-select.scss');
 
+const baseURL = [window.location.protocol, '//', window.location.host, window.location.pathname].join('');
 
 export default class CharacterSelect extends React.Component {
     constructor(props) {
@@ -30,7 +31,7 @@ class Character extends React.Component {
     render() {
         return(
             <div className="character" onClick={this.props.onCharacterChange.bind(null, this.props.character)} >
-                <img className="character__portrait" src={"/characters/" + this.props.character + "/portrait.jpg"} />
+                <img className="character__portrait" src={baseURL + "characters/" + this.props.character + "/portrait.jpg"} />
                 <h3 className="character__name">{this.props.character}</h3>
             </div>
         );

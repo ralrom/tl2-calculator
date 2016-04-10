@@ -5,6 +5,8 @@ import Slider from "./Slider.jsx";
 
 require('../sass/modules/skill.scss');
 
+const baseURL = [window.location.protocol, '//', window.location.host, window.location.pathname].join('');
+
 export default class Skill extends React.Component {
     constructor(props) {
         super(props);
@@ -45,7 +47,7 @@ class SkillIcon extends React.Component {
     }
     render() {
         var styles = {
-            backgroundImage: 'url(' + '/characters/' + this.props.currentCharacter + '/icons.jpg)',
+            backgroundImage: 'url(' + baseURL + '/characters/' + this.props.currentCharacter + '/icons.jpg)',
             backgroundPosition: (-64 * this.props.x) + 'px ' + (-64 * this.props.y) + 'px'
         };
         return (
