@@ -1,0 +1,20 @@
+@import '../base.scss';
+
+.point-distribution {
+    height: 1rem;
+    background: $light-gray;
+    line-height: 1;
+}
+
+.point-distribution__fill {
+    display: inline-block;
+    background: $medium-gray;
+    height: 100%;
+    transition: width 0.3s ease;
+}
+
+@each $key, $color in $tree-colors {
+    .point-distribution__fill--tree-color-#{$key} {
+        background: $color;
+    }
+}

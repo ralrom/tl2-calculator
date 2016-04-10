@@ -1,0 +1,29 @@
+@import '../base.scss';
+
+.share-link {
+    box-sizing: border-box;
+    display: table;
+    width: 100%;
+    border: solid 3px $light-gray;
+    border-top: none;
+}
+
+.share-link__label {
+    display: table-cell;
+    width: 3.5rem;
+    padding: 0.5rem 1rem;
+    background: $light-gray;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #777;
+}
+
+.share-link__url {
+    font-family: monospace;
+    background: none;
+    border: none;
+    width: 100%;
+    display: table-cell;
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+}

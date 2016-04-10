@@ -1,0 +1,44 @@
+@import '../base.scss';
+
+.character-summary {
+    position: relative;
+}
+
+.character-summary__portrait {
+    width: 115px;
+    height: 115px;
+    display: block;
+}
+
+.character-summary__name {
+    text-transform: uppercase;
+    position: absolute;
+    left: 115+16px;
+    top: 0;
+    margin: 0;
+    font-size: 1.60rem;
+}
+
+.character-summary__points {
+    position: absolute;
+    left: 115+16px;
+    bottom: 0;
+    right: 0;
+}
+
+.character-summary__title {
+    margin: 0;
+    margin-bottom: 0.25rem;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    color: #777;
+}
+
+@media (min-width: 40rem) {
+    .character-summary__name {
+        font-size: 3rem;
+    }
+    .character-summary__title {
+        font-size: 1rem;
+    }
+}

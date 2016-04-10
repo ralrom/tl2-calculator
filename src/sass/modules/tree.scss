@@ -1,0 +1,14 @@
+@import '../base.scss';
+
+.tree {
+    padding: 1rem 0;
+    @include clearfix;
+    display: none;
+    border: solid 3px $light-gray;
+    border-top: none;
+    background: #fff;
+}
+
+.tree--active {
+    display: block;
+}

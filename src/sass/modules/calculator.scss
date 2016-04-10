@@ -1,0 +1,51 @@
+@import '../base.scss';
+
+.calculator {
+    padding: 0 1rem;
+    max-width: 75rem;
+    margin: 0 auto;
+}
+
+.calculator__header {
+    @include clearfix;
+    margin: 1rem 0;
+}
+
+.calculator__switch-text {
+    text-transform: uppercase;
+    margin: 0;
+    margin-bottom: 1rem;
+    padding-left: 0.77rem;
+    text-align: center;
+}
+
+.calculator__characters {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: solid 3px $light-gray;
+}
+
+@media (min-width: 64rem) {
+
+    .calculator__current-character {
+        float: left;
+        width: 66.666%;
+        padding-right: 1rem;
+        box-sizing: border-box;
+    }
+    
+    .calculator__characters {
+        padding-top: 0;
+        margin-top: 0;
+        float: left;
+        width: 33.333%;
+        border-left: solid 3px $light-gray;
+        box-sizing: border-box;
+        border-top: none;
+    }
+    
+    .calculator__switch-text {
+        margin-bottom: 0.25rem;
+        text-align: left;
+    }
+}

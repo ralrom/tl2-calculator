@@ -1,0 +1,62 @@
+@import '../base.scss';
+
+.slider {
+    position: relative;
+}
+
+.slider__bar {
+    position: absolute;
+    height: 0.5rem;
+    right: 0.7rem;
+    left: 3.7rem;
+    top: 50%;
+    margin-top: -0.25rem;
+    background: $light-gray;
+    cursor: pointer;
+}
+
+.slider__handle {
+    position: absolute;
+    top: 50%;
+    width: 1.4rem;
+    height: 1.4rem;
+    background: $primary-color;
+    margin-left: -0.7rem;
+    margin-top: -0.7rem;
+    z-index: 2;
+    transition: left 0.3s ease;
+}
+
+.slider__fill {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background: $medium-gray;
+    z-index: 1;
+    transition: width 0.3s ease;
+}
+
+.slider__input {
+    border: none;
+    outline: none;
+    border-bottom: solid 3px $light-gray;
+    width: 2rem;
+    font-family: inherit;
+    font-size: 1.2rem;
+    transition: border-color 0.3s ease;
+}
+
+@each $key, $color in $tree-colors {
+    .slider__input--tree-color-#{$key}:focus {
+        border-color: $color;
+    }
+    .slider__fill--tree-color-#{$key} {
+        background-color: $color;
+    }
+    .slider__handle--tree-color-#{$key} {
+        background-color: darken($color, 20%);
+    }
+}
+
+

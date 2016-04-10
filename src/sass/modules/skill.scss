@@ -1,0 +1,56 @@
+@import '../base.scss';
+.skill {
+    position: relative;
+    margin-bottom: 2rem;
+    box-sizing: border-box;
+    padding: 0 1rem;
+}
+
+.skill__icon {
+    width: 4rem;
+    height: 4rem;
+    display: block;
+}
+
+.skill__name {
+    position: absolute;
+    top: 0;
+    left: 6rem;
+    font-size: 1.2rem;
+}
+
+.skill__slider {
+    position: absolute;
+    left: 6rem;
+    bottom: 0;
+    right: 1rem;
+}
+
+@media (min-width: 40rem) {
+    .skill {
+        width: 50%;
+        float: left;
+    }
+    .skill:nth-child(7) {
+        float: none;
+        clear: both;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .skill:nth-child(9) {
+        margin-bottom: 0;
+    }
+    .skill:nth-child(10) {
+        margin-bottom: 0;
+    }
+}
+
+@media (min-width: 64rem) {
+    .skill {
+        width: 33.333%;
+    }
+    
+    .skill:nth-child(8) {
+        margin-bottom: 0;
+    }
+}

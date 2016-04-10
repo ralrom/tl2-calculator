@@ -1,0 +1,20 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600);
+
+html {
+	font-family: "Open Sans", sans-serif;
+	line-height: 1;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background: #f8f8f8;
+}
+
+#the-dough {
+	max-width: 75rem;
+	margin: 1rem auto 0 auto;
+}

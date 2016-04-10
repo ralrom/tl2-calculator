@@ -4,6 +4,10 @@
 
 # Changelog #
 
+## 10 April 2016
+
+Moved to ReactJs
+
 ## 4 May 2015
 
 - Rewrote the calculator
