@@ -32,12 +32,12 @@ module.exports = {
             test: /\.jsx?$/,
             loader: ['babel'],
             query: {
-                cacheDirectory: false,
+                cacheDirectory: true,
                 presets: ['react', 'es2015']
             },
             include: PATHS.js
         }, {
-            test: /\.jpg$/,
+            test: /\.png$/,
             loader: 'file'
         }]
     },

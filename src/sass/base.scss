@@ -40,25 +40,8 @@ body {
 	}
 }
 
-.github-link__logo {
-	display: inline-block;
-	vertical-align: middle;
-	width: 36px;
-	height: 36px;
-	padding: 6px 0;
-	line-height: 1;
-	margin-right: 0.5rem;
-}
-
 .github-link__text {
 	vertical-align: middle;
-}
-
-@media (min-width: 40rem) {
-	.github-link__logo {
-		width: 48px;
-		height: 48px;
-	}
 }
 
 @media (min-width: 64rem) {
@@ -75,9 +58,5 @@ body {
 	
 	.github-link__text {
 		font-size: 1.2rem;
-	}
-	.github-link__logo {
-		width: 52ppx;
-		height: 52px;
 	}
 }
