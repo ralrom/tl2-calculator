@@ -18,7 +18,6 @@
     position: absolute;
     top: 0;
     left: 6rem;
-    font-size: 1.2rem;
 }
 
 .skill__slider {
@@ -39,6 +38,9 @@
     }
     .skill:nth-child(9) {
         margin-bottom: 0;
+    }
+    .skill__name {
+        font-size: 1.2rem;
     }
 }
 
