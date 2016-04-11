@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
 const CleanPlugin = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const PATHS = {
     src: path.join(__dirname, 'src'),
@@ -26,7 +27,7 @@ module.exports = {
     module: {
         loaders: [{
             test: /\.scss$/,
-            loaders: ['style', 'css', 'sass'],
+            loader: ExtractTextPlugin.extract('style', 'css!sass'),
             include: PATHS.sass
         }, {
             test: /\.jsx?$/,
@@ -58,6 +59,7 @@ module.exports = {
             }
         }),
         new CleanPlugin([PATHS.dist]),
-        new CopyWebpackPlugin([{from: PATHS.chars, to: 'characters'}])
+        new CopyWebpackPlugin([{from: PATHS.chars, to: 'characters'}]),
+        new ExtractTextPlugin('[name].[chunkhash].css')
     ]
 };
