@@ -23,25 +23,20 @@ body {
 
 .layout__text {
 	margin-top: 1rem;
+	text-align: center;
 }
 
 .github-link {
-	display: block;
-	padding: 0.75rem 1rem;
+	padding: 0.25rem 0.5rem;
 	font-weight: 600;
 	text-decoration: none;
-	background: $light-gray;
-	color: #333;
+	color: #777;
 	text-align: center;
 	text-transform: uppercase;
-	border: solid 3px $light-gray;
+	font-size: 0.85rem;
 	&:hover {
-		background-color: lighten($light-gray, 4%);
+		color: #333;
 	}
-}
-
-.github-link__text {
-	vertical-align: middle;
 }
 
 @media (min-width: 64rem) {
@@ -54,6 +49,7 @@ body {
 		width: 33.333%;
 		padding-left: 1rem;
 		box-sizing: border-box;
+		text-align: right;
 	}
 	
 	.github-link__text {
