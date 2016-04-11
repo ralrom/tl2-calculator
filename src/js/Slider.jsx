@@ -54,9 +54,18 @@ class SliderBar extends React.Component {
         this.beginDrag = this.beginDrag.bind(this);
         this.endDrag = this.endDrag.bind(this);
         this.handleMove = this.handleMove.bind(this);
+        this.componentDidMount = this.componentDidMount.bind(this);
+        this.componentWillUnmount = this.componentWillUnmount.bind(this);
         this.state = {drag: false};
     }
-    
+    componentDidMount() {
+        window.addEventListener('mousemove', this.handleMove);
+        window.addEventListener('mouseup', this.endDrag);
+    }
+    componentWillUnmount() {
+        window.removeEventListener('mousemove', this.handleMove);
+        window.removeEventListener('mouseup', this.endDrag);
+    }
     /**
      * Determines how many points are requested based on the mouse click position
      * 
@@ -67,7 +76,10 @@ class SliderBar extends React.Component {
             var boundingRect = this.refs.sliderbar.getBoundingClientRect();
             var barWidth = boundingRect.right - boundingRect.left;
             var percentage = ( event.clientX - boundingRect.left ) / barWidth;
+            percentage = percentage > 1 ? 1 : percentage;
+            percentage = percentage < 0 ? 0 : percentage;
             var desiredPoints = Math.round(percentage * 15);
+            console.log(desiredPoints);
             this.props.onPointChange(desiredPoints);
         }
     }
@@ -84,7 +96,7 @@ class SliderBar extends React.Component {
     }
     render() {
         return (
-            <div className="slider__bar" onMouseDown={this.beginDrag} onMouseUp={this.endDrag} onMouseMove={this.handleMove} onMouseLeave={this.endDrag} ref="sliderbar" >
+            <div className="slider__bar" onMouseDown={this.beginDrag} ref="sliderbar" >
                 {this.props.children}
             </div>
         );
