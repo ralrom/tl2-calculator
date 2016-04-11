@@ -28,21 +28,16 @@
     right: 1rem;
 }
 
+.skill:nth-child(10) {
+    margin-bottom: 0;
+}
+
 @media (min-width: 40rem) {
     .skill {
         width: 50%;
         float: left;
     }
-    .skill:nth-child(7) {
-        float: none;
-        clear: both;
-        margin-left: auto;
-        margin-right: auto;
-    }
     .skill:nth-child(9) {
-        margin-bottom: 0;
-    }
-    .skill:nth-child(10) {
         margin-bottom: 0;
     }
 }
@@ -50,6 +45,13 @@
 @media (min-width: 64rem) {
     .skill {
         width: 33.333%;
+    }
+    
+    .skill:nth-child(7) {
+        float: none;
+        clear: both;
+        margin-left: auto;
+        margin-right: auto;
     }
     
     .skill:nth-child(8) {
