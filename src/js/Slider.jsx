@@ -51,22 +51,40 @@ class SliderInput extends React.Component {
 class SliderBar extends React.Component {
     constructor(props) {
         super(props);
-        this.handleClick = this.handleClick.bind(this);
+        this.beginDrag = this.beginDrag.bind(this);
+        this.endDrag = this.endDrag.bind(this);
+        this.handleMove = this.handleMove.bind(this);
+        this.state = {drag: false};
     }
     
     /**
      * Determines how many points are requested based on the mouse click position
+     * 
+     * @param bool force Forces the event to fire ignoring drag
      */
-    handleClick(event) {
-        var boundingRect = this.refs.sliderbar.getBoundingClientRect();
-        var barWidth = boundingRect.right - boundingRect.left;
-        var percentage = ( event.clientX - boundingRect.left ) / barWidth;
-        var desiredPoints = Math.round(percentage * 15);
-        this.props.onPointChange(desiredPoints);
+    handleMove(event) {
+        if(this.state.drag) {
+            var boundingRect = this.refs.sliderbar.getBoundingClientRect();
+            var barWidth = boundingRect.right - boundingRect.left;
+            var percentage = ( event.clientX - boundingRect.left ) / barWidth;
+            var desiredPoints = Math.round(percentage * 15);
+            this.props.onPointChange(desiredPoints);
+        }
+    }
+    beginDrag(event) {
+        event.preventDefault();
+        event.persist();
+        // Begin drag and move the handle right away (for clicks)
+        this.setState({drag: true}, function(event){
+            this.handleMove(event);
+        }.bind(this, event));
+    }
+    endDrag() {
+        this.setState({drag: false});
     }
     render() {
         return (
-            <div className="slider__bar" onClick={this.handleClick} ref="sliderbar" >
+            <div className="slider__bar" onMouseDown={this.beginDrag} onMouseUp={this.endDrag} onMouseMove={this.handleMove} onMouseLeave={this.endDrag} ref="sliderbar" >
                 {this.props.children}
             </div>
         );
