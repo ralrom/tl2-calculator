@@ -4,6 +4,10 @@
 
 # Changelog #
 
+## 29 January 2017
+
+Removed Google Ads
+
 ## 10 April 2016
 
 Moved to ReactJs
